@@ -49,11 +49,13 @@ a[href="#"]{
 .tab-box{
 	color: #ffffff;
 	font-weight: bold;
-	background-image: linear-gradient(#D52B2B, #F7D5D5);
 }
 
 .tab-box td{
 	cursor: pointer;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	background-image: linear-gradient(#1B93B1, #D3F1F8);
 }
 
 .tab-box td:NOT(:LAST-CHILD){
@@ -90,7 +92,7 @@ border: 10px solid #ffffff;
 }
 
 .explain_title .title{
-	background: green;
+	background: #1B93B1;
 	height: 30px;
 	line-height: 30px;
 	text-align: center;
