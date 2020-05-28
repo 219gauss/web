@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/content_rst.css">
+<script type="text/javascript">
+	//禁止通过网址进入配置界面
+	if(!document.referrer || document.referrer.split('://')[1].split('/')[1] != 'sasin'){
+		alert('请从登录界面进入！');
+		window.location.href = 'index.html';
+	}
+</script>
+</head>
+<body onload="data_init()" onmouseover="mouseover()">
+	<table align="center" cellspacing="0">
+		<tr height="100px">
+			<td>
+				<table class="nav-box" height="100px" cellspacing="0">
+					<tr>
+						<td width="200px" align="center">
+							<a href="#">sasin</a>
+						</td>
+						<td width="800px">
+							<table height="100px" cellspacing="0">
+								<tr height="30px">
+									<td class="logout" width="50px" align="right"><span onclick="logout()">Logout</span></td>
+								</tr>
+								<tr height="30px">
+									<td width="800px" align="right">
+										<select onchange="language_en_select(this.value)">
+											<option value="ch">中文</option>
+											<option value="en" selected="selected">English</option>
+										</select>
+									</td>
+								</tr>
+								<tr height="40px">
+									<td width="800px">
+										<table class="tab-box" cellspacing="0px" height="40px" width="800px">
+											<tr >
+												<td id="tab_1" align="center" onclick="tabone()" style="background: #fafafa;color: #000">State</td>
+												<td id="tab_2" align="center" onclick="tabtwo()">Account</td>
+												<td id="tab_3" align="center" onclick="tabthree()">Network</td>
+												<td id="tab_4" align="center" onclick="tabfour()">Dsskey</td>
+												<td id="tab_5" align="center" onclick="tabfive()">Features</td>
+												<td id="tab_6" align="center" onclick="tabsix()">Settings</td>
+												<td id="tab_7" align="center" onclick="tabseven()">Directory</td>
+												<td id="tab_8" align="center" onclick="tabeight()">Security</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+
+		<tr height="850px">
+			<td>
+				<div id="one_1" class="one">
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-one" width="200px" bgcolor="#c0c0c0">
+								<div>Status</div>
+							</td>
+							<td width="600px" bgcolor="#fafafa">
+								<table class="content" width="600px" height="850px" cellspacing="0" >
+									<tr><th>&emsp;Version</th></tr>
+									<tr>
+										<td>Firmware Version</td>
+										<td id="firmware_version"></td>
+									</tr>
+									<tr>
+										<td>Hardware Version</td>
+										<td id="hardware_version"></td>
+									</tr>
+									<tr><th>&emsp;Device Certificate</th></tr>
+									<tr>
+										<td>Device Certificate</td>
+										<td id="certificate"></td>
+									</tr>
+									<tr><th>&emsp;Network</th></tr>
+									<tr>
+										<td>Internet Port</td>
+										<td id="internet_port"></td>
+									</tr>
+									<tr><th id="internet_port_title" style="white-space: pre;">    IPv4</th></tr>
+									<tr>
+										<td>WAN Port Type</td>
+										<td id="wan_port"></td>
+									</tr>
+									<tr>
+										<td>WAN IP Address</td>
+										<td id="ip_address"></td>
+									</tr>
+									<tr>
+										<td>Subnet Mask</td>
+										<td id="mask"></td>
+									</tr>
+									<tr>
+										<td>Gateway</td>
+										<td id="gateway"></td>
+									</tr>
+									<tr>
+										<td>Primary DNS</td>
+										<td id="first_dns"></td>
+									</tr>
+									<tr>
+										<td>Secondary DNS</td>
+										<td id="second_dns"></td>
+									</tr>
+									<tr><th>&emsp;Network Common</th></tr>
+									<tr>
+										<td>MAC Address</td>
+										<td id="physical_address"></td>
+									</tr>
+									<tr>
+										<td>WAN Port Status</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>PC Port Status</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Device Type</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>Uptime</td>
+										<td id="run_time"></td>
+									</tr>
+									<tr>
+										<td>Current Time</td>
+										<td id="now_time"> </td>
+									</tr>
+									<tr><th>&emsp;Account Status</th></tr>
+									<tr>
+										<td>Account1</td>
+										<td id="account_1"></td>
+									</tr>
+									<tr>
+										<td>Account2</td>
+										<td id="account_2"></td>
+									</tr>
+									<tr>
+										<td>Account3</td>
+										<td id="account_3"></td>
+									</tr>
+									<tr><th>&emsp;Ext</th></tr>
+								</table>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title">NOTE</div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-one">
+												<div class="explain_name">&emsp;Version:</div>
+												<div class="explain_content">&emsp;It shows the firmware version and hardware version.</div>
+												<br />
+												<div class="explain_name">&emsp;Network:</div>
+												<div class="explain_content">&emsp;It shows the network settings of Internet (WAN) port.</div>
+												<br />
+												<div class="explain_name">&emsp;Account:</div>
+												<div class="explain_content">&emsp;It shows the registration status of SIP accounts.</div>
+												<br />
+												<div class="explain_help"><a href="#">Click here to get more product documents. </a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="two_2" class="two">
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-two" width="200px" bgcolor="#c0c0c0">
+								<div class="s1">Register</div>
+								<div class="s2">Basic</div>
+								<div class="s3">Codec</div>
+								<div class="s4">Advanced</div>
+							</td>
+							<td class="two-1" width="600px" bgcolor="#fafafa">
+								<form action="php/page2_submit.php" method="post">
+									<table class="content_two" width="600px" height="850px" cellspacing="0" >
+										<tr>
+											<th>&emsp;Account</th>
+											<td>
+												<select id="page2_account" name="page2_account" onchange="account_select(this.value)">
+													<option value="account_1">Account1</option>
+													<option value="account_2">Account2</option>
+													<option value="account_3">Account3</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>Register Status</td>
+											<td id="reg_status"></td>
+										</tr>
+										<tr>
+											<td>Line Active</td>
+											<td>
+												<select id="path_activate" name="path_activate">
+													<option value="close">disable</option>
+													<option value="open">enable</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>Label</td>
+											<td><input id="lable" type="text" name="lable"></td>
+										</tr>
+										<tr>
+											<td>Display Name</td>
+											<td><input id="show_name" type="text" name="show_name"></td>
+										</tr>
+										<tr>
+											<td>Register Name</td>
+											<td><input id="login_name" type="text" name="login_name"></td>
+										</tr>
+										<tr>
+											<td>User Name</td>
+											<td><input id="user_name" type="text" name="user_name"></td>
+										</tr>
+										<tr>
+											<td>Password</td>
+											<td><input id="password" type="password" name="password"></td>
+										</tr>
+										<tr><th>&emsp;SIP Server 1</th></tr>
+										<tr>
+											<td>Server Host</td>
+											<td><input id="server_address1" type="text" name="server_address1"></td>
+											<td>Port <input id="port1" type="text" name="port1"></td>
+										</tr>
+										<tr>
+											<td>Transport</td>
+											<td><input id="transfer1" type="text" name="transfer1"></td>
+										</tr>
+										<tr>
+											<td>Server Expires</td>
+											<td><input id="heartbeat1" type="text" name="heartbeat1"></td>
+										</tr>
+										<tr>
+											<td>Server Retry Counts</td>
+											<td><input id="repetition1" type="text" name="repetition1"></td>
+										</tr>
+										<tr><th>&emsp;SIP Server 2</th></tr>
+										<tr>
+											<td>Server Host</td>
+											<td><input id="server_address2" type="text" name="server_address2"></td>
+											<td>Port <input id="port2" type="text" name="port2"></td>
+										</tr>
+										<tr>
+											<td>Transport</td>
+											<td><input id="transfer2" type="text" name="transfer2"></td>
+										</tr>
+										<tr>
+											<td>Server Expires</td>
+											<td><input id="heartbeat2" type="text" name="heartbeat2"></td>
+										</tr>
+										<tr>
+											<td>Server Retry Counts</td>
+											<td><input id="repetition2" type="text" name="repetition2"></td>
+										</tr>
+										<tr><td><br /></td></tr>
+										<tr>
+											<td>Enable Outbound Proxy Server</td>
+											<td>
+												<select id="Outbound" name="Outbound">
+													<option value="close">disable</option>
+													<option value="open">enable</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>Outbound Proxy Server 1</td>
+											<td><input id="agency_server1" type="text" name="agency_server1"> </td>
+										</tr>
+										<tr>
+											<td>Outbound Proxy Server 2</td>
+											<td><input id="agency_server2" type="text" name="agency_server2"></td>
+										</tr>
+										<tr>
+											<td>Proxy Fallback Interval</td>
+											<td><input id="rollback" type="text" name="rollback"></td>
+										</tr>
+										<tr>
+											<td>NAT</td>
+											<td><input id="nat" type="text" name="nat"></td>
+										</tr>
+										<tr>
+											<td style="text-align: right;"><input id="page2_submit" type="submit" value="Confirm"/></td>
+											<td style="text-align: right;"><input id="page2_cancel" type="button" value="Cancel"/></td>
+										</tr>
+									</table>
+								</form>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title">NOTE</div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-two">
+												<div class="explain_name">&emsp;Account Registration:</div>
+												<div class="explain_content">&emsp;Registers account(s) for the IP phone.</div>
+												<br />
+												<div class="explain_name"></div>
+												<div class="explain_content"></div>
+												<br />
+												<div class="explain_name"></div>
+												<div class="explain_content"></div>
+												<br />
+												<div class="explain_name"></div>
+												<div class="explain_content"></div>
+												<br />
+												<div class="explain_help"><a href="#">Click here to get more product documents. </a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="three_3" class="three">
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-three" width="200px" bgcolor="#c0c0c0">
+								<div class="s3_1">Basic</div>
+								<div >PC Port</div>
+								<div >NAT</div>
+								<div >Advanced</div>
+								<div >Diagnostics</div>
+							</td>
+							<td class="two-1" width="600px" bgcolor="#fafafa">
+								<form action="php/page3_submit.php" method="post">
+									<table class="content_three" width="600px" height="850px" cellspacing="0" >
+										<tr><th>&emsp;Internet Port</th></tr>
+										<tr>
+											<td>Mode(IPv4/IPv6)</td>
+											<td>
+												<select id="page3_internet" name="page3_internet" onchange="page3_internet_select(this.value)">
+													<option value="ipv4">IPv4</option>
+													<option value="ipv6">IPv6</option>
+												</select>
+											</td>
+										</tr>
+										<tr><th>&emsp;IPv4 Config</th></tr>
+										<tr>
+											<td>
+												<input id="page3_ipv4_dhcp_id" type="radio" name="ipv4_type_set" value="dhcp" checked="checked" onclick="ipv4_dhcp()">
+												<label for="page3_ipv4_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="page3_ipv4_staticip_id" type="radio" name="ipv4_type_set" value="static" onclick="ipv4_staticip()">
+												<label for="page3_ipv4_staticip_id" style="cursor: pointer;">Static IP Address</label>
+											</td>
+										</tr>
+										<tr>
+											<td>IP Address</td>
+											<td><input id="page3_ipv4_ipaddress" name="page3_ipv4_ipaddress" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>Subnet Mask</td>
+											<td><input id="page3_ipv4_mask" name="page3_ipv4_mask" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>Default Gateway</td>
+											<td><input id="page3_ipv4_gateway" name="page3_ipv4_gateway" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>Static DNS</td>
+											<td>
+												<input id="page3_ipv4_staticdns_open_id" type="radio" name="ipv4_staticDNS" value="open" onclick="ipv4_staticdns_open()">
+												<label for="page3_ipv4_staticdns_open_id" style="cursor: pointer;">on</label>
+												<input id="page3_ipv4_staticdns_close_id" type="radio" name="ipv4_staticDNS" value="close" checked="checked" onclick="ipv4_staticdns_close()">
+												<label for="page3_ipv4_staticdns_close_id" style="cursor: pointer;">off</label>
+											</td>
+										</tr>
+										<tr>
+											<td>Primary DNS</td>
+											<td><input id="page3_ipv4_firstDNS" name="page3_ipv4_firstDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>Secondary DNS</td>
+											<td><input id="page3_ipv4_secondDNS" name="page3_ipv4_secondDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr><th>&emsp;IPv6 Config</th></tr>
+										<tr>
+											<td>
+												<input id="page3_ipv6_dhcp_id" type="radio" name="ipv6_type_set" value="dhcp" checked="checked" onclick="ipv6_dhcp()">
+												<label for="page3_ipv6_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="page3_ipv6_staticip_id" type="radio" name="ipv6_type_set" value="static" onclick="ipv6_staticip()">
+												<label for="page3_ipv6_staticip_id" style="cursor: pointer;">Static IP Address </label>
+											</td>
+										</tr>
+										<tr>
+											<td>IP Address</td>
+											<td><input id="page3_ipv6_ipaddress" name="page3_ipv6_ipaddress" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>IPv6 Prefix(0~128)</td>
+											<td><input id="page3_ipv6_mask" name="page3_ipv6_mask" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>Default Gateway</td>
+											<td><input id="page3_ipv6_gateway" name="page3_ipv6_gateway" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>IPv6 Static DNS</td>
+											<td>
+												<input id="page3_ipv6_staticdns_open_id" type="radio" name="ipv6_staticDNS" value="open" onclick="ipv6_staticdns_open()">
+												<label for="page3_ipv6_staticdns_open_id" style="cursor: pointer;">on</label>
+												<input id="page3_ipv6_staticdns_close_id" type="radio" name="ipv6_staticDNS" value="close" checked="checked" onclick="ipv6_staticdns_close()">
+												<label for="page3_ipv6_staticdns_close_id" style="cursor: pointer;">off</label>
+											</td>
+										</tr>
+										<tr>
+											<td>Primary DNS</td>
+											<td><input id="page3_ipv6_firstDNS" name="page3_ipv6_firstDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>Secondary DNS</td>
+											<td><input id="page3_ipv6_secondDNS" name="page3_ipv6_secondDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page3_submit" type="submit" value="Confirm"/>
+												&emsp;
+												<input id="page3_cancel" type="button" value="Cancel"/>
+											</td>
+										</tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+									</table>
+								</form>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title">NOTE</div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-two">
+												<div class="explain_name">&emsp;DHCP:</div>
+												<div class="explain_content">&emsp;DHCP (Dynamic Host Configuration Protocol) is a network protocol used to dynamically allocate network parameters to IP phones..</div>
+												<br />
+												<div class="explain_name">&emsp;Static IP Address:</div>
+												<div class="explain_content">&emsp;Specifies the network parameters of IP phones manually.</div>
+												<br />
+												<div class="explain_help"><a href="#">Click here to get more product documents. </a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+
+		<tr height="50px">
+			<td align="center">Copyright © 1998-2020 **Inc. All Rights Reserved </td>
+		</tr>
+	</table>
+	<script type="text/javascript" src="js/content.js"></script>
+	<script type="text/javascript" src="js/page1.js"></script>
+	<script type="text/javascript" src="js/page2.js"></script>
+	<script type="text/javascript" src="js/page3.js"></script>
+	<script type="text/javascript" src="js/language.js"></script>
+</body>
+</html>

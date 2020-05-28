@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/index.css">
+<title>用户登录</title>
+</head>
+<body>
+	<form method="post" action="php/index.php">
+		<div class="body-box">
+			<div class="title-box">
+				<div class="title">xxx配置界面</div>
+			</div>
+			<div class="userlogin-box">
+				<div class="user-box">
+					<label for="username">账号</label>
+					<input type="text" id="username" name="username" placeholder="请输入用户名">
+				</div>
+				<div class="password-box">
+					<label for="password">密码:</label>
+					<input type="password" id="password" name="password" placeholder="请输入密码"/>
+				</div>
+				<div class="login-box">
+					<input id="submit" type="submit" value="登录"/><span id="error" style="color: red;font-size: 12px;"></span>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+<script type="text/javascript">
+	var submit = document.getElementById('submit');
+	submit.onclick = function(){
+		var xhr = new XMLHttpRequest();
+
+		xhr.onreadystatechange = function () {
+	        if(xhr.readyState==4 && xhr.status == 200){
+	        	var json = JSON.parse(xhr.responseText);
+	        	var error = document.getElementById('error');
+	        	if(!json.error){
+	        		error.innerHTML = " 用户名或密码错误";
+	        	}else{
+	        		var jsonStr = JSON.stringify(json.data);
+	        		window.location.href = 'content_ch.html';
+	        		/* console.log(json.data); */
+	        	}
+	        }
+	    }
+
+		var user = document.getElementById('username').value;
+	    var password = document.getElementById('password').value;
+	    var data = 'username='+user+'&password='+password+'&error='+true;
+	    var url = 'php/index.php';
+	    xhr.open('post',url,true);
+
+	    xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
+
+	    xhr.send(data);
+	    return false;
+	}
+</script>
+</html>

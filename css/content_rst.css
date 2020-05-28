@@ -1,0 +1,185 @@
+@CHARSET "UTF-8";
+
+*{
+	margin: auto; /* 设置控件居中 */
+	padding: 0px;
+}
+
+/* ----------背景设置------------------------ */
+body{
+	background: #f3f3f3;
+}
+
+body>table{
+	width: 1000px;
+	height: 1000px;
+}
+
+
+/* -------------导航栏设置------------------------- */
+.nav-box{
+	border-radius: 20px 20px 0px 0px;
+	background-image: linear-gradient(#1B93B1, #D3F1F8);
+}
+
+.logout{
+	padding-right: 5px;
+}
+
+/* 设置厂家 */
+a[href="#"]{
+	font-size: 50px;
+	text-decoration: none;
+	color: #ffffff;
+	text-transform: capitalize;
+}
+
+/* 注销 */
+.logout>span{
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 12px;
+	cursor: pointer;
+}
+.logout>span:HOVER{
+	font-size: 16px;
+}
+
+/* 选项卡 */
+.tab-box{
+	color: #ffffff;
+	font-weight: bold;
+	background-image: linear-gradient(#D52B2B, #F7D5D5);
+}
+
+.tab-box td{
+	cursor: pointer;
+}
+
+.tab-box td:NOT(:LAST-CHILD){
+	border-right: 1px solid #000;
+}
+
+/* -------------正文部分设置---------------------------- */
+.one>table,.two>table,.three>table{
+border: 10px solid #ffffff;
+}
+
+/* 设置左边选项栏 */
+.sidebar-one div{
+	position: relative;
+	top: -350px;
+	text-align: center;
+	background: #fafafa;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+
+.content th{
+	text-align: left;
+}
+
+.content td{
+	text-align: center;
+	font-size: 14px;
+}
+
+.explain_title{
+	height: 850px;
+}
+
+.explain_title .title{
+	background: green;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	border-bottom-style: solid;
+	border-bottom-color: #ffffff;
+}
+
+/* ---------右侧说明栏-------------- */
+.explain-box-one,.explain-box-two{
+	position: relative;
+	top: -250px;
+	font-size: 14px;
+}
+
+.explain-box-one .explain_name,.explain-box-two .explain_name{
+	font-weight: bold;
+}
+
+.explain-box-one a,.explain-box-two a{
+	font-size: 14px;
+	color: #000000;
+}
+
+.explain-box-one a:HOVER,.explain-box-two a:HOVER{
+	color: blue;
+	text-decoration: underline;
+}
+
+.explain-box-one a:BEFORE,.explain-box-two a:BEFORE{
+	content: "*";
+	color: red;
+	padding-left: 16px;
+}
+
+/* ----------page 2-------------- */
+
+.sidebar-two div{
+	position: relative;
+	top: -300px;
+	text-align: center;
+	background: #c0c0c0;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.sidebar-two .s1{
+	background: #fafafa;
+}
+
+.content_two td{
+	text-align: center;
+	font-size: 14px;
+}
+
+.content_two th{
+	text-align: left;
+}
+
+/* -------page 3--------- */
+.sidebar-three div{
+	position: relative;
+	top: -300px;
+	text-align: center;
+	background: #c0c0c0;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.sidebar-three .s3_1{
+	background: #fafafa;
+}
+
+.content_three td{
+	text-align: center;
+	font-size: 14px;
+}
+
+.content_three th{
+	text-align: left;
+}
+
+/* -------标签页切换设置--------- */
+.one{
+	display: block;
+}
+
+.two,.three{
+	display: none;
+}
+

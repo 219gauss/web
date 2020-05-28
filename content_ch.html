@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/content_rst.css">
+<script type="text/javascript">
+	//禁止通过网址进入配置界面
+	if(!document.referrer || document.referrer.split('://')[1].split('/')[1] != 'sasin'){
+		alert('请从登录界面进入！');
+		window.location.href = 'index.html';
+	}
+</script>
+</head>
+<body onload="data_init()" onmouseover="mouseover()">
+	<table align="center" cellspacing="0">
+		<tr height="100px">
+			<td>
+				<table class="nav-box" height="100px" cellspacing="0">
+					<tr>
+						<td width="200px" align="center">
+							<a href="#">sasin</a>
+						</td>
+						<td width="800px">
+							<table height="100px" cellspacing="0">
+								<tr height="30px">
+									<td class="logout" width="50px" align="right"><span onclick="logout()">注销</span></td>
+								</tr>
+								<tr height="30px">
+									<td width="800px" align="right">
+										<select onchange="language_ch_select(this.value)">
+											<option value="ch" selected="selected">中文</option>
+											<option value="en">English</option>
+										</select>
+									</td>
+								</tr>
+								<tr height="40px">
+									<td width="800px">
+										<table class="tab-box" cellspacing="0px" height="40px" width="800px">
+											<tr >
+												<td id="tab_1" align="center" onclick="tabone()" style="background: #fafafa;color: #000">状态</td>
+												<td id="tab_2" align="center" onclick="tabtwo()">账号</td>
+												<td id="tab_3" align="center" onclick="tabthree()">网络配置</td>
+												<td id="tab_4" align="center" onclick="tabfour()">可编程按键</td>
+												<td id="tab_5" align="center" onclick="tabfive()">功能</td>
+												<td id="tab_6" align="center" onclick="tabsix()">设置</td>
+												<td id="tab_7" align="center" onclick="tabseven()">联系人</td>
+												<td id="tab_8" align="center" onclick="tabeight()">安全</td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+
+		<tr height="850px">
+			<td>
+				<div id="one_1" class="one">
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-one" width="200px" bgcolor="#c0c0c0">
+								<div>状态</div>
+							</td>
+							<td width="600px" bgcolor="#fafafa">
+								<table class="content" width="600px" height="850px" cellspacing="0" >
+									<tr><th>&emsp;版本</th></tr>
+									<tr>
+										<td>固件版本</td>
+										<td id="firmware_version"></td>
+									</tr>
+									<tr>
+										<td>硬件版本</td>
+										<td id="hardware_version"></td>
+									</tr>
+									<tr><th>&emsp;设备证书</th></tr>
+									<tr>
+										<td>设备证书</td>
+										<td id="certificate"></td>
+									</tr>
+									<tr><th>&emsp;网络配置</th></tr>
+									<tr>
+										<td>因特网接口</td>
+										<td id="internet_port"></td>
+									</tr>
+									<tr><th id="internet_port_title" style="white-space: pre;">    IPv4</th></tr>
+									<tr>
+										<td>WAN口类型</td>
+										<td id="wan_port"></td>
+									</tr>
+									<tr>
+										<td>IP地址</td>
+										<td id="ip_address"></td>
+									</tr>
+									<tr>
+										<td>子网掩码</td>
+										<td id="mask"></td>
+									</tr>
+									<tr>
+										<td>网关地址</td>
+										<td id="gateway"></td>
+									</tr>
+									<tr>
+										<td>首选DNS</td>
+										<td id="first_dns"></td>
+									</tr>
+									<tr>
+										<td>备选DNS</td>
+										<td id="second_dns"></td>
+									</tr>
+									<tr><th>&emsp;网络通用参数</th></tr>
+									<tr>
+										<td>物理地址</td>
+										<td id="physical_address"></td>
+									</tr>
+									<tr>
+										<td>WAN口状态</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>PC口状态</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>连接类型</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>运行时间</td>
+										<td id="run_time"></td>
+									</tr>
+									<tr>
+										<td>当前时间</td>
+										<td id="now_time"> </td>
+									</tr>
+									<tr><th>&emsp;账号状态</th></tr>
+									<tr>
+										<td>账号 1</td>
+										<td id="account_1"></td>
+									</tr>
+									<tr>
+										<td>账号 2</td>
+										<td id="account_2"></td>
+									</tr>
+									<tr>
+										<td>账号 3</td>
+										<td id="account_3"></td>
+									</tr>
+									<tr><th>&emsp;扩展设备</th></tr>
+								</table>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title">说明</div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-one">
+												<div class="explain_name">&emsp;版本号:</div>
+												<div class="explain_content">&emsp;显示设备当前的固件版本号.</div>
+												<br />
+												<div class="explain_name">&emsp;网络配置:</div>
+												<div class="explain_content">&emsp;显示Internet口和PC口的网络情况.</div>
+												<br />
+												<div class="explain_name">&emsp;账号:</div>
+												<div class="explain_content">&emsp;显示注册的SIP账号的状态和SIP服务器.</div>
+												<br />
+												<div class="explain_help"><a href="#">请点击这里获取更多的帮助. </a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="two_2" class="two">
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-two" width="200px" bgcolor="#c0c0c0">
+								<div class="s1">注册</div>
+								<div class="s2">基础</div>
+								<div class="s3">编解码</div>
+								<div class="s4">高级</div>
+							</td>
+							<td class="two-1" width="600px" bgcolor="#fafafa">
+								<form action="php/page2_submit.php" method="post">
+									<table class="content_two" width="600px" height="850px" cellspacing="0" >
+										<tr>
+											<th>&emsp;账号</th>
+											<td>
+												<select id="page2_account" name="page2_account" onchange="account_select(this.value)">
+													<option value="account_1">账号1</option>
+													<option value="account_2">账号2</option>
+													<option value="account_3">账号3</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>注册状态</td>
+											<td id="reg_status"></td>
+										</tr>
+										<tr>
+											<td>线路激活</td>
+											<td>
+												<select id="path_activate" name="path_activate">
+													<option value="close">禁用</option>
+													<option value="open">启用</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>标签</td>
+											<td><input id="lable" type="text" name="lable"></td>
+										</tr>
+										<tr>
+											<td>显示名称</td>
+											<td><input id="show_name" type="text" name="show_name"></td>
+										</tr>
+										<tr>
+											<td>注册名称</td>
+											<td><input id="login_name" type="text" name="login_name"></td>
+										</tr>
+										<tr>
+											<td>用户名称</td>
+											<td><input id="user_name" type="text" name="user_name"></td>
+										</tr>
+										<tr>
+											<td>密码</td>
+											<td><input id="password" type="password" name="password"></td>
+										</tr>
+										<tr><th>&emsp;SIP服务器 1</th></tr>
+										<tr>
+											<td>服务器地址</td>
+											<td><input id="server_address1" type="text" name="server_address1"></td>
+											<td>端口 <input id="port1" type="text" name="port1"></td>
+										</tr>
+										<tr>
+											<td>传输方式</td>
+											<td><input id="transfer1" type="text" name="transfer1"></td>
+										</tr>
+										<tr>
+											<td>心跳报文</td>
+											<td><input id="heartbeat1" type="text" name="heartbeat1"></td>
+										</tr>
+										<tr>
+											<td>重试次数</td>
+											<td><input id="repetition1" type="text" name="repetition1"></td>
+										</tr>
+										<tr><th>&emsp;SIP服务器 2</th></tr>
+										<tr>
+											<td>服务器地址</td>
+											<td><input id="server_address2" type="text" name="server_address2"></td>
+											<td>端口 <input id="port2" type="text" name="port2"></td>
+										</tr>
+										<tr>
+											<td>传输方式</td>
+											<td><input id="transfer2" type="text" name="transfer2"></td>
+										</tr>
+										<tr>
+											<td>心跳报文</td>
+											<td><input id="heartbeat2" type="text" name="heartbeat2"></td>
+										</tr>
+										<tr>
+											<td>重试次数</td>
+											<td><input id="repetition2" type="text" name="repetition2"></td>
+										</tr>
+										<tr><td><br /></td></tr>
+										<tr>
+											<td>启用Outbound代理</td>
+											<td>
+												<select id="Outbound" name="Outbound">
+													<option value="close">禁用</option>
+													<option value="open">启用</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>Outbound代理服务器1</td>
+											<td><input id="agency_server1" type="text" name="agency_server1"> </td>
+										</tr>
+										<tr>
+											<td>Outbound代理服务器2</td>
+											<td><input id="agency_server2" type="text" name="agency_server2"></td>
+										</tr>
+										<tr>
+											<td>代理回退间隔</td>
+											<td><input id="rollback" type="text" name="rollback"></td>
+										</tr>
+										<tr>
+											<td>NAT</td>
+											<td><input id="nat" type="text" name="nat"></td>
+										</tr>
+										<tr>
+											<td style="text-align: right;"><input id="page2_submit" type="submit" value="确定"/></td>
+											<td style="text-align: right;"><input id="page2_cancel" type="button" value="取消"/></td>
+										</tr>
+									</table>
+								</form>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title">说明</div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-two">
+												<div class="explain_name">&emsp;显示名称:</div>
+												<div class="explain_content">&emsp;拨打电话时对方话机上显示的本地名字.</div>
+												<br />
+												<div class="explain_name">&emsp;用户名称:</div>
+												<div class="explain_content">&emsp;由运营商提供的用户名.</div>
+												<br />
+												<div class="explain_name">&emsp;注册账号:</div>
+												<div class="explain_content">&emsp;由运营商提供的注册名.</div>
+												<br />
+												<div class="explain_name">&emsp;密码:</div>
+												<div class="explain_content">&emsp;注册账号对应的密码.</div>
+												<br />
+												<div class="explain_help"><a href="#">请点击这里获取更多的帮助. </a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="three_3" class="three">
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-three" width="200px" bgcolor="#c0c0c0">
+								<div class="s3_1">基础</div>
+								<div >PC接口</div>
+								<div >NAT</div>
+								<div >高级</div>
+								<div >诊断</div>
+							</td>
+							<td class="two-1" width="600px" bgcolor="#fafafa">
+								<form action="php/page3_submit.php" method="post">
+									<table class="content_three" width="600px" height="850px" cellspacing="0" >
+										<tr><th>&emsp;因特网接口</th></tr>
+										<tr>
+											<td>模式(IPv4)</td>
+											<td>
+												<select id="page3_internet" name="page3_internet" onchange="page3_internet_select(this.value)">
+													<option value="ipv4">IPv4</option>
+													<option value="ipv6">IPv6</option>
+												</select>
+											</td>
+										</tr>
+										<tr><th>&emsp;IPv4配置</th></tr>
+										<tr>
+											<td>
+												<input id="page3_ipv4_dhcp_id" type="radio" name="ipv4_type_set" value="dhcp" checked="checked" onclick="ipv4_dhcp()">
+												<label for="page3_ipv4_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="page3_ipv4_staticip_id" type="radio" name="ipv4_type_set" value="static" onclick="ipv4_staticip()">
+												<label for="page3_ipv4_staticip_id" style="cursor: pointer;">静态IP地址</label>
+											</td>
+										</tr>
+										<tr>
+											<td>IP地址</td>
+											<td><input id="page3_ipv4_ipaddress" name="page3_ipv4_ipaddress" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>子网掩码</td>
+											<td><input id="page3_ipv4_mask" name="page3_ipv4_mask" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>网关地址</td>
+											<td><input id="page3_ipv4_gateway" name="page3_ipv4_gateway" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>静态 DNS</td>
+											<td>
+												<input id="page3_ipv4_staticdns_open_id" type="radio" name="ipv4_staticDNS" value="open" onclick="ipv4_staticdns_open()">
+												<label for="page3_ipv4_staticdns_open_id" style="cursor: pointer;">开</label>
+												<input id="page3_ipv4_staticdns_close_id" type="radio" name="ipv4_staticDNS" value="close" checked="checked" onclick="ipv4_staticdns_close()">
+												<label for="page3_ipv4_staticdns_close_id" style="cursor: pointer;">关</label>
+											</td>
+										</tr>
+										<tr>
+											<td>首选DNS</td>
+											<td><input id="page3_ipv4_firstDNS" name="page3_ipv4_firstDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>备选DNS</td>
+											<td><input id="page3_ipv4_secondDNS" name="page3_ipv4_secondDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr><th>&emsp;IPv6配置</th></tr>
+										<tr>
+											<td>
+												<input id="page3_ipv6_dhcp_id" type="radio" name="ipv6_type_set" value="dhcp" checked="checked" onclick="ipv6_dhcp()">
+												<label for="page3_ipv6_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="page3_ipv6_staticip_id" type="radio" name="ipv6_type_set" value="static" onclick="ipv6_staticip()">
+												<label for="page3_ipv6_staticip_id" style="cursor: pointer;">静态IP地址</label>
+											</td>
+										</tr>
+										<tr>
+											<td>IP地址</td>
+											<td><input id="page3_ipv6_ipaddress" name="page3_ipv6_ipaddress" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>IPv6前缀(0~128)</td>
+											<td><input id="page3_ipv6_mask" name="page3_ipv6_mask" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>网关地址</td>
+											<td><input id="page3_ipv6_gateway" name="page3_ipv6_gateway" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>静态IPv6 DNS</td>
+											<td>
+												<input id="page3_ipv6_staticdns_open_id" type="radio" name="ipv6_staticDNS" value="open" onclick="ipv6_staticdns_open()">
+												<label for="page3_ipv6_staticdns_open_id" style="cursor: pointer;">开</label>
+												<input id="page3_ipv6_staticdns_close_id" type="radio" name="ipv6_staticDNS" value="close" checked="checked" onclick="ipv6_staticdns_close()">
+												<label for="page3_ipv6_staticdns_close_id" style="cursor: pointer;">关</label>
+											</td>
+										</tr>
+										<tr>
+											<td>首选DNS</td>
+											<td><input id="page3_ipv6_firstDNS" name="page3_ipv6_firstDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td>备选DNS</td>
+											<td><input id="page3_ipv6_secondDNS" name="page3_ipv6_secondDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page3_submit" type="submit" value="确定"/>
+												&emsp;
+												<input id="page3_cancel" type="button" value="取消"/>
+											</td>
+										</tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+									</table>
+								</form>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title">说明</div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-two">
+												<div class="explain_name">&emsp;自动获得IP地址:</div>
+												<div class="explain_content">&emsp;话机自动向DHCP服务器请求获得IP地址,子网掩码,网关,DNS等.</div>
+												<br />
+												<div class="explain_name">&emsp;静态IP地址:</div>
+												<div class="explain_content">&emsp;手动配置IP地址,子网掩码,网关,DNS等.</div>
+												<br />
+												<div class="explain_help"><a href="#">请点击这里获取更多的帮助. </a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+
+		<tr height="50px">
+			<td align="center">Copyright © 1998-2020 **Inc. All Rights Reserved </td>
+		</tr>
+	</table>
+	<script type="text/javascript" src="js/content.js"></script>
+	<script type="text/javascript" src="js/page1.js"></script>
+	<script type="text/javascript" src="js/page2.js"></script>
+	<script type="text/javascript" src="js/page3.js"></script>
+	<script type="text/javascript" src="js/language.js"></script>
+</body>
+</html>
