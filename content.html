@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title class="i18n" name='title'></title>
+<link rel="stylesheet" href="css/content_rst.css">
+<meta id="i18n_pagename" content="index">
+<script type="text/javascript">
+	//禁止通过网址进入配置界面
+	if(!document.referrer || document.referrer.split('://')[1].split('/')[1] != 'sasin'){
+		alert('请从登录界面进入！');
+		window.location.href = 'index.html';
+	}
+</script>
+</head>
+<body onload="data_init()" onmouseover="mouseover()">
+	<table align="center" cellspacing="0">
+		<tr height="100px">
+			<td>
+				<table class="nav-box" height="100px" cellspacing="0">
+					<tr>
+						<td width="200px" align="center">
+							<a href="#">sasin</a>
+						</td>
+						<td width="800px">
+							<table height="100px" cellspacing="0">
+								<tr height="30px">
+									<td class="logout" width="50px" align="right"><span class="i18n" name = 'logout' onclick="logout()"></span></td>
+								</tr>
+								<tr height="30px">
+									<td width="800px" align="right">
+										<select id="language">
+											<option value="zh-CN">简体中文</option>
+											<option value="en">English</option>
+										</select>
+									</td>
+								</tr>
+								<tr height="40px">
+									<td width="800px">
+										<table class="tab-box" cellspacing="0px" height="40px" width="800px">
+											<tr >
+												<td id="tab_1" class="i18n" name='Status' align="center" onclick="tabone()" style="background: #fafafa;color: #000"></td>
+												<td id="tab_2" class="i18n" name='Account' align="center" onclick="tabtwo()"></td>
+												<td id="tab_3" class="i18n" name='Network' align="center" onclick="tabthree()"></td>
+												<td id="tab_4" class="i18n" name='Dsskey' align="center" onclick="tabfour()"></td>
+												<td id="tab_5" class="i18n" name='Features' align="center" onclick="tabfive()"></td>
+												<td id="tab_6" class="i18n" name='Settings' align="center" onclick="tabsix()"></td>
+												<td id="tab_7" class="i18n" name='Directory' align="center" onclick="tabseven()"></td>
+												<td id="tab_8" class="i18n" name='Security' align="center" onclick="tabeight()"></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+
+		<tr height="850px">
+			<td>
+				<div id="one_1" class="one">
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-one" width="200px" bgcolor="#c0c0c0">
+								<div class="i18n" name='page1_status'></div>
+							</td>
+							<td width="600px" bgcolor="#fafafa">
+								<table class="content" width="600px" height="850px" cellspacing="0" >
+									<tr><th class="i18n" name='page1_version'></th></tr>
+									<tr>
+										<td class="i18n" name='page1_firmware_version'></td>
+										<td id="firmware_version"></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_hardware_version'></td>
+										<td id="hardware_version"></td>
+									</tr>
+									<tr><th class="i18n" name='page1_device_certificate'></th></tr>
+									<tr>
+										<td class="i18n" name='page1_device_certificate'></td>
+										<td id="certificate"></td>
+									</tr>
+									<tr><th class="i18n" name='page1_network'></th></tr>
+									<tr>
+										<td class="i18n" name='page1_internet_port'></td>
+										<td id="internet_port"></td>
+									</tr>
+									<tr><th id="internet_port_title" style="white-space: pre;">    IPv4</th></tr>
+									<tr>
+										<td class="i18n" name='page1_wan_port_type'></td>
+										<td id="wan_port"></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_wan_ip_address'></td>
+										<td id="ip_address"></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_subnet_mask'></td>
+										<td id="mask"></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_gateway'></td>
+										<td id="gateway"></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_primary_dns'></td>
+										<td id="first_dns"></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_secondary_dns'></td>
+										<td id="second_dns"></td>
+									</tr>
+									<tr><th class="i18n" name='page1_network_common'></th></tr>
+									<tr>
+										<td class="i18n" name='page1_mac_address'></td>
+										<td id="physical_address"></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_wan_port_status'></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_pc_port_status'></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_device_type'></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_uptime'></td>
+										<td id="run_time"></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_current_time'></td>
+										<td id="now_time"> </td>
+									</tr>
+									<tr><th class="i18n" name='page1_account_status'></th></tr>
+									<tr>
+										<td class="i18n" name='page1_account_1'></td>
+										<td id="account_1"></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_account_2'></td>
+										<td id="account_2"></td>
+									</tr>
+									<tr>
+										<td class="i18n" name='page1_account_3'></td>
+										<td id="account_3"></td>
+									</tr>
+									<tr><th class="i18n" name='page1_ext'>&emsp;</th></tr>
+								</table>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title i18n" name='page1_explain_title'></div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-one">
+												<div class="explain_name i18n" name='page1_explain_1'></div>
+												<div class="explain_content i18n" name='page1_explain_1_1'></div>
+												<br />
+												<div class="explain_name i18n" name='page1_explain_2'></div>
+												<div class="explain_content i18n" name='page1_explain_2_1'></div>
+												<br />
+												<div class="explain_name i18n" name='page1_explain_3'></div>
+												<div class="explain_content i18n" name='page1_explain_3_1'></div>
+												<br />
+												<div class="explain_help"><a href="#" class="i18n" name='page1_explain_help'></a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="two_2" class="two">
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-two" width="200px" bgcolor="#c0c0c0">
+								<div class="s1 i18n" name='page2_register'></div>
+								<div class="s2 i18n" name='page2_basic'></div>
+								<div class="s3 i18n" name='page2_codec'></div>
+								<div class="s4 i18n" name='page2_advanced'></div>
+							</td>
+							<td class="two-1" width="600px" bgcolor="#fafafa">
+								<form action="php/page2_submit.php" method="post">
+									<table class="content_two" width="600px" height="850px" cellspacing="0" >
+										<tr>
+											<th class="i18n" name='page2_account'></th>
+											<td>
+												<select id="page2_account" name="page2_account" onchange="account_select(this.value)">
+													<option value="account_1" class="i18n" name='page2_account_1'></option>
+													<option value="account_2" class="i18n" name='page2_account_2'></option>
+													<option value="account_3" class="i18n" name='page2_account_3'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_register_status'></td>
+											<td id="reg_status"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_path_activate'></td>
+											<td>
+												<select id="path_activate" name="path_activate">
+													<option value="close" class="i18n" name='page2_path_activate_disable'></option>
+													<option value="open" class="i18n" name='page2_path_activate_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_lable'></td>
+											<td><input id="lable" type="text" name="lable"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_show_name'></td>
+											<td><input id="show_name" type="text" name="show_name"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_login_name'></td>
+											<td><input id="login_name" type="text" name="login_name"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_user_name'></td>
+											<td><input id="user_name" type="text" name="user_name"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_password'></td>
+											<td><input id="password" type="password" name="password"></td>
+										</tr>
+										<tr><th class="i18n" name='page2_sip_server_1'></th></tr>
+										<tr>
+											<td class="i18n" name='page2_server_address1'></td>
+											<td><input id="server_address1" type="text" name="server_address1"></td>
+											<td class="i18n" name='page2_port1'></td>
+											<td> <input id="port1" type="text" name="port1"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_transfer1'></td>
+											<td><input id="transfer1" type="text" name="transfer1"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_heartbeat1'></td>
+											<td><input id="heartbeat1" type="text" name="heartbeat1"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_repetition1'></td>
+											<td><input id="repetition1" type="text" name="repetition1"></td>
+										</tr>
+										<tr><th class="i18n" name='page2_sip_server_2'></th></tr>
+										<tr>
+											<td class="i18n" name='page2_server_address2'></td>
+											<td><input id="server_address2" type="text" name="server_address2"></td>
+											<td class="i18n" name='page2_port2'></td>
+											<td> <input id="port2" type="text" name="port2"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_transfer2'></td>
+											<td><input id="transfer2" type="text" name="transfer2"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_heartbeat2'></td>
+											<td><input id="heartbeat2" type="text" name="heartbeat2"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_repetition2'></td>
+											<td><input id="repetition2" type="text" name="repetition2"></td>
+										</tr>
+										<tr><td><br /></td></tr>
+										<tr>
+											<td class="i18n" name='page2_enable_outbound_proxy_server'></td>
+											<td>
+												<select id="Outbound" name="Outbound">
+													<option value="close" class="i18n" name='page2_outbound_disable'></option>
+													<option value="open" value="close" class="i18n" name='page2_outbound_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_outbound_1'></td>
+											<td><input id="agency_server1" type="text" name="agency_server1"> </td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_outbound_2'></td>
+											<td><input id="agency_server2" type="text" name="agency_server2"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_proxy_fallback_interval'></td>
+											<td><input id="rollback" type="text" name="rollback"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_nat'></td>
+											<td><input id="nat" type="text" name="nat"></td>
+										</tr>
+										<tr>
+											<td style="text-align: right;"><input id="page2_submit" class="i18n-input" selectname='page2_submit' type="submit"/></td>
+											<td style="text-align: right;"><input id="page2_cancel" class="i18n-input" selectname='page2_button' type="button"/></td>
+										</tr>
+									</table>
+								</form>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title i18n" name='page2_explain_title'></div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-two">
+												<div class="explain_name i18n" name='page2_explain_1'></div>
+												<div class="explain_content i18n" name='page2_explain_1_1'></div>
+												<br />
+												<div class="explain_name i18n" name='page2_explain_2'></div>
+												<div class="explain_content i18n" name='page2_explain_2_1'></div>
+												<br />
+												<div class="explain_name i18n" name='page2_explain_3'></div>
+												<div class="explain_content i18n" name='page2_explain_3_1'></div>
+												<br />
+												<div class="explain_name i18n" name='page2_explain_4'></div>
+												<div class="explain_content i18n" name='page2_explain_4_1'></div>
+												<br />
+												<div class="explain_help"><a class="i18n" name='page2_explain_help' href="#"></a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="three_3" class="three">
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-three" width="200px" bgcolor="#c0c0c0">
+								<div class="s3_1 i18n" name='page3_basic'></div>
+								<div class="i18n" name='page3_pc_Port'></div>
+								<div class="i18n" name='page3_nat'></div>
+								<div class="i18n" name='page3_advanced'></div>
+								<div class="i18n" name='page3_diagnostics'></div>
+							</td>
+							<td class="two-1" width="600px" bgcolor="#fafafa">
+								<form action="php/page3_submit.php" method="post">
+									<table class="content_three" width="600px" height="850px" cellspacing="0" >
+										<tr><th class="i18n" name='page3_internet_port'></th></tr>
+										<tr>
+											<td class="i18n" name='page3_Mode'></td>
+											<td>
+												<select id="page3_internet" name="page3_internet" onchange="page3_internet_select(this.value)">
+													<option value="ipv4">IPv4</option>
+													<option value="ipv6">IPv6</option>
+												</select>
+											</td>
+										</tr>
+										<tr><th class="i18n" name='page3_ipv4_config'></th></tr>
+										<tr>
+											<td>
+												<input id="page3_ipv4_dhcp_id" type="radio" name="ipv4_type_set" value="dhcp" checked="checked" onclick="ipv4_dhcp()">
+												<label for="page3_ipv4_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="page3_ipv4_staticip_id" type="radio" name="ipv4_type_set" value="static" onclick="ipv4_staticip()">
+												<label class="i18n" name='page3_ipv4_staticip_id' for="page3_ipv4_staticip_id" style="cursor: pointer;"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv4_ipaddress'></td>
+											<td><input id="page3_ipv4_ipaddress" name="page3_ipv4_ipaddress" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv4_mask'></td>
+											<td><input id="page3_ipv4_mask" name="page3_ipv4_mask" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv4_gateway'></td>
+											<td><input id="page3_ipv4_gateway" name="page3_ipv4_gateway" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv4_staticdns'></td>
+											<td>
+												<input id="page3_ipv4_staticdns_open_id" type="radio" name="ipv4_staticDNS" value="open" onclick="ipv4_staticdns_open()">
+												<label class="i18n" name='page3_ipv4_staticdns_open_id' for="page3_ipv4_staticdns_open_id" style="cursor: pointer;"></label>
+												<input id="page3_ipv4_staticdns_close_id" type="radio" name="ipv4_staticDNS" value="close" checked="checked" onclick="ipv4_staticdns_close()">
+												<label class="i18n" name='page3_ipv4_staticdns_close_id' for="page3_ipv4_staticdns_close_id" style="cursor: pointer;"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv4_firstDNS'></td>
+											<td><input id="page3_ipv4_firstDNS" name="page3_ipv4_firstDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv4_secondDNS'></td>
+											<td><input id="page3_ipv4_secondDNS" name="page3_ipv4_secondDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr><th class="i18n" name='page3_ipv6_config'>&emsp;</th></tr>
+										<tr>
+											<td>
+												<input id="page3_ipv6_dhcp_id" type="radio" name="ipv6_type_set" value="dhcp" checked="checked" onclick="ipv6_dhcp()">
+												<label for="page3_ipv6_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="page3_ipv6_staticip_id" type="radio" name="ipv6_type_set" value="static" onclick="ipv6_staticip()">
+												<label class="i18n" name='page3_ipv6_staticip_id' for="page3_ipv6_staticip_id" style="cursor: pointer;"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv6_ipaddress'></td>
+											<td><input id="page3_ipv6_ipaddress" name="page3_ipv6_ipaddress" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv6_mask'></td>
+											<td><input id="page3_ipv6_mask" name="page3_ipv6_mask" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv6_gateway'></td>
+											<td><input id="page3_ipv6_gateway" name="page3_ipv6_gateway" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv6_staticdns'></td>
+											<td>
+												<input id="page3_ipv6_staticdns_open_id" type="radio" name="ipv6_staticDNS" value="open" onclick="ipv6_staticdns_open()">
+												<label class="i18n" name='page3_ipv6_staticdns_open_id' for="page3_ipv6_staticdns_open_id" style="cursor: pointer;"></label>
+												<input id="page3_ipv6_staticdns_close_id" type="radio" name="ipv6_staticDNS" value="close" checked="checked" onclick="ipv6_staticdns_close()">
+												<label class="i18n" name='page3_ipv6_staticdns_close_id' for="page3_ipv6_staticdns_close_id" style="cursor: pointer;"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv6_firstDNS'></td>
+											<td><input id="page3_ipv6_firstDNS" name="page3_ipv6_firstDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_ipv6_secondDNS'></td>
+											<td><input id="page3_ipv6_secondDNS" name="page3_ipv6_secondDNS" type="text" disabled="disabled"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page3_submit" class="i18n-input" selectname='page3_submit' type="submit"/>
+												&emsp;
+												<input id="page3_cancel" class="i18n-input" selectname='page3_button' type="button"/>
+											</td>
+										</tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+									</table>
+								</form>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title i18n" name='page3_explain_title'></div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-two">
+												<div class="explain_name i18n" name='page3_explain_1'></div>
+												<div class="explain_content i18n" name='page3_explain_1_1'></div>
+												<br />
+												<div class="explain_name i18n" name='page3_explain_2'></div>
+												<div class="explain_content i18n" name='page3_explain_2_1'></div>
+												<br />
+												<div class="explain_help"><a class="i18n" name='page3_explain_help' href="#"> </a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+
+		<tr height="50px">
+			<td align="center">Copyright © 1998-2020 **Inc. All Rights Reserved </td>
+		</tr>
+	</table>
+	<script type="text/javascript" src="js/content.js"></script>
+	<script type="text/javascript" src="js/page1.js"></script>
+	<script type="text/javascript" src="js/page2.js"></script>
+	<script type="text/javascript" src="js/page3.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.i18n.properties.js"></script>
+	<script type="text/javascript" src="js/language.js"></script>
+</body>
+</html>

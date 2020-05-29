@@ -4,25 +4,26 @@
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/index.css">
-<title>用户登录</title>
+<meta id="i18n_pagename" content="index">
+<title class="i18n" name='index_title'></title>
 </head>
 <body>
 	<form method="post" action="php/index.php">
 		<div class="body-box">
 			<div class="title-box">
-				<div class="title">xxx配置界面</div>
+				<div class="title i18n" name='index_set_title'></div>
 			</div>
 			<div class="userlogin-box">
 				<div class="user-box">
-					<label for="username">账号</label>
-					<input type="text" id="username" name="username" placeholder="请输入用户名">
+					<label for="username" class="i18n" name='index_username'></label>
+					<input type="text" id="username" name="username" class="i18n-input" selectname="username" selectattr="placeholder">
 				</div>
 				<div class="password-box">
-					<label for="password">密码:</label>
-					<input type="password" id="password" name="password" placeholder="请输入密码"/>
+					<label for="password" class="i18n" name='index_password'></label>
+					<input type="password" id="password" name="password" class="i18n-input" selectname="password" selectattr="placeholder"/>
 				</div>
 				<div class="login-box">
-					<input id="submit" type="submit" value="登录"/><span id="error" style="color: red;font-size: 12px;"></span>
+					<input id="submit" type="submit" class="i18n-input" selectname='login'/><span id="error" style="color: red;font-size: 12px;"></span>
 				</div>
 			</div>
 		</div>
@@ -38,10 +39,14 @@
 	        	var json = JSON.parse(xhr.responseText);
 	        	var error = document.getElementById('error');
 	        	if(!json.error){
-	        		error.innerHTML = " 用户名或密码错误";
+	        		if(getCookie("userLanguage")== "zh-CN"){
+	        			error.innerHTML = " 用户名或密码错误";
+	        		}else if(getCookie("userLanguage")== "en"){
+	        			error.innerHTML = " username or password error";
+	        		}
 	        	}else{
 	        		var jsonStr = JSON.stringify(json.data);
-	        		window.location.href = 'content_ch.html';
+	        		window.location.href = 'content.html';
 	        		/* console.log(json.data); */
 	        	}
 	        }
@@ -59,4 +64,7 @@
 	    return false;
 	}
 </script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.i18n.properties.js"></script>
+<script type="text/javascript" src="js/language.js"></script>
 </html>
