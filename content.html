@@ -69,7 +69,7 @@
 							</td>
 							<td width="600px" bgcolor="#fafafa">
 								<table class="content" width="600px" height="850px" cellspacing="0" >
-									<tr><th class="i18n" name='page1_version'></th></tr>
+									<tr><th ><span class="i18n" name='page1_version'></span></th></tr>
 									<tr>
 										<td class="i18n" name='page1_firmware_version'></td>
 										<td id="firmware_version"></td>
@@ -78,12 +78,12 @@
 										<td class="i18n" name='page1_hardware_version'></td>
 										<td id="hardware_version"></td>
 									</tr>
-									<tr><th class="i18n" name='page1_device_certificate'></th></tr>
+									<tr><th><span class="i18n" name='page1_device_certificate'></span></th></tr>
 									<tr>
 										<td class="i18n" name='page1_device_certificate'></td>
 										<td id="certificate"></td>
 									</tr>
-									<tr><th class="i18n" name='page1_network'></th></tr>
+									<tr><th><span class="i18n" name='page1_network'></span></th></tr>
 									<tr>
 										<td class="i18n" name='page1_internet_port'></td>
 										<td id="internet_port"></td>
@@ -113,7 +113,7 @@
 										<td class="i18n" name='page1_secondary_dns'></td>
 										<td id="second_dns"></td>
 									</tr>
-									<tr><th class="i18n" name='page1_network_common'></th></tr>
+									<tr><th><span class="i18n" name='page1_network_common'></span></th></tr>
 									<tr>
 										<td class="i18n" name='page1_mac_address'></td>
 										<td id="physical_address"></td>
@@ -138,7 +138,7 @@
 										<td class="i18n" name='page1_current_time'></td>
 										<td id="now_time"> </td>
 									</tr>
-									<tr><th class="i18n" name='page1_account_status'></th></tr>
+									<tr><th><span class="i18n" name='page1_account_status'></span></th></tr>
 									<tr>
 										<td class="i18n" name='page1_account_1'></td>
 										<td id="account_1"></td>
@@ -151,7 +151,7 @@
 										<td class="i18n" name='page1_account_3'></td>
 										<td id="account_3"></td>
 									</tr>
-									<tr><th class="i18n" name='page1_ext'>&emsp;</th></tr>
+									<tr><th><span class="i18n" name='page1_ext'></span></th></tr>
 								</table>
 							</td>
 							<td width="200px" bgcolor="#c0c0c0">
@@ -196,7 +196,7 @@
 								<form action="php/page2_submit.php" method="post">
 									<table class="content_two" width="600px" height="850px" cellspacing="0" >
 										<tr>
-											<th class="i18n" name='page2_account'></th>
+											<th><span class="i18n" name='page2_account'></span></th>	<!-- 账号 -->
 											<td>
 												<select id="page2_account" name="page2_account" onchange="account_select(this.value)">
 													<option value="account_1" class="i18n" name='page2_account_1'></option>
@@ -238,7 +238,7 @@
 											<td class="i18n" name='page2_password'></td>
 											<td><input id="password" type="password" name="password"></td>
 										</tr>
-										<tr><th class="i18n" name='page2_sip_server_1'></th></tr>
+										<tr><th><span class="i18n" name='page2_sip_server_1'></span></th></tr>	<!-- SIP服务器 1 -->
 										<tr>
 											<td class="i18n" name='page2_server_address1'></td>
 											<td><input id="server_address1" type="text" name="server_address1"></td>
@@ -257,7 +257,7 @@
 											<td class="i18n" name='page2_repetition1'></td>
 											<td><input id="repetition1" type="text" name="repetition1"></td>
 										</tr>
-										<tr><th class="i18n" name='page2_sip_server_2'></th></tr>
+										<tr><th><span class="i18n" name='page2_sip_server_2'></span></th></tr>	<!-- SIP服务器 2 -->
 										<tr>
 											<td class="i18n" name='page2_server_address2'></td>
 											<td><input id="server_address2" type="text" name="server_address2"></td>
@@ -354,7 +354,7 @@
 							<td class="two-1" width="600px" bgcolor="#fafafa">
 								<form action="php/page3_submit.php" method="post">
 									<table class="content_three" width="600px" height="850px" cellspacing="0" >
-										<tr><th class="i18n" name='page3_internet_port'></th></tr>
+										<tr><th><span class="i18n" name='page3_internet_port'></span></th></tr>
 										<tr>
 											<td class="i18n" name='page3_Mode'></td>
 											<td>
@@ -364,7 +364,7 @@
 												</select>
 											</td>
 										</tr>
-										<tr><th class="i18n" name='page3_ipv4_config'></th></tr>
+										<tr><th><span class="i18n" name='page3_ipv4_config'></span></th></tr>
 										<tr>
 											<td>
 												<input id="page3_ipv4_dhcp_id" type="radio" name="ipv4_type_set" value="dhcp" checked="checked" onclick="ipv4_dhcp()">
@@ -406,7 +406,7 @@
 											<td class="i18n" name='page3_ipv4_secondDNS'></td>
 											<td><input id="page3_ipv4_secondDNS" name="page3_ipv4_secondDNS" type="text" disabled="disabled"></td>
 										</tr>
-										<tr><th class="i18n" name='page3_ipv6_config'>&emsp;</th></tr>
+										<tr><th><span class="i18n" name='page3_ipv6_config'></span></th></tr>
 										<tr>
 											<td>
 												<input id="page3_ipv6_dhcp_id" type="radio" name="ipv6_type_set" value="dhcp" checked="checked" onclick="ipv6_dhcp()">
@@ -472,7 +472,7 @@
 									</tr>
 									<tr>
 										<td>
-											<div class="explain-box-two">
+											<div class="explain-box-three">
 												<div class="explain_name i18n" name='page3_explain_1'></div>
 												<div class="explain_content i18n" name='page3_explain_1_1'></div>
 												<br />
