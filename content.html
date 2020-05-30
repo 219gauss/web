@@ -65,89 +65,89 @@
 					<table  height="850px" cellspacing="0" >
 						<tr>
 							<td class="sidebar-one" width="200px" bgcolor="#c0c0c0">
-								<div class="i18n" name='page1_status'></div>
+								<div class="i18n" name='page1_status'></div>	<!-- 状态 -->
 							</td>
 							<td width="600px" bgcolor="#fafafa">
 								<table class="content" width="600px" height="850px" cellspacing="0" >
 									<tr><th ><span class="i18n" name='page1_version'></span></th></tr>
-									<tr>
+									<tr>	<!-- 固件版本 -->
 										<td class="i18n" name='page1_firmware_version'></td>
 										<td id="firmware_version"></td>
 									</tr>
-									<tr>
+									<tr>	<!-- 硬件版本 -->
 										<td class="i18n" name='page1_hardware_version'></td>
 										<td id="hardware_version"></td>
 									</tr>
 									<tr><th><span class="i18n" name='page1_device_certificate'></span></th></tr>
-									<tr>
+									<tr>	<!-- 设备证书 -->
 										<td class="i18n" name='page1_device_certificate'></td>
 										<td id="certificate"></td>
 									</tr>
 									<tr><th><span class="i18n" name='page1_network'></span></th></tr>
-									<tr>
+									<tr>	<!-- 因特网接口 -->
 										<td class="i18n" name='page1_internet_port'></td>
 										<td id="internet_port"></td>
 									</tr>
 									<tr><th id="internet_port_title" style="white-space: pre;">    IPv4</th></tr>
-									<tr>
+									<tr>	<!-- WAN口类型 -->
 										<td class="i18n" name='page1_wan_port_type'></td>
 										<td id="wan_port"></td>
 									</tr>
-									<tr>
+									<tr>	<!-- IP地址 -->
 										<td class="i18n" name='page1_wan_ip_address'></td>
 										<td id="ip_address"></td>
 									</tr>
-									<tr>
+									<tr>	<!-- 子网掩码 -->
 										<td class="i18n" name='page1_subnet_mask'></td>
 										<td id="mask"></td>
 									</tr>
-									<tr>
+									<tr>	<!-- 网关地址 -->
 										<td class="i18n" name='page1_gateway'></td>
 										<td id="gateway"></td>
 									</tr>
-									<tr>
+									<tr>	<!-- 首选DNS -->
 										<td class="i18n" name='page1_primary_dns'></td>
 										<td id="first_dns"></td>
 									</tr>
-									<tr>
+									<tr>	<!-- 备选DNS -->
 										<td class="i18n" name='page1_secondary_dns'></td>
 										<td id="second_dns"></td>
 									</tr>
 									<tr><th><span class="i18n" name='page1_network_common'></span></th></tr>
-									<tr>
+									<tr>	<!-- 物理地址 -->
 										<td class="i18n" name='page1_mac_address'></td>
 										<td id="physical_address"></td>
 									</tr>
-									<tr>
+									<tr>	<!-- WAN口状态 -->
 										<td class="i18n" name='page1_wan_port_status'></td>
 										<td></td>
 									</tr>
-									<tr>
+									<tr>	<!-- PC口状态 -->
 										<td class="i18n" name='page1_pc_port_status'></td>
 										<td></td>
 									</tr>
-									<tr>
+									<tr>	<!-- 连接类型 -->
 										<td class="i18n" name='page1_device_type'></td>
 										<td></td>
 									</tr>
-									<tr>
+									<tr>	<!-- 运行时间 -->
 										<td class="i18n" name='page1_uptime'></td>
 										<td id="run_time"></td>
 									</tr>
-									<tr>
+									<tr>	<!-- 当前时间 -->
 										<td class="i18n" name='page1_current_time'></td>
 										<td id="now_time"> </td>
 									</tr>
 									<tr><th><span class="i18n" name='page1_account_status'></span></th></tr>
-									<tr>
+									<tr>	<!-- 账号 1 -->
 										<td class="i18n" name='page1_account_1'></td>
 										<td id="account_1"></td>
 									</tr>
-									<tr>
+									<tr>	<!-- 账号 2 -->
 										<td class="i18n" name='page1_account_2'></td>
 										<td id="account_2"></td>
 									</tr>
-									<tr>
+									<tr>	<!-- 账号 3 -->
 										<td class="i18n" name='page1_account_3'></td>
 										<td id="account_3"></td>
 									</tr>
@@ -195,8 +195,8 @@
 							<td class="two-1" width="600px" bgcolor="#fafafa">
 								<form action="php/page2_submit.php" method="post">
 									<table class="content_two" width="600px" height="850px" cellspacing="0" >
-										<tr>
-											<th><span class="i18n" name='page2_account'></span></th>	<!-- 账号 -->
+										<tr>	<!-- 账号 -->
+											<th><span class="i18n" name='page2_account'></span></th>
 											<td>
 												<select id="page2_account" name="page2_account" onchange="account_select(this.value)">
 													<option value="account_1" class="i18n" name='page2_account_1'></option>
@@ -205,11 +205,11 @@
 												</select>
 											</td>
 										</tr>
-										<tr>
+										<tr>	<!-- 注册状态 -->
 											<td class="i18n" name='page2_register_status'></td>
 											<td id="reg_status"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 线路激活 -->
 											<td class="i18n" name='page2_path_activate'></td>
 											<td>
 												<select id="path_activate" name="path_activate">
@@ -218,66 +218,66 @@
 												</select>
 											</td>
 										</tr>
-										<tr>
+										<tr>	<!-- 标签 -->
 											<td class="i18n" name='page2_lable'></td>
 											<td><input id="lable" type="text" name="lable"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 显示名称 -->
 											<td class="i18n" name='page2_show_name'></td>
 											<td><input id="show_name" type="text" name="show_name"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 注册名称 -->
 											<td class="i18n" name='page2_login_name'></td>
 											<td><input id="login_name" type="text" name="login_name"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 用户名称 -->
 											<td class="i18n" name='page2_user_name'></td>
 											<td><input id="user_name" type="text" name="user_name"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 密码 -->
 											<td class="i18n" name='page2_password'></td>
 											<td><input id="password" type="password" name="password"></td>
 										</tr>
 										<tr><th><span class="i18n" name='page2_sip_server_1'></span></th></tr>	<!-- SIP服务器 1 -->
-										<tr>
+										<tr>	<!-- 服务器地址	端口 -->
 											<td class="i18n" name='page2_server_address1'></td>
 											<td><input id="server_address1" type="text" name="server_address1"></td>
 											<td class="i18n" name='page2_port1'></td>
-											<td> <input id="port1" type="text" name="port1"></td>
+											<td> <input id="port1" type="text" name="port1"></td>	<!-- 端口 -->
 										</tr>
-										<tr>
+										<tr>	<!-- 传输方式 -->
 											<td class="i18n" name='page2_transfer1'></td>
 											<td><input id="transfer1" type="text" name="transfer1"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 心跳报文 -->
 											<td class="i18n" name='page2_heartbeat1'></td>
 											<td><input id="heartbeat1" type="text" name="heartbeat1"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 重试次数 -->
 											<td class="i18n" name='page2_repetition1'></td>
 											<td><input id="repetition1" type="text" name="repetition1"></td>
 										</tr>
 										<tr><th><span class="i18n" name='page2_sip_server_2'></span></th></tr>	<!-- SIP服务器 2 -->
-										<tr>
+										<tr>	<!-- 服务器地址	端口 -->
 											<td class="i18n" name='page2_server_address2'></td>
 											<td><input id="server_address2" type="text" name="server_address2"></td>
 											<td class="i18n" name='page2_port2'></td>
 											<td> <input id="port2" type="text" name="port2"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 传输方式 -->
 											<td class="i18n" name='page2_transfer2'></td>
 											<td><input id="transfer2" type="text" name="transfer2"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 心跳报文 -->
 											<td class="i18n" name='page2_heartbeat2'></td>
 											<td><input id="heartbeat2" type="text" name="heartbeat2"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 重试次数 -->
 											<td class="i18n" name='page2_repetition2'></td>
 											<td><input id="repetition2" type="text" name="repetition2"></td>
 										</tr>
 										<tr><td><br /></td></tr>
-										<tr>
+										<tr>	<!-- 启用Outbound代理 -->
 											<td class="i18n" name='page2_enable_outbound_proxy_server'></td>
 											<td>
 												<select id="Outbound" name="Outbound">
@@ -286,19 +286,19 @@
 												</select>
 											</td>
 										</tr>
-										<tr>
+										<tr>	<!-- Outbound代理服务器1	 -->
 											<td class="i18n" name='page2_outbound_1'></td>
 											<td><input id="agency_server1" type="text" name="agency_server1"> </td>
 										</tr>
-										<tr>
+										<tr>	<!-- Outbound代理服务器2	 -->
 											<td class="i18n" name='page2_outbound_2'></td>
 											<td><input id="agency_server2" type="text" name="agency_server2"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 代理回退间隔 -->
 											<td class="i18n" name='page2_proxy_fallback_interval'></td>
 											<td><input id="rollback" type="text" name="rollback"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- NAT -->
 											<td class="i18n" name='page2_nat'></td>
 											<td><input id="nat" type="text" name="nat"></td>
 										</tr>
@@ -368,28 +368,28 @@
 										<tr>
 											<td>
 												<input id="page3_ipv4_dhcp_id" type="radio" name="ipv4_type_set" value="dhcp" checked="checked" onclick="ipv4_dhcp()">
-												<label for="page3_ipv4_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label>
+												<label for="page3_ipv4_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label> <!-- DHCP -->
 											</td>
 										</tr>
-										<tr>
+										<tr>	<!-- 静态IP地址 -->
 											<td>
 												<input id="page3_ipv4_staticip_id" type="radio" name="ipv4_type_set" value="static" onclick="ipv4_staticip()">
 												<label class="i18n" name='page3_ipv4_staticip_id' for="page3_ipv4_staticip_id" style="cursor: pointer;"></label>
 											</td>
 										</tr>
-										<tr>
+										<tr>	<!-- IP地址 -->
 											<td class="i18n" name='page3_ipv4_ipaddress'></td>
 											<td><input id="page3_ipv4_ipaddress" name="page3_ipv4_ipaddress" type="text" disabled="disabled"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 子网掩码 -->
 											<td class="i18n" name='page3_ipv4_mask'></td>
 											<td><input id="page3_ipv4_mask" name="page3_ipv4_mask" type="text" disabled="disabled"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 网关地址 -->
 											<td class="i18n" name='page3_ipv4_gateway'></td>
 											<td><input id="page3_ipv4_gateway" name="page3_ipv4_gateway" type="text" disabled="disabled"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 静态 DNS -->
 											<td class="i18n" name='page3_ipv4_staticdns'></td>
 											<td>
 												<input id="page3_ipv4_staticdns_open_id" type="radio" name="ipv4_staticDNS" value="open" onclick="ipv4_staticdns_open()">
@@ -398,11 +398,11 @@
 												<label class="i18n" name='page3_ipv4_staticdns_close_id' for="page3_ipv4_staticdns_close_id" style="cursor: pointer;"></label>
 											</td>
 										</tr>
-										<tr>
+										<tr>	<!-- 首选DNS -->
 											<td class="i18n" name='page3_ipv4_firstDNS'></td>
 											<td><input id="page3_ipv4_firstDNS" name="page3_ipv4_firstDNS" type="text" disabled="disabled"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 备选DNS -->
 											<td class="i18n" name='page3_ipv4_secondDNS'></td>
 											<td><input id="page3_ipv4_secondDNS" name="page3_ipv4_secondDNS" type="text" disabled="disabled"></td>
 										</tr>
@@ -419,19 +419,19 @@
 												<label class="i18n" name='page3_ipv6_staticip_id' for="page3_ipv6_staticip_id" style="cursor: pointer;"></label>
 											</td>
 										</tr>
-										<tr>
+										<tr>	<!-- IP地址 -->
 											<td class="i18n" name='page3_ipv6_ipaddress'></td>
 											<td><input id="page3_ipv6_ipaddress" name="page3_ipv6_ipaddress" type="text" disabled="disabled"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- IPv6前缀(0~128) -->
 											<td class="i18n" name='page3_ipv6_mask'></td>
 											<td><input id="page3_ipv6_mask" name="page3_ipv6_mask" type="text" disabled="disabled"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 网关地址 -->
 											<td class="i18n" name='page3_ipv6_gateway'></td>
 											<td><input id="page3_ipv6_gateway" name="page3_ipv6_gateway" type="text" disabled="disabled"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 静态IPv6 DNS -->
 											<td class="i18n" name='page3_ipv6_staticdns'></td>
 											<td>
 												<input id="page3_ipv6_staticdns_open_id" type="radio" name="ipv6_staticDNS" value="open" onclick="ipv6_staticdns_open()">
@@ -440,11 +440,11 @@
 												<label class="i18n" name='page3_ipv6_staticdns_close_id' for="page3_ipv6_staticdns_close_id" style="cursor: pointer;"></label>
 											</td>
 										</tr>
-										<tr>
+										<tr>	<!-- 首选DNS -->
 											<td class="i18n" name='page3_ipv6_firstDNS'></td>
 											<td><input id="page3_ipv6_firstDNS" name="page3_ipv6_firstDNS" type="text" disabled="disabled"></td>
 										</tr>
-										<tr>
+										<tr>	<!-- 备选DNS -->
 											<td class="i18n" name='page3_ipv6_secondDNS'></td>
 											<td><input id="page3_ipv6_secondDNS" name="page3_ipv6_secondDNS" type="text" disabled="disabled"></td>
 										</tr>
