@@ -509,158 +509,152 @@
 										<tr>
 											<td class="i18n" name='page4_line_key1'></td>	<!-- 账号键1 -->
 											<td>
-												<select>
-													<option class="i18n" name='page4_type_empty' value=""></option>			<!-- 空 -->
-													<option class="i18n" name='page4_type_line' value=""></option>			<!-- 线路 -->
-													<option class="i18n" name='page4_type_speed_dial' value=""></option>	<!-- 速拨 -->
-													<option class="i18n" name='page4_type_blf' value=""></option>			<!-- BLF -->
-													<option class="i18n" name='page4_type_blf_list' value=""></option>		<!-- BLF List -->
-													<option class="i18n" name='page4_type_voice_mail' value=""></option>	<!-- 语音留言 -->
-													<option class="i18n" name='page4_type_pickup' value=""></option>		<!-- 截答 -->
-													<option class="i18n" name='page4_type_group_pickup' value=""></option>	<!-- 群组截答 -->
-													<option class="i18n" name='page4_type_call_park' value=""></option>		<!-- 通话驻留 -->
-													<option class="i18n" name='page4_type_intercom' value=""></option>		<!-- 对讲机 -->
-													<option class="i18n" name='page4_type_dtmf' value=""></option>			<!-- DTMF -->
-													<option class="i18n" name='page4_type_prefix' value=""></option>		<!-- 前缀 -->
-													<option class="i18n" name='page4_type_local_group' value=""></option>	<!-- 本地群组 -->
-													<option class="i18n" name='page4_type_xml_group' value=""></option>		<!-- XML群组 -->
-													<option class="i18n" name='page4_type_xml_browser' value=""></option>	<!-- XML浏览 -->
-													<option class="i18n" name='page4_type_conference' value=""></option>	<!-- 会议 -->
-													<option class="i18n" name='page4_type_forward' value=""></option>		<!-- 呼叫转移 -->
-													<option class="i18n" name='page4_type_transfer' value=""></option>		<!-- 通话转接 -->
-													<option class="i18n" name='page4_type_hold' value=""></option>			<!-- 保持 -->
-													<option class="i18n" name='page4_type_dnd' value=""></option>			<!-- 免打扰 -->
-													<option class="i18n" name='page4_type_recall' value=""></option>		<!-- 回呼 -->
-													<option class="i18n" name='page4_type_sms' value=""></option>			<!-- 短信息 -->
-													<option class="i18n" name='page4_type_record' value=""></option>		<!-- 录音 -->
-													<option class="i18n" name='page4_type_url_record' value=""></option>	<!-- URL录音 -->
-													<option class="i18n" name='page4_type_paging' value=""></option>		<!-- 组播 -->
-													<option class="i18n" name='page4_type_group_listening' value=""></option>	<!-- 群听 -->
-													<option class="i18n" name='page4_type_private_hold' value=""></option>	<!-- 私有保持 -->
-													<option class="i18n" name='page4_type_hot_desking' value=""></option>	<!-- 移动办公 -->
-													<option class="i18n" name='page4_type_acd' value=""></option>			<!-- ACD -->
-													<option class="i18n" name='page4_type_zero_touch' value=""></option>	<!-- 一键更新 -->
-													<option class="i18n" name='page4_type_url' value=""></option>			<!-- URL -->
-													<option class="i18n" name='page4_type_phone_lock' value=""></option>	<!-- 键盘锁 -->
-													<option class="i18n" name='page4_type_retrieve_park' value=""></option>	<!-- 取回驻留 -->
-													<option class="i18n" name='page4_type_directory' value=""></option>		<!-- 联系人 -->
-													<option class="i18n" name='page4_type_paging_list' value=""></option>	<!-- 组播列表 -->
+												<select id="page4_account1_type" name="page4_account1_type" onchange="page4_account_type_select(this.name,this.value)">
+													<option class="i18n" name='page4_type_empty' value="empty"></option>				<!-- 空 -->
+													<option class="i18n" name='page4_type_line' value="line" selected="selected"></option>					<!-- 线路 -->
+													<option class="i18n" name='page4_type_speed_dial' value="speed_dial"></option>		<!-- 速拨 -->
+													<option class="i18n" name='page4_type_blf' value="blf"></option>					<!-- BLF -->
+													<option class="i18n" name='page4_type_blf_list' value="blf_list"></option>			<!-- BLF List -->
+													<option class="i18n" name='page4_type_voice_mail' value="voice_mail"></option>		<!-- 语音留言 -->
+													<option class="i18n" name='page4_type_pickup' value="pickup"></option>				<!-- 截答 -->
+													<option class="i18n" name='page4_type_group_pickup' value="group_pickup"></option>	<!-- 群组截答 -->
+													<option class="i18n" name='page4_type_call_park' value="call_park"></option>		<!-- 通话驻留 -->
+													<option class="i18n" name='page4_type_intercom' value="intercom"></option>			<!-- 对讲机 -->
+													<option class="i18n" name='page4_type_dtmf' value="dtmf"></option>					<!-- DTMF -->
+													<option class="i18n" name='page4_type_prefix' value="prefix"></option>				<!-- 前缀 -->
+													<option class="i18n" name='page4_type_local_group' value="local_group"></option>	<!-- 本地群组 -->
+													<option class="i18n" name='page4_type_xml_group' value="xml_group"></option>		<!-- XML群组 -->
+													<option class="i18n" name='page4_type_xml_browser' value="xml_browser"></option>	<!-- XML浏览 -->
+													<option class="i18n" name='page4_type_conference' value="conference"></option>		<!-- 会议 -->
+													<option class="i18n" name='page4_type_forward' value="forward"></option>			<!-- 呼叫转移 -->
+													<option class="i18n" name='page4_type_transfer' value="transfer"></option>			<!-- 通话转接 -->
+													<option class="i18n" name='page4_type_hold' value="hold"></option>					<!-- 保持 -->
+													<option class="i18n" name='page4_type_dnd' value="dnd"></option>					<!-- 免打扰 -->
+													<option class="i18n" name='page4_type_recall' value="recall"></option>				<!-- 回呼 -->
+													<option class="i18n" name='page4_type_sms' value="sms"></option>					<!-- 短信息 -->
+													<option class="i18n" name='page4_type_record' value="record"></option>				<!-- 录音 -->
+													<option class="i18n" name='page4_type_url_record' value="url_record"></option>		<!-- URL录音 -->
+													<option class="i18n" name='page4_type_paging' value="paging"></option>				<!-- 组播 -->
+													<option class="i18n" name='page4_type_group_listening' value="group_listening"></option>	<!-- 群听 -->
+													<option class="i18n" name='page4_type_private_hold' value="private_hold"></option>	<!-- 私有保持 -->
+													<option class="i18n" name='page4_type_hot_desking' value="hot_desking"></option>	<!-- 移动办公 -->
+													<option class="i18n" name='page4_type_acd' value="acd"></option>					<!-- ACD -->
+													<option class="i18n" name='page4_type_zero_touch' value="zero_touch"></option>		<!-- 一键更新 -->
+													<option class="i18n" name='page4_type_url' value="url"></option>					<!-- URL -->
+													<option class="i18n" name='page4_type_phone_lock' value="phone_lock"></option>		<!-- 键盘锁 -->
+													<option class="i18n" name='page4_type_retrieve_park' value="retrieve_park"></option>	<!-- 取回驻留 -->
+													<option class="i18n" name='page4_type_directory' value="directory"></option>		<!-- 联系人 -->
+													<option class="i18n" name='page4_type_paging_list' value="paging_list"></option>	<!-- 组播列表 -->
 												</select>
 											</td>
-											<td><input type="text" style="width: 100px;"/></td>
-											<td><input type="text" style="width: 100px;"/></td>
+											<td><input id="page4_account1_value" type="text" style="width: 100px;"/></td>
+											<td><input id="page4_account1_lable" type="text" style="width: 100px;"/></td>
 											<td>
-												<select>
-													<option class="i18n" name='page4_line_1'></option>	<!-- 线路一 -->
-													<option class="i18n" name='page4_line_2'></option>	<!-- 线路二 -->
-													<option class="i18n" name='page4_line_3'></option>	<!-- 线路三 -->
+												<select id="page4_account1_line_select" name="page4_account1_line_select">
+
 												</select>
 											</td>
-											<td><input type="text" style="width: 100px;"/></td>
+											<td><input id="page4_account1_extension" type="text" style="width: 100px;"/></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page4_line_key2'></td>	<!-- 账号键2 -->
 											<td>
-												<select>
-													<option class="i18n" name='page4_type_empty' value=""></option>			<!-- 空 -->
-													<option class="i18n" name='page4_type_line' value=""></option>			<!-- 线路 -->
-													<option class="i18n" name='page4_type_speed_dial' value=""></option>	<!-- 速拨 -->
-													<option class="i18n" name='page4_type_blf' value=""></option>			<!-- BLF -->
-													<option class="i18n" name='page4_type_blf_list' value=""></option>		<!-- BLF List -->
-													<option class="i18n" name='page4_type_voice_mail' value=""></option>	<!-- 语音留言 -->
-													<option class="i18n" name='page4_type_pickup' value=""></option>		<!-- 截答 -->
-													<option class="i18n" name='page4_type_group_pickup' value=""></option>	<!-- 群组截答 -->
-													<option class="i18n" name='page4_type_call_park' value=""></option>		<!-- 通话驻留 -->
-													<option class="i18n" name='page4_type_intercom' value=""></option>		<!-- 对讲机 -->
-													<option class="i18n" name='page4_type_dtmf' value=""></option>			<!-- DTMF -->
-													<option class="i18n" name='page4_type_prefix' value=""></option>		<!-- 前缀 -->
-													<option class="i18n" name='page4_type_local_group' value=""></option>	<!-- 本地群组 -->
-													<option class="i18n" name='page4_type_xml_group' value=""></option>		<!-- XML群组 -->
-													<option class="i18n" name='page4_type_xml_browser' value=""></option>	<!-- XML浏览 -->
-													<option class="i18n" name='page4_type_conference' value=""></option>	<!-- 会议 -->
-													<option class="i18n" name='page4_type_forward' value=""></option>		<!-- 呼叫转移 -->
-													<option class="i18n" name='page4_type_transfer' value=""></option>		<!-- 通话转接 -->
-													<option class="i18n" name='page4_type_hold' value=""></option>			<!-- 保持 -->
-													<option class="i18n" name='page4_type_dnd' value=""></option>			<!-- 免打扰 -->
-													<option class="i18n" name='page4_type_recall' value=""></option>		<!-- 回呼 -->
-													<option class="i18n" name='page4_type_sms' value=""></option>			<!-- 短信息 -->
-													<option class="i18n" name='page4_type_record' value=""></option>		<!-- 录音 -->
-													<option class="i18n" name='page4_type_url_record' value=""></option>	<!-- URL录音 -->
-													<option class="i18n" name='page4_type_paging' value=""></option>		<!-- 组播 -->
-													<option class="i18n" name='page4_type_group_listening' value=""></option>	<!-- 群听 -->
-													<option class="i18n" name='page4_type_private_hold' value=""></option>	<!-- 私有保持 -->
-													<option class="i18n" name='page4_type_hot_desking' value=""></option>	<!-- 移动办公 -->
-													<option class="i18n" name='page4_type_acd' value=""></option>			<!-- ACD -->
-													<option class="i18n" name='page4_type_zero_touch' value=""></option>	<!-- 一键更新 -->
-													<option class="i18n" name='page4_type_url' value=""></option>			<!-- URL -->
-													<option class="i18n" name='page4_type_phone_lock' value=""></option>	<!-- 键盘锁 -->
-													<option class="i18n" name='page4_type_retrieve_park' value=""></option>	<!-- 取回驻留 -->
-													<option class="i18n" name='page4_type_directory' value=""></option>		<!-- 联系人 -->
-													<option class="i18n" name='page4_type_paging_list' value=""></option>	<!-- 组播列表 -->
+												<select id="page4_account2_type" name="page4_account2_type" onchange="page4_account_type_select(this.name,this.value)">
+													<option class="i18n" name='page4_type_empty' value="empty"></option>				<!-- 空 -->
+													<option class="i18n" name='page4_type_line' value="line" selected="selected"></option>					<!-- 线路 -->
+													<option class="i18n" name='page4_type_speed_dial' value="speed_dial"></option>		<!-- 速拨 -->
+													<option class="i18n" name='page4_type_blf' value="blf"></option>					<!-- BLF -->
+													<option class="i18n" name='page4_type_blf_list' value="blf_list"></option>			<!-- BLF List -->
+													<option class="i18n" name='page4_type_voice_mail' value="voice_mail"></option>		<!-- 语音留言 -->
+													<option class="i18n" name='page4_type_pickup' value="pickup"></option>				<!-- 截答 -->
+													<option class="i18n" name='page4_type_group_pickup' value="group_pickup"></option>	<!-- 群组截答 -->
+													<option class="i18n" name='page4_type_call_park' value="call_park"></option>		<!-- 通话驻留 -->
+													<option class="i18n" name='page4_type_intercom' value="intercom"></option>			<!-- 对讲机 -->
+													<option class="i18n" name='page4_type_dtmf' value="dtmf"></option>					<!-- DTMF -->
+													<option class="i18n" name='page4_type_prefix' value="prefix"></option>				<!-- 前缀 -->
+													<option class="i18n" name='page4_type_local_group' value="local_group"></option>	<!-- 本地群组 -->
+													<option class="i18n" name='page4_type_xml_group' value="xml_group"></option>		<!-- XML群组 -->
+													<option class="i18n" name='page4_type_xml_browser' value="xml_browser"></option>	<!-- XML浏览 -->
+													<option class="i18n" name='page4_type_conference' value="conference"></option>		<!-- 会议 -->
+													<option class="i18n" name='page4_type_forward' value="forward"></option>			<!-- 呼叫转移 -->
+													<option class="i18n" name='page4_type_transfer' value="transfer"></option>			<!-- 通话转接 -->
+													<option class="i18n" name='page4_type_hold' value="hold"></option>					<!-- 保持 -->
+													<option class="i18n" name='page4_type_dnd' value="dnd"></option>					<!-- 免打扰 -->
+													<option class="i18n" name='page4_type_recall' value="recall"></option>				<!-- 回呼 -->
+													<option class="i18n" name='page4_type_sms' value="sms"></option>					<!-- 短信息 -->
+													<option class="i18n" name='page4_type_record' value="record"></option>				<!-- 录音 -->
+													<option class="i18n" name='page4_type_url_record' value="url_record"></option>		<!-- URL录音 -->
+													<option class="i18n" name='page4_type_paging' value="paging"></option>				<!-- 组播 -->
+													<option class="i18n" name='page4_type_group_listening' value="group_listening"></option>	<!-- 群听 -->
+													<option class="i18n" name='page4_type_private_hold' value="private_hold"></option>	<!-- 私有保持 -->
+													<option class="i18n" name='page4_type_hot_desking' value="hot_desking"></option>	<!-- 移动办公 -->
+													<option class="i18n" name='page4_type_acd' value="acd"></option>					<!-- ACD -->
+													<option class="i18n" name='page4_type_zero_touch' value="zero_touch"></option>		<!-- 一键更新 -->
+													<option class="i18n" name='page4_type_url' value="url"></option>					<!-- URL -->
+													<option class="i18n" name='page4_type_phone_lock' value="phone_lock"></option>		<!-- 键盘锁 -->
+													<option class="i18n" name='page4_type_retrieve_park' value="retrieve_park"></option>	<!-- 取回驻留 -->
+													<option class="i18n" name='page4_type_directory' value="directory"></option>		<!-- 联系人 -->
+													<option class="i18n" name='page4_type_paging_list' value="paging_list"></option>	<!-- 组播列表 -->
 												</select>
 											</td>
-											<td><input type="text" style="width: 100px;"/></td>
-											<td><input type="text" style="width: 100px;"/></td>
+											<td><input id="page4_account2_value" type="text" style="width: 100px;"/></td>
+											<td><input id="page4_account2_lable" type="text" style="width: 100px;"/></td>
 											<td>
-												<select>
-													<option class="i18n" name='page4_line_1'></option>	<!-- 线路一 -->
-													<option class="i18n" name='page4_line_2'></option>	<!-- 线路二 -->
-													<option class="i18n" name='page4_line_3'></option>	<!-- 线路三 -->
+												<select id="page4_account2_line_select" name="page4_account2_line_select">
+
 												</select>
 											</td>
-											<td><input type="text" style="width: 100px;"/></td>
+											<td><input id="page4_account2_extension" type="text" style="width: 100px;"/></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page4_line_key3'></td>	<!-- 账号键3 -->
 											<td>
-												<select>
-													<option class="i18n" name='page4_type_empty' value=""></option>			<!-- 空 -->
-													<option class="i18n" name='page4_type_line' value=""></option>			<!-- 线路 -->
-													<option class="i18n" name='page4_type_speed_dial' value=""></option>	<!-- 速拨 -->
-													<option class="i18n" name='page4_type_blf' value=""></option>			<!-- BLF -->
-													<option class="i18n" name='page4_type_blf_list' value=""></option>		<!-- BLF List -->
-													<option class="i18n" name='page4_type_voice_mail' value=""></option>	<!-- 语音留言 -->
-													<option class="i18n" name='page4_type_pickup' value=""></option>		<!-- 截答 -->
-													<option class="i18n" name='page4_type_group_pickup' value=""></option>	<!-- 群组截答 -->
-													<option class="i18n" name='page4_type_call_park' value=""></option>		<!-- 通话驻留 -->
-													<option class="i18n" name='page4_type_intercom' value=""></option>		<!-- 对讲机 -->
-													<option class="i18n" name='page4_type_dtmf' value=""></option>			<!-- DTMF -->
-													<option class="i18n" name='page4_type_prefix' value=""></option>		<!-- 前缀 -->
-													<option class="i18n" name='page4_type_local_group' value=""></option>	<!-- 本地群组 -->
-													<option class="i18n" name='page4_type_xml_group' value=""></option>		<!-- XML群组 -->
-													<option class="i18n" name='page4_type_xml_browser' value=""></option>	<!-- XML浏览 -->
-													<option class="i18n" name='page4_type_conference' value=""></option>	<!-- 会议 -->
-													<option class="i18n" name='page4_type_forward' value=""></option>		<!-- 呼叫转移 -->
-													<option class="i18n" name='page4_type_transfer' value=""></option>		<!-- 通话转接 -->
-													<option class="i18n" name='page4_type_hold' value=""></option>			<!-- 保持 -->
-													<option class="i18n" name='page4_type_dnd' value=""></option>			<!-- 免打扰 -->
-													<option class="i18n" name='page4_type_recall' value=""></option>		<!-- 回呼 -->
-													<option class="i18n" name='page4_type_sms' value=""></option>			<!-- 短信息 -->
-													<option class="i18n" name='page4_type_record' value=""></option>		<!-- 录音 -->
-													<option class="i18n" name='page4_type_url_record' value=""></option>	<!-- URL录音 -->
-													<option class="i18n" name='page4_type_paging' value=""></option>		<!-- 组播 -->
-													<option class="i18n" name='page4_type_group_listening' value=""></option>	<!-- 群听 -->
-													<option class="i18n" name='page4_type_private_hold' value=""></option>	<!-- 私有保持 -->
-													<option class="i18n" name='page4_type_hot_desking' value=""></option>	<!-- 移动办公 -->
-													<option class="i18n" name='page4_type_acd' value=""></option>			<!-- ACD -->
-													<option class="i18n" name='page4_type_zero_touch' value=""></option>	<!-- 一键更新 -->
-													<option class="i18n" name='page4_type_url' value=""></option>			<!-- URL -->
-													<option class="i18n" name='page4_type_phone_lock' value=""></option>	<!-- 键盘锁 -->
-													<option class="i18n" name='page4_type_retrieve_park' value=""></option>	<!-- 取回驻留 -->
-													<option class="i18n" name='page4_type_directory' value=""></option>		<!-- 联系人 -->
-													<option class="i18n" name='page4_type_paging_list' value=""></option>	<!-- 组播列表 -->
+												<select id="page4_account3_type" name="page4_account3_type" onchange="page4_account_type_select(this.name,this.value)">
+													<option class="i18n" name='page4_type_empty' value="empty"></option>				<!-- 空 -->
+													<option class="i18n" name='page4_type_line' value="line" selected="selected"></option>					<!-- 线路 -->
+													<option class="i18n" name='page4_type_speed_dial' value="speed_dial"></option>		<!-- 速拨 -->
+													<option class="i18n" name='page4_type_blf' value="blf"></option>					<!-- BLF -->
+													<option class="i18n" name='page4_type_blf_list' value="blf_list"></option>			<!-- BLF List -->
+													<option class="i18n" name='page4_type_voice_mail' value="voice_mail"></option>		<!-- 语音留言 -->
+													<option class="i18n" name='page4_type_pickup' value="pickup"></option>				<!-- 截答 -->
+													<option class="i18n" name='page4_type_group_pickup' value="group_pickup"></option>	<!-- 群组截答 -->
+													<option class="i18n" name='page4_type_call_park' value="call_park"></option>		<!-- 通话驻留 -->
+													<option class="i18n" name='page4_type_intercom' value="intercom"></option>			<!-- 对讲机 -->
+													<option class="i18n" name='page4_type_dtmf' value="dtmf"></option>					<!-- DTMF -->
+													<option class="i18n" name='page4_type_prefix' value="prefix"></option>				<!-- 前缀 -->
+													<option class="i18n" name='page4_type_local_group' value="local_group"></option>	<!-- 本地群组 -->
+													<option class="i18n" name='page4_type_xml_group' value="xml_group"></option>		<!-- XML群组 -->
+													<option class="i18n" name='page4_type_xml_browser' value="xml_browser"></option>	<!-- XML浏览 -->
+													<option class="i18n" name='page4_type_conference' value="conference"></option>		<!-- 会议 -->
+													<option class="i18n" name='page4_type_forward' value="forward"></option>			<!-- 呼叫转移 -->
+													<option class="i18n" name='page4_type_transfer' value="transfer"></option>			<!-- 通话转接 -->
+													<option class="i18n" name='page4_type_hold' value="hold"></option>					<!-- 保持 -->
+													<option class="i18n" name='page4_type_dnd' value="dnd"></option>					<!-- 免打扰 -->
+													<option class="i18n" name='page4_type_recall' value="recall"></option>				<!-- 回呼 -->
+													<option class="i18n" name='page4_type_sms' value="sms"></option>					<!-- 短信息 -->
+													<option class="i18n" name='page4_type_record' value="record"></option>				<!-- 录音 -->
+													<option class="i18n" name='page4_type_url_record' value="url_record"></option>		<!-- URL录音 -->
+													<option class="i18n" name='page4_type_paging' value="paging"></option>				<!-- 组播 -->
+													<option class="i18n" name='page4_type_group_listening' value="group_listening"></option>	<!-- 群听 -->
+													<option class="i18n" name='page4_type_private_hold' value="private_hold"></option>	<!-- 私有保持 -->
+													<option class="i18n" name='page4_type_hot_desking' value="hot_desking"></option>	<!-- 移动办公 -->
+													<option class="i18n" name='page4_type_acd' value="acd"></option>					<!-- ACD -->
+													<option class="i18n" name='page4_type_zero_touch' value="zero_touch"></option>		<!-- 一键更新 -->
+													<option class="i18n" name='page4_type_url' value="url"></option>					<!-- URL -->
+													<option class="i18n" name='page4_type_phone_lock' value="phone_lock"></option>		<!-- 键盘锁 -->
+													<option class="i18n" name='page4_type_retrieve_park' value="retrieve_park"></option>	<!-- 取回驻留 -->
+													<option class="i18n" name='page4_type_directory' value="directory"></option>		<!-- 联系人 -->
+													<option class="i18n" name='page4_type_paging_list' value="paging_list"></option>	<!-- 组播列表 -->
 												</select>
 											</td>
-											<td><input type="text" style="width: 100px;"/></td>
-											<td><input type="text" style="width: 100px;"/></td>
+											<td><input id="page4_account3_value" type="text" style="width: 100px;"/></td>
+											<td><input id="page4_account3_lable" type="text" style="width: 100px;"/></td>
 											<td>
-												<select>
-													<option class="i18n" name='page4_line_1'></option>	<!-- 线路一 -->
-													<option class="i18n" name='page4_line_2'></option>	<!-- 线路二 -->
-													<option class="i18n" name='page4_line_3'></option>	<!-- 线路三 -->
+												<select id="page4_account3_line_select" name="page4_account3_line_select">
+
 												</select>
 											</td>
-											<td><input type="text" style="width: 100px;"/></td>
+											<td><input id="page4_account3_extension" type="text" style="width: 100px;"/></td>
 										</tr>
 										<tr>
 											<td></td>
