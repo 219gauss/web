@@ -63,7 +63,7 @@ a[href="#"]{
 }
 
 /* -------------正文部分设置---------------------------- */
-.one>table,.two>table,.three>table{
+.one>table,.two>table,.three>table,.four>table{
 border: 10px solid #ffffff;
 }
 
@@ -103,27 +103,27 @@ border: 10px solid #ffffff;
 }
 
 /* ---------右侧说明栏-------------- */
-.explain-box-one,.explain-box-two,.explain-box-three{
+.explain-box-one,.explain-box-two,.explain-box-three,.explain-box-four{
 	position: relative;
 	top: -250px;
 	font-size: 14px;
 }
 
-.explain-box-one .explain_name,.explain-box-two .explain_name,.explain-box-three .explain_name{
+.explain-box-one .explain_name,.explain-box-two .explain_name,.explain-box-three .explain_name,.explain-box-four .explain_name{
 	font-weight: bold;
 }
 
-.explain-box-one a,.explain-box-two a,.explain-box-three a{
+.explain-box-one a,.explain-box-two a,.explain-box-three a,.explain-box-four a{
 	font-size: 14px;
 	color: #000000;
 }
 
-.explain-box-one a:HOVER,.explain-box-two a:HOVER,.explain-box-three a:HOVER{
+.explain-box-one a:HOVER,.explain-box-two a:HOVER,.explain-box-three a:HOVER,.explain-box-four a:HOVER{
 	color: blue;
 	text-decoration: underline;
 }
 
-.explain-box-one a:BEFORE,.explain-box-two a:BEFORE,.explain-box-three a:BEFORE{
+.explain-box-one a:BEFORE,.explain-box-two a:BEFORE,.explain-box-three a:BEFORE,.explain-box-four a:BEFORE{
 	content: "*";
 	color: red;
 }
@@ -175,8 +175,31 @@ border: 10px solid #ffffff;
 	text-align: left;
 }
 
+/* -------page 4--------- */
+.sidebar-four div{
+	position: relative;
+	top: -350px;
+	text-align: center;
+	background: #c0c0c0;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.sidebar-four .s4_1{
+	background: #fafafa;
+}
+
+.content_four tr:FIRST-CHILD{
+	background: #999999;
+}
+
+.content_four tr td{
+	text-align: center;
+	font-size: 12px;
+}
+
 /* 设置所有页面标题和说明的间距 */
-.content th span,.explain-box-one div,.content_two th span,.explain-box-two div,.content_three th span,.explain-box-three div{
+.content th span,.explain-box-one div,.content_two th span,.explain-box-two div,.content_three th span,.explain-box-three div,.explain-box-four div{
 	padding-left: 16px;
 }
 
@@ -185,7 +208,7 @@ border: 10px solid #ffffff;
 	display: block;
 }
 
-.two,.three{
+.two,.three,.four{
 	display: none;
 }
 

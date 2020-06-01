@@ -5,11 +5,21 @@
 	tab_1 = document.getElementById("tab_1");
 	tab_2 = document.getElementById("tab_2");
 	tab_3 = document.getElementById("tab_3");
+	tab_4 = document.getElementById("tab_4");
+	tab_5 = document.getElementById("tab_5");
+	tab_6 = document.getElementById("tab_6");
+	tab_7 = document.getElementById("tab_7");
+	tab_8 = document.getElementById("tab_8");
 
 	//主要内容
 	content_1 = document.getElementById("one_1");
 	content_2 = document.getElementById("two_2");
 	content_3 = document.getElementById("three_3");
+	content_4 = document.getElementById("four_4");
+	content_5 = document.getElementById("five_5");
+	content_6 = document.getElementById("six_6");
+	content_7 = document.getElementById("seven_7");
+	content_8 = document.getElementById("eight_8");
 
 
 
