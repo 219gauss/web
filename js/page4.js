@@ -1,17 +1,19 @@
 /**
  * 	页面四
  */
-
+_page4_account1_type = document.getElementById("page4_account1_type");
 _page4_account1_value = document.getElementById("page4_account1_value");
 _page4_account1_lable = document.getElementById("page4_account1_lable");
 _page4_account1_line_select = document.getElementById("page4_account1_line_select");
 _page4_account1_extension = document.getElementById("page4_account1_extension");
 
+_page4_account2_type = document.getElementById("page4_account2_type");
 _page4_account2_value = document.getElementById("page4_account2_value");
 _page4_account2_lable = document.getElementById("page4_account2_lable");
 _page4_account2_line_select = document.getElementById("page4_account2_line_select");
 _page4_account2_extension = document.getElementById("page4_account2_extension");
 
+_page4_account3_type = document.getElementById("page4_account3_type");
 _page4_account3_value = document.getElementById("page4_account3_value");
 _page4_account3_lable = document.getElementById("page4_account3_lable");
 _page4_account3_line_select = document.getElementById("page4_account3_line_select");
@@ -567,3 +569,49 @@ function account3_value_select(value) {
 		break;
 	}
 }
+
+
+
+/*点击确定，提交数据*/
+page4_submit = document.getElementById('page4_submit');
+page4_submit.onclick = function(){
+	var xhr = new XMLHttpRequest();
+
+	xhr.onreadystatechange = function () {
+        if(xhr.readyState==4 && xhr.status == 200){
+        	var json = JSON.parse(xhr.responseText);
+        	if(json.flag == "1"){
+        		alert("保存成功！");
+        	}else if(json.flag == "0"){
+        		alert("保存失败！");
+        	}
+        	//console.log(xhr.responseText);
+        }
+    }
+
+	datainit();
+    var data = 'flag='+"0"
+			    +'&page4_account1_type='+		_page4_account1_type.value
+				+'&page4_account1_value='+		_page4_account1_value.value
+				+'&page4_account1_lable='+		_page4_account1_lable.value
+				+'&page4_account1_line_select='+_page4_account1_line_select.value
+				+'&page4_account1_extension='+	_page4_account1_extension.value
+				+'&page4_account2_type='+		_page4_account2_type.value
+				+'&page4_account2_value='+		_page4_account2_value.value
+				+'&page4_account2_lable='+		_page4_account2_lable.value
+				+'&page4_account2_line_select='+_page4_account2_line_select.value
+				+'&page4_account2_extension='+	_page4_account2_extension.value
+				+'&page4_account3_type='+		_page4_account3_type.value
+				+'&page4_account3_value='+		_page4_account3_value.value
+				+'&page4_account3_lable='+		_page4_account3_lable.value
+				+'&page4_account3_line_select='+_page4_account3_line_select.value
+				+'&page4_account3_extension='+	_page4_account3_extension.value;
+    var url = 'php/page4_submit.php';
+    xhr.open('post',url,true);
+
+    xhr.setRequestHeader('content-type','application/x-www-form-urlencoded');
+
+    xhr.send(data);
+    return false;
+}
+
