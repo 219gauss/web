@@ -34,6 +34,7 @@ function tabtwo() {
 		content_2.style.display = "block";
 		content_3.style.display = "none";
 		content_4.style.display = "none";
+		content_5.style.display = "none";
 	}
 
 	if(tab_2){
@@ -45,6 +46,8 @@ function tabtwo() {
 		tab_3.style.color = "";
 		tab_4.style.background = "";
 		tab_4.style.color = "";
+		tab_5.style.background = "";
+		tab_5.style.color = "";
 	}
 
 	//显示数据

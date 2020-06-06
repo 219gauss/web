@@ -67,6 +67,7 @@ function tabone() {
 		content_2.style.display = "none";	//不可见
 		content_3.style.display = "none";
 		content_4.style.display = "none";
+		content_5.style.display = "none";
 	}
 
 	if(tab_1){
@@ -78,6 +79,8 @@ function tabone() {
 		tab_3.style.color = "";
 		tab_4.style.background = "";
 		tab_4.style.color = "";
+		tab_5.style.background = "";
+		tab_5.style.color = "";
 	}
 	data_init();
 }

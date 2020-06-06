@@ -98,13 +98,14 @@ if (document.cookie.split("=")[1] == "en") {
 	page4_account3_all_contacts.innerHTML="所有联系人";
 }
 
-//点击标签三
+//点击标签四
 function tabfour() {
 	if(content_4.style.display == "none" || content_4.style.display == ""){
 		content_1.style.display = "none";
 		content_2.style.display = "none";
 		content_3.style.display = "none";
 		content_4.style.display = "block";
+		content_5.style.display = "none";
 	}
 
 	if(tab_4){
@@ -116,6 +117,8 @@ function tabfour() {
 		tab_3.style.color = "";
 		tab_4.style.background = "#fafafa";
 		tab_4.style.color = "#000000";
+		tab_5.style.background = "";
+		tab_5.style.color = "";
 	}
 	//page4_account_type_select();
 	$.get("php/page4.php",function(data,status){

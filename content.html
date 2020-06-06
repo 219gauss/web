@@ -717,6 +717,215 @@
 						</tr>
 					</table>
 				</div>
+				<div id="five_5" class="five">	<!-- 页面五 -->
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-five" width="200px" bgcolor="#c0c0c0">
+								<div class="s5_1 i18n" name='page5_forward_dnd'></div>		<!-- 呼叫转移 & 免打扰 -->
+								<div class="i18n" name='page5_general_information'></div>	<!-- 基本信息 -->
+								<div class="i18n" name='page5_audio'></div>					<!-- 声音 -->
+								<div class="i18n" name='page5_intercom'></div>				<!-- 对讲机 -->
+								<div class="i18n" name='page5_transfer'></div>				<!-- 对讲机 -->
+								<div class="i18n" name='page5_pick_up_park'></div>			<!-- 呼叫截答 -->
+								<div class="i18n" name='page5_remote_control'></div>		<!-- 远程控制 -->
+								<div class="i18n" name='page5_phone_lock'></div>			<!-- 键盘锁 -->
+								<div class="i18n" name='page5_acd'></div>					<!-- ACD -->
+								<div class="i18n" name='page5_sms'></div>					<!-- 短信息 -->
+								<div class="i18n" name='page5_action_url'></div>			<!-- Action URL -->
+								<div class="i18n" name='page5_power_led'></div>				<!-- 电源灯 -->
+								<div class="i18n" name='page5_notification_popups'></div>	<!-- 弹出通知窗口 -->
+							</td>
+							<td class="five-1" width="600px" bgcolor="#fafafa">
+								<form action="php/page5_submit.php" method="post">
+									<table class="content_five" width="600px" height="850px" cellspacing="0">
+										<tr><th><span class="i18n" name='page5_forward'></span></th></tr>	<!-- 呼叫转移 -->
+										<tr>
+											<td class="i18n" name='page5_forward_emergency'></td>	<!-- 呼叫转移紧急号码 -->
+											<td>
+												<select>
+													<option class="i18n" name='page5_forward_disable'></option>	<!-- 禁用 -->
+													<option class="i18n" name='page5_forward_enable'></option>	<!-- 启用 -->
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_forward_authorized_numbers'></td>	<!-- 呼叫转移鉴权号码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_forward_mode'></td>	<!-- 模式 -->
+											<td>
+												<input id="page5_forward_mode_phone" type="radio" name="page5_forward_mode">
+												<label class="i18n" name='page5_forward_mode_phone' for="page5_forward_mode_phone" style="cursor: pointer;"></label>	<!-- 话机 -->
+												<input id="page5_forward_mode_custom" type="radio" name="page5_forward_mode">
+												<label class="i18n" name='page5_forward_mode_custom' for="page5_forward_mode_custom" style="cursor: pointer;"></label>	<!-- 自定义 -->
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_forward_account'></td>	<!-- 账号 -->
+											<td>
+												<select>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_always_forward'></td>	<!-- 无条件转移 -->
+											<td>
+												<input id="page5_always_forward_on" type="radio" name="page5_always_forward">
+												<label class="i18n" name='page5_always_forward_on' for="page5_always_forward_on" style="cursor: pointer;"></label>	<!-- 开 -->
+												<input id="page5_always_forward_off" type="radio" name="page5_always_forward">
+												<label class="i18n" name='page5_always_forward_off' for="page5_always_forward_off" style="cursor: pointer;"></label>	<!-- 关 -->
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_always_forward_target'></td>	<!-- 目标号码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_always_forward_on_code'></td>	<!-- 开启特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_always_forward_off_code'></td>	<!-- 关闭特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_busy_forward'></td>	<!-- 遇忙转移 -->
+											<td>
+												<input id="page5_busy_forward_on" type="radio" name="page5_busy_forward">
+												<label class="i18n" name='page5_busy_forward_on' for="page5_busy_forward_on" style="cursor: pointer;"></label>	<!-- 开 -->
+												<input id="page5_busy_forward_off" type="radio" name="page5_busy_forward">
+												<label class="i18n" name='page5_busy_forward_off' for="page5_busy_forward_off" style="cursor: pointer;"></label>	<!-- 关 -->
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_busy_forward_target'></td>	<!-- 目标号码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_busy_forward_on_code'></td>	<!-- 开启特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_busy_forward_off_code'></td>	<!-- 关闭特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_no_answer_forward'></td>	<!-- 无应答转移 -->
+											<td>
+												<input id="page5_no_answer_forward_on" type="radio" name="page5_no_answer_forward">
+												<label class="i18n" name='page5_no_answer_forward_on' for="page5_no_answer_forward_on" style="cursor: pointer;"></label>	<!-- 开 -->
+												<input id="page5_no_answer_forward_off" type="radio" name="page5_no_answer_forward">
+												<label class="i18n" name='page5_no_answer_forward_off' for="page5_no_answer_forward_off" style="cursor: pointer;"></label>	<!-- 关 -->
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_ring_time'></td>	<!-- 响铃时间（秒） -->
+											<td>
+												<select>
+													<option>0</option>
+													<option>10</option>
+													<option>20</option>
+													<option>30</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_no_answer_forward_target'></td>	<!-- 目标号码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_no_answer_forward_on_code'></td>	<!-- 开启特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_no_answer_forward_off_code'></td>	<!-- 关闭特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr><th><span class="i18n" name='page5_dnd'></span></th></tr>	<!-- 免打扰 -->
+										<tr>
+											<td class="i18n" name='page5_dnd_emergency'></td>	<!-- 紧急号码 -->
+											<td>
+												<select>
+													<option class="i18n" name='page5_dnd_disable'></option>	<!-- 禁用 -->
+													<option class="i18n" name='page5_dnd_enable'></option>	<!-- 启用 -->
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_dnd_authorized_numbers'></td>	<!-- 免打扰鉴权号码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_dnd_mode'></td>	<!-- 模式 -->
+											<td>
+												<input id="page5_dnd_mode_phone" type="radio" name="page5_dnd_mode">
+												<label class="i18n" name='page5_dnd_mode_phone' for="page5_dnd_mode_phone" style="cursor: pointer;"></label>	<!-- 话机 -->
+												<input id="page5_dnd_mode_custom" type="radio" name="page5_dnd_mode">
+												<label class="i18n" name='page5_dnd_mode_custom' for="page5_dnd_mode_custom" style="cursor: pointer;"></label>	<!-- 自定义 -->
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_dnd_account'></td>	<!-- 账号 -->
+											<td>
+												<select>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_dnd_status'></td>	<!-- 免打扰状态 -->
+											<td>
+												<input id="page5_dnd_status_on" type="radio" name="page5_dnd_status">
+												<label class="i18n" name='page5_dnd_status_on' for="page5_dnd_status_on" style="cursor: pointer;"></label>	<!-- 开 -->
+												<input id="page5_dnd_status_off" type="radio" name="page5_dnd_status">
+												<label class="i18n" name='page5_dnd_status_off' for="page5_dnd_status_off" style="cursor: pointer;"></label>	<!-- 关 -->
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_dnd_on_code'></td>	<!-- 开启特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_dnd_off_code'></td>	<!-- 关闭特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td><input class="i18n-input" selectname='page5_submit' type="submit"/></td>	<!-- 确认 -->
+											<td><input class="i18n-input" selectname='page5_cancel' type="button"/></td>	<!-- 取消 -->
+										</tr>
+
+									</table>
+								</form>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title i18n" name='page5_explain_title'></div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-five">
+												<div class="explain_name i18n" name='page5_explain_1'></div>
+												<div class="explain_content i18n" name='page5_explain_1_1'></div>
+												<br />
+												<div class="explain_name i18n" name='page5_explain_2'></div>
+												<div class="explain_content i18n" name='page5_explain_2_1'></div>
+												<br />
+												<div class="explain_name i18n" name='page5_explain_3'></div>
+												<div class="explain_content i18n" name='page5_explain_3_1'></div>
+												<br />
+												<div class="explain_help"><a class="i18n" name='page5_explain_help' href="#"> </a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</td>
 		</tr>
 
@@ -729,6 +938,7 @@
 	<script type="text/javascript" src="js/page2.js"></script>
 	<script type="text/javascript" src="js/page3.js"></script>
 	<script type="text/javascript" src="js/page4.js"></script>
+	<script type="text/javascript" src="js/page5.js"></script>
 
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.i18n.properties.js"></script>
