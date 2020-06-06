@@ -742,15 +742,15 @@
 										<tr>
 											<td class="i18n" name='page5_forward_emergency'></td>	<!-- 呼叫转移紧急号码 -->
 											<td>
-												<select>
-													<option class="i18n" name='page5_forward_disable'></option>	<!-- 禁用 -->
-													<option class="i18n" name='page5_forward_enable'></option>	<!-- 启用 -->
+												<select id="page5_forward_emergency">
+													<option class="i18n" name='page5_forward_disable' value="0"></option>	<!-- 禁用 -->
+													<option class="i18n" name='page5_forward_enable' value="1"></option>	<!-- 启用 -->
 												</select>
 											</td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_forward_authorized_numbers'></td>	<!-- 呼叫转移鉴权号码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_forward_authorized_numbers" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_forward_mode'></td>	<!-- 模式 -->
@@ -764,7 +764,7 @@
 										<tr>
 											<td class="i18n" name='page5_forward_account'></td>	<!-- 账号 -->
 											<td>
-												<select>
+												<select id="page5_forward_account">
 												</select>
 											</td>
 										</tr>
@@ -779,15 +779,15 @@
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_always_forward_target'></td>	<!-- 目标号码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_always_forward_target" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_always_forward_on_code'></td>	<!-- 开启特征码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_always_forward_on_code" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_always_forward_off_code'></td>	<!-- 关闭特征码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_always_forward_off_code" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_busy_forward'></td>	<!-- 遇忙转移 -->
@@ -800,15 +800,15 @@
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_busy_forward_target'></td>	<!-- 目标号码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_busy_forward_target" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_busy_forward_on_code'></td>	<!-- 开启特征码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_busy_forward_on_code" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_busy_forward_off_code'></td>	<!-- 关闭特征码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_busy_forward_off_code" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_no_answer_forward'></td>	<!-- 无应答转移 -->
@@ -822,39 +822,39 @@
 										<tr>
 											<td class="i18n" name='page5_ring_time'></td>	<!-- 响铃时间（秒） -->
 											<td>
-												<select>
-													<option>0</option>
-													<option>10</option>
-													<option>20</option>
-													<option>30</option>
+												<select id="page5_ring_time">
+													<option value="0">0</option>
+													<option value="10">10</option>
+													<option value="20">20</option>
+													<option value="30">30</option>
 												</select>
 											</td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_no_answer_forward_target'></td>	<!-- 目标号码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_no_answer_forward_target" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_no_answer_forward_on_code'></td>	<!-- 开启特征码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_no_answer_forward_on_code" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_no_answer_forward_off_code'></td>	<!-- 关闭特征码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_no_answer_forward_off_code" type="text"></td>
 										</tr>
 										<tr><th><span class="i18n" name='page5_dnd'></span></th></tr>	<!-- 免打扰 -->
 										<tr>
 											<td class="i18n" name='page5_dnd_emergency'></td>	<!-- 紧急号码 -->
 											<td>
-												<select>
-													<option class="i18n" name='page5_dnd_disable'></option>	<!-- 禁用 -->
-													<option class="i18n" name='page5_dnd_enable'></option>	<!-- 启用 -->
+												<select id="page5_dnd_emergency">
+													<option class="i18n" name='page5_dnd_disable' value="0"></option>	<!-- 禁用 -->
+													<option class="i18n" name='page5_dnd_enable' value="1"></option>	<!-- 启用 -->
 												</select>
 											</td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_dnd_authorized_numbers'></td>	<!-- 免打扰鉴权号码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_dnd_authorized_numbers" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_dnd_mode'></td>	<!-- 模式 -->
@@ -868,7 +868,7 @@
 										<tr>
 											<td class="i18n" name='page5_dnd_account'></td>	<!-- 账号 -->
 											<td>
-												<select>
+												<select id="page5_dnd_account">
 												</select>
 											</td>
 										</tr>
@@ -883,15 +883,18 @@
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_dnd_on_code'></td>	<!-- 开启特征码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_dnd_on_code" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page5_dnd_off_code'></td>	<!-- 关闭特征码 -->
-											<td><input type="text"></td>
+											<td><input id="page5_dnd_off_code" type="text"></td>
 										</tr>
 										<tr>
-											<td><input class="i18n-input" selectname='page5_submit' type="submit"/></td>	<!-- 确认 -->
-											<td><input class="i18n-input" selectname='page5_cancel' type="button"/></td>	<!-- 取消 -->
+											<td colspan="2">
+												<input id="page5_submit" class="i18n-input" selectname='page5_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page5_cancel" class="i18n-input" selectname='page5_cancel' type="button"/>	<!-- 取消 -->
+											</td>
 										</tr>
 
 									</table>

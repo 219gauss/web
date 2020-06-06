@@ -1320,7 +1320,6 @@ page4_submit.onclick = function(){
         }
     }
 
-	datainit();
     var data = 'flag='+"0"
 			    +'&page4_account1_type='+		_page4_account1_type.value
 				+'&page4_account1_value='+		_page4_account1_value.value
