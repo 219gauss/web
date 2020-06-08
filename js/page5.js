@@ -43,6 +43,7 @@ function tabfive() {
 		content_3.style.display = "none";
 		content_4.style.display = "none";
 		content_5.style.display = "block";
+		content_6.style.display = "none";
 	}
 
 	if(tab_5){
@@ -56,6 +57,8 @@ function tabfive() {
 		tab_4.style.color = "";
 		tab_5.style.background = "#fafafa";
 		tab_5.style.color = "#000000";
+		tab_6.style.background = "";
+		tab_6.style.color = "";
 	}
 
 	$.get("php/page5.php",function(data,status){
@@ -85,7 +88,7 @@ function page5_display_data(data) {
 	_page5_busy_forward_on_code.value = data.busy_forward_on_code;
 	_page5_busy_forward_off_code.value = data.busy_forward_off_code;
 	data.no_answer_forward = "on"?_page5_no_answer_forward_on.checked = true:_page5_no_answer_forward_off.checked = true;
-	$(" select option[value='"+data.ring_time+"']").attr("selected","selected");
+	$(" select[id='page5_ring_time'] option[value='"+data.ring_time+"']").attr("selected","selected");
 	_page5_no_answer_forward_target.value = data.no_answer_forward_target;
 	_page5_no_answer_forward_on_code.value = data.no_answer_forward_on_code;
 	_page5_no_answer_forward_off_code.value = data.no_answer_forward_off_code;

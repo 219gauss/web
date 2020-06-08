@@ -106,6 +106,7 @@ function tabfour() {
 		content_3.style.display = "none";
 		content_4.style.display = "block";
 		content_5.style.display = "none";
+		content_6.style.display = "none";
 	}
 
 	if(tab_4){
@@ -119,6 +120,8 @@ function tabfour() {
 		tab_4.style.color = "#000000";
 		tab_5.style.background = "";
 		tab_5.style.color = "";
+		tab_6.style.background = "";
+		tab_6.style.color = "";
 	}
 	//page4_account_type_select();
 	$.get("php/page4.php",function(data,status){
