@@ -13,7 +13,8 @@
 	}
 </script>
 </head>
-<body onload="data_init()" onmouseover="mouseover()">
+<!-- <body onload="data_init()" onmouseover="mouseover()"> -->
+<body onload="data_init()">
 	<table align="center" cellspacing="0">
 		<tr height="100px">
 			<td>
@@ -755,9 +756,9 @@
 										<tr>
 											<td class="i18n" name='page5_forward_mode'></td>	<!-- 模式 -->
 											<td>
-												<input id="page5_forward_mode_phone" type="radio" name="page5_forward_mode">
+												<input id="page5_forward_mode_phone" type="radio" name="page5_forward_mode" onclick="forward_mode_phone_click()">
 												<label class="i18n" name='page5_forward_mode_phone' for="page5_forward_mode_phone" style="cursor: pointer;"></label>	<!-- 话机 -->
-												<input id="page5_forward_mode_custom" type="radio" name="page5_forward_mode">
+												<input id="page5_forward_mode_custom" type="radio" name="page5_forward_mode" onclick="forward_mode_custom_click()">
 												<label class="i18n" name='page5_forward_mode_custom' for="page5_forward_mode_custom" style="cursor: pointer;"></label>	<!-- 自定义 -->
 											</td>
 										</tr>
@@ -859,9 +860,9 @@
 										<tr>
 											<td class="i18n" name='page5_dnd_mode'></td>	<!-- 模式 -->
 											<td>
-												<input id="page5_dnd_mode_phone" type="radio" name="page5_dnd_mode">
+												<input id="page5_dnd_mode_phone" type="radio" name="page5_dnd_mode" onclick="dnd_mode_phone_click()">
 												<label class="i18n" name='page5_dnd_mode_phone' for="page5_dnd_mode_phone" style="cursor: pointer;"></label>	<!-- 话机 -->
-												<input id="page5_dnd_mode_custom" type="radio" name="page5_dnd_mode">
+												<input id="page5_dnd_mode_custom" type="radio" name="page5_dnd_mode" onclick="dnd_mode_custom_click()">
 												<label class="i18n" name='page5_dnd_mode_custom' for="page5_dnd_mode_custom" style="cursor: pointer;"></label>	<!-- 自定义 -->
 											</td>
 										</tr>

@@ -57,6 +57,67 @@ function tabfive() {
 		tab_5.style.background = "#fafafa";
 		tab_5.style.color = "#000000";
 	}
+
+	$.get("php/page5.php",function(data,status){
+		if (status == "success") {
+			var json = JSON.parse(data);
+			console.log(json.data);
+			page5_display_data(json.data);
+		}
+	});
+}
+
+function page5_display_data(data) {
+	console.log(data);
+	_page5_forward_emergency.options[data.forward_emergency].selected = true;
+	_page5_forward_authorized_numbers.value = data.forward_authorized_numbers;
+	data.forward_mode == "phone"?forward_mode_phone_click():forward_mode_custom_click();
+	$("#page5_forward_account").empty();
+	for (var i = data.forward_account.length - 1; i >= 0; i--) {
+		$("#page5_forward_account").append("<option value='"+data.forward_account[i]+"'>"+data.forward_account[i]+"</option>");
+	}
+	data.always_forward == "on"?_page5_always_forward_on.checked = true:_page5_always_forward_off.checked = true;
+	_page5_always_forward_target.value = data.always_forward_target;
+	_page5_always_forward_on_code.value = data.always_forward_on_code;
+	_page5_always_forward_off_code.value = data.always_forward_off_code;
+	data.busy_forward == "on"?_page5_busy_forward_on.checked = true:_page5_busy_forward_off.checked = true;
+	_page5_busy_forward_target.value = data.busy_forward_target;
+	_page5_busy_forward_on_code.value = data.busy_forward_on_code;
+	_page5_busy_forward_off_code.value = data.busy_forward_off_code;
+	data.no_answer_forward = "on"?_page5_no_answer_forward_on.checked = true:_page5_no_answer_forward_off.checked = true;
+	$(" select option[value='"+data.ring_time+"']").attr("selected","selected");
+	_page5_no_answer_forward_target.value = data.no_answer_forward_target;
+	_page5_no_answer_forward_on_code.value = data.no_answer_forward_on_code;
+	_page5_no_answer_forward_off_code.value = data.no_answer_forward_off_code;
+	_page5_dnd_emergency.options[data.dnd_emergency].selected = true;
+	_page5_dnd_authorized_numbers.value = data.dnd_authorized_numbers;
+	data.dnd_mode == "phone"?dnd_mode_phone_click():dnd_mode_custom_click();
+	$("#page5_dnd_account").empty();
+	for (var i = data.dnd_account.length - 1; i >= 0; i--) {
+		$("#page5_dnd_account").append("<option value='"+data.dnd_account[i]+"'>"+data.dnd_account[i]+"</option>");
+	}
+	data.dnd_status == "on"?_page5_dnd_status_on.checked = true:_page5_dnd_status_off.checked = true;
+	_page5_dnd_on_code.value = data.dnd_on_code;
+	_page5_dnd_off_code.value = data.dnd_off_code;
+}
+
+
+//模式选择
+function forward_mode_phone_click(){
+	_page5_forward_mode_phone.checked = true;
+	_page5_forward_account.disabled = true;
+}
+function forward_mode_custom_click(){
+	_page5_forward_mode_custom.checked = true;
+	_page5_forward_account.disabled = false;
+}
+function dnd_mode_phone_click(){
+	_page5_dnd_mode_phone.checked = true;
+	_page5_dnd_account.disabled = true;
+}
+function dnd_mode_custom_click(){
+	_page5_dnd_mode_custom.checked = true;
+	_page5_dnd_account.disabled = false;
 }
 
 
@@ -115,3 +176,4 @@ page5_submit.onclick = function(){
     xhr.send(data);
     return false;
 }
+
