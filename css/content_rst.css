@@ -252,6 +252,19 @@ border: 10px solid #ffffff;
 	background: #fafafa;
 }
 
+.content_six td{
+	text-align: center;
+	font-size: 14px;
+}
+
+.content_six th{
+	text-align: left;
+}
+
+.content_six select{
+	width: 173px;
+}
+
 /* 设置所有页面标题和说明的间距 */
 .content th span,.explain-box-one div,.content_two th span,.explain-box-two div,.content_three th span,.explain-box-three div,.explain-box-four div,
 .content_five th span,.explain-box-five div,.explain-box-six div{
