@@ -951,95 +951,96 @@
 								<div class="i18n" name='page6_power_saving'></div>		<!-- 节电模式 -->
 							</td>
 							<td class="six-1" width="600px" bgcolor="#fafafa">
-								<form action="php/page6_submit.php" method="post">
+								<form action="php/page6_submit.php" method="post" enctype="multipart/form-data">
 									<table class="content_six" width="600px" height="850px" cellspacing="0">
 										<tr>
 											<td class="i18n" name='page6_live_dialpad'></td>	<!-- 自动呼出 -->
 											<td style="text-align:left">
-												<select>
-													<option class="i18n" name='page6_live_dialpad_disable'></option>
-													<option class="i18n" name='page6_live_dialpad_enable'></option>
+												<select id="page6_live_dialpad">
+													<option class="i18n" name='page6_live_dialpad_disable' value="0"></option>
+													<option class="i18n" name='page6_live_dialpad_enable' value="1"></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page6_inter_digit_time'></td>	<!-- 自动呼出激活时间（1~14秒） -->
-											<td style="text-align:left"><input type="text"></td>
+											<td style="text-align:left"><input id="page6_inter_digit_time" type="text"></td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page6_backlight_time'></td>	<!-- 背光灯时间 -->
 											<td style="text-align:left">
-												<select name="" id="">
-													<option class="i18n" name='page6_backlight_time_0' value=""></option>
-													<option class="i18n" name='page6_backlight_time_1' value=""></option>
-													<option class="i18n" name='page6_backlight_time_15' value=""></option>
-													<option class="i18n" name='page6_backlight_time_30' value=""></option>
+												<select id="page6_backlight_time">
+													<option class="i18n" name='page6_backlight_time_0' value="0"></option>
+													<option class="i18n" name='page6_backlight_time_1' value="1"></option>
+													<option class="i18n" name='page6_backlight_time_15' value="15"></option>
+													<option class="i18n" name='page6_backlight_time_30' value="30"></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page6_contrast'></td>	<!-- 对比度 -->
 											<td style="text-align:left">
-												<select name="" id="">
-													<option value="">1</option>
-													<option value="">2</option>
-													<option value="">3</option>
-													<option value="">4</option>
-													<option value="">5</option>
+												<select id="page6_contrast">
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
 												</select>
 											</td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page6_watch_dog'></td>	<!-- 看门狗 -->
 											<td style="text-align:left">
-												<select>
-													<option class="i18n" name='page6_watch_dog_disable'></option>
-													<option class="i18n" name='page6_watch_dog_enable'></option>
+												<select id="page6_watch_dog">
+													<option class="i18n" name='page6_watch_dog_disable' value="0"></option>
+													<option class="i18n" name='page6_watch_dog_enable' value="1"></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page6_ring_type'></td>	<!-- 铃声类型 -->
 											<td style="text-align:left">
-												<select name="" id="">
-													<option class="i18n" name='page6_ring_type_1' value=""></option>
-													<option class="i18n" name='page6_ring_type_2' value=""></option>
-													<option class="i18n" name='page6_ring_type_3' value=""></option>
-													<option class="i18n" name='page6_ring_type_4' value=""></option>
-													<option class="i18n" name='page6_ring_type_5' value=""></option>
+												<select id="page6_ring_type">
+													<option class="i18n" name='page6_ring_type_1' value="1"></option>
+													<option class="i18n" name='page6_ring_type_2' value="2"></option>
+													<option class="i18n" name='page6_ring_type_3' value="3"></option>
+													<option class="i18n" name='page6_ring_type_4' value="4"></option>
+													<option class="i18n" name='page6_ring_type_5' value="5"></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page6_upload_ringtone'></td>	<!-- 加载铃声 -->
 											<td style="text-align:left">
-												<input class="i18n-input" selectname="page6_select_file" disabled="true" type="text">
-												<input class="i18n-input" selectname='page6_browse' type="button">
+												<input id="page6_filename_show" class="i18n-input" selectname="page6_select_file" readonly="readonly" style="background:#f2f2f2" type="text" onclick="page6_ring_select()">
+												<input class="i18n-input" selectname='page6_browse' type="button" onclick="page6_ring_select()">
+												<input id="page6_file_select" type="file" name="page6_file_select" onchange="page6_file_select_change(this)" style="opacity:0; position:absolute; width:0px; " accept=".wav,.mp3">
 											</td>
 										</tr>
 										<tr>
 											<td></td>
 											<td style="text-align:left">
-												<input class="i18n-input" selectname='page6_file_upload' type="button">
-												<input class="i18n-input" selectname='page6_file_cancel' type="button">
+												<input id="page6_ring_upload" class="i18n-input" selectname='page6_file_upload' type="button">
+												<input id="page6_ring_cancel" class="i18n-input" selectname='page6_file_cancel' type="button">
 												<span></span>
 											</td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page6_screensaver_wait_time'></td>	<!-- 屏保待机时间 -->
 											<td style="text-align:left">
-												<select name="" id="">
-													<option class="i18n" name='page6_screensaver_wait_time_15s' value=""></option>
-													<option class="i18n" name='page6_screensaver_wait_time_30s' value=""></option>
-													<option class="i18n" name='page6_screensaver_wait_time_1min' value=""></option>
-													<option class="i18n" name='page6_screensaver_wait_time_5min' value=""></option>
-													<option class="i18n" name='page6_screensaver_wait_time_10min' value=""></option>
+												<select id="page6_screensaver_wait_time">
+													<option class="i18n" name='page6_screensaver_wait_time_15s' value="0"></option>
+													<option class="i18n" name='page6_screensaver_wait_time_30s' value="1"></option>
+													<option class="i18n" name='page6_screensaver_wait_time_1min' value="2"></option>
+													<option class="i18n" name='page6_screensaver_wait_time_5min' value="3"></option>
+													<option class="i18n" name='page6_screensaver_wait_time_10min' value="4"></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
 											<td class="i18n" name='page6_xml_browser_url'></td>	<!-- 	XML浏览器URL -->
-											<td style="text-align:left"><input type="text"></td>
+											<td style="text-align:left"><input id="page6_xml_browser_url" type="text"></td>
 										</tr>
 										<tr>
 											<td colspan="2">
@@ -1102,6 +1103,11 @@
 			<td align="center">Copyright © 1998-2020 **Inc. All Rights Reserved </td>
 		</tr>
 	</table>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.i18n.properties.js"></script>
+	<script type="text/javascript" src="js/language.js"></script>
+
+
 	<script type="text/javascript" src="js/content.js"></script>
 	<script type="text/javascript" src="js/page1.js"></script>
 	<script type="text/javascript" src="js/page2.js"></script>
@@ -1109,9 +1115,5 @@
 	<script type="text/javascript" src="js/page4.js"></script>
 	<script type="text/javascript" src="js/page5.js"></script>
 	<script type="text/javascript" src="js/page6.js"></script>
-
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery.i18n.properties.js"></script>
-	<script type="text/javascript" src="js/language.js"></script>
 </body>
 </html>
