@@ -111,12 +111,12 @@ page6_submit.onclick = function(){
 
 	xhr.onreadystatechange = function () {
         if(xhr.readyState==4 && xhr.status == 200){
-        	/*var json = JSON.parse(xhr.responseText);
+        	var json = JSON.parse(xhr.responseText);
         	if(json.flag == "1"){
         		alert("保存成功！");
         	}else if(json.flag == "0"){
         		alert("保存失败！");
-        	}*/
+        	}
         	//console.log(xhr.responseText);
         }
     }

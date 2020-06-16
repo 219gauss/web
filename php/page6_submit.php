@@ -1,5 +1,4 @@
 <?php
-print_r($_POST);
 
 $page6_live_dialpad=        $_POST["page6_live_dialpad"];
 $page6_inter_digit_time=    $_POST["page6_inter_digit_time"];
@@ -29,9 +28,10 @@ $sql =<<<EOF
 EOF;
 $ret = $db->exec($sql);
 if(!$ret){
-    echo $db->lastErrorMsg();
+    $_POST['flag'] = "0";
 } else {
-    echo "Table created successfully\n";
+    $_POST['flag'] = "1";
 }
 $db->close();
+echo json_encode($_POST);
 ?>

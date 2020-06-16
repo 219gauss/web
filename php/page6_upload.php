@@ -25,6 +25,7 @@ if (($_FILES["page6_file_select"]["size"] < 1024000)  // 文件小于1M
         }
         // 拷贝文件
         move_uploaded_file($_FILES["page6_file_select"]["tmp_name"], "../upload/" . $_FILES["page6_file_select"]["name"]);
+        chmod("../upload/" . $_FILES["page6_file_select"]["name"],0777);
         $_FILES["flag"] = 1;
     }
 }
