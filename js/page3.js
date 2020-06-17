@@ -260,6 +260,7 @@ function tabthree() {
 		content_4.style.display = "none";
 		content_5.style.display = "none";
 		content_6.style.display = "none";
+		content_8.style.display = "none";
 	}
 
 	if(tab_3){
@@ -275,6 +276,8 @@ function tabthree() {
 		tab_5.style.color = "";
 		tab_6.style.background = "";
 		tab_6.style.color = "";
+		tab_8.style.background = "";
+		tab_8.style.color = "";
 	}
 
 	/*page3_internet_select("ipv4");*/

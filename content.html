@@ -38,7 +38,7 @@
 								</tr>
 								<tr height="40px">
 									<td width="800px">
-										<table class="tab-box" cellspacing="0px" height="40px" width="800px">
+										<table class="tab-box" cellspacing="0px" height="40px" width="800px" style="table-layout: fixed;">
 											<tr >
 												<td id="tab_1" class="i18n" name='Status' align="center" onclick="tabone()" style="background: #fafafa;color: #000"></td>
 												<td id="tab_2" class="i18n" name='Account' align="center" onclick="tabtwo()"></td>
@@ -1096,6 +1096,98 @@
 						</tr>
 					</table>
 				</div>
+				<div id="eight_8" class="eight">	<!-- 页面八 -->
+					<table  height="850px" cellspacing="0" >
+						<tr>
+							<td class="sidebar-eight" width="200px" bgcolor="#c0c0c0">
+								<div class="s8_1 i18n" name='page8_password'></div>			<!-- 密码 -->
+								<div class="i18n" name='page8_trusted_certificates'></div>	<!-- 可信任证书 -->
+								<div class="i18n" name='page8_server_certificates'></div>	<!-- 服务器证书 -->
+							</td>
+							<td class="eight-1" width="600px" bgcolor="#fafafa">
+								<form action="php/page8_submit.php" method="post">
+									<table class="content_eight" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page8_user_type'></td>	<!-- 用户类型 -->
+											<td>
+												<select id="page8_user_type" onchange="page8_user_type_select(this.value)">
+													<option class="i18n" name='page8_admin' value="admin"></option>	<!-- 管理员 -->
+													<option class="i18n" name='page8_user' value="user"></option>	<!-- 用户 -->
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page8_old_password'></td>	<!-- 当前密码 -->
+											<td><input id="page8_old_password" type="password"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page8_new_password'></td>	<!-- 新密码 -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page8_confirm_password'></td>	<!-- 确认密码 -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input class="i18n-input" selectname='page8_submit' type="submit">	<!-- 确认 -->
+												&emsp;
+												<input class="i18n-input" selectname='page8_submit' type="button">	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+										<tr></tr>
+									</table>
+								</form>
+							</td>
+							<td width="200px" bgcolor="#c0c0c0">
+								<table class="explain_title" cellspacing="0">
+									<tr height="30px">
+										<td>
+											<div>
+												<div class="title i18n" name='page8_explain_title'></div></td>
+											</div>
+									</tr>
+									<tr>
+										<td>
+											<div class="explain-box-eight">
+												<div class="explain_name i18n" name='page8_explain_1'></div>
+												<div class="explain_content i18n" name='page8_explain_1_1'></div>
+												<br />
+												<div class="explain_name i18n" name='page8_explain_2'></div>
+												<div class="explain_content i18n" name='page8_explain_2_1'></div>
+												<br />
+												<div class="explain_name i18n" name='page8_explain_3'></div>
+												<div class="explain_content i18n" name='page8_explain_3_1'></div>
+												<br />
+												<div class="explain_help"><a class="i18n" name='page8_explain_help' href="#"> </a></div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</div>
 			</td>
 		</tr>
 
@@ -1115,5 +1207,6 @@
 	<script type="text/javascript" src="js/page4.js"></script>
 	<script type="text/javascript" src="js/page5.js"></script>
 	<script type="text/javascript" src="js/page6.js"></script>
+	<script type="text/javascript" src="js/page8.js"></script>
 </body>
 </html>
