@@ -63,7 +63,7 @@ a[href="#"]{
 }
 
 /* -------------正文部分设置---------------------------- */
-.one>table,.two>table,.three>table,.four>table,.five>table,.six>table,.eight>table{
+.one>table,.two>table,.three>table,.four>table,.five>table,.six>table,.seven>table,.eight>table{
 border: 10px solid #ffffff;
 }
 
@@ -104,31 +104,31 @@ border: 10px solid #ffffff;
 
 /* ---------右侧说明栏-------------- */
 .explain-box-one,.explain-box-two,.explain-box-three,.explain-box-four,.explain-box-five,
-.explain-box-six,.explain-box-eight{
+.explain-box-six,.explain-box-seven,.explain-box-eight{
 	position: relative;
 	top: -250px;
 	font-size: 14px;
 }
 
 .explain-box-one .explain_name,.explain-box-two .explain_name,.explain-box-three .explain_name,.explain-box-four .explain_name,.explain-box-five .explain_name,
-.explain-box-six .explain_name,.explain-box-eight .explain_name{
+.explain-box-six .explain_name,.explain-box-seven .explain_name,.explain-box-eight .explain_name{
 	font-weight: bold;
 }
 
 .explain-box-one a,.explain-box-two a,.explain-box-three a,.explain-box-four a,.explain-box-five a,
-.explain-box-six a,.explain-box-eight a{
+.explain-box-six a,.explain-box-seven a,.explain-box-eight a{
 	font-size: 14px;
 	color: #000000;
 }
 
 .explain-box-one a:HOVER,.explain-box-two a:HOVER,.explain-box-three a:HOVER,.explain-box-four a:HOVER,.explain-box-five a:HOVER,
-.explain-box-six a:HOVER,.explain-box-eight a:HOVER{
+.explain-box-six a:HOVER,.explain-box-seven a:HOVER,.explain-box-eight a:HOVER{
 	color: blue;
 	text-decoration: underline;
 }
 
 .explain-box-one a:BEFORE,.explain-box-two a:BEFORE,.explain-box-three a:BEFORE,.explain-box-four a:BEFORE,.explain-box-five a:BEFORE,
-.explain-box-six a:BEFORE,.explain-box-eight a:BEFORE{
+.explain-box-six a:BEFORE,.explain-box-seven a:BEFORE,.explain-box-eight a:BEFORE{
 	content: "*";
 	color: red;
 }
@@ -238,7 +238,7 @@ border: 10px solid #ffffff;
 	width: 173px;
 }
 
-/* -------page 5--------- */
+/* -------page 6--------- */
 .sidebar-six div{
 	position: relative;
 	top: -150px;
@@ -265,6 +265,38 @@ border: 10px solid #ffffff;
 	width: 173px;
 }
 
+/* -------page 7--------- */
+.sidebar-seven div{
+	position: relative;
+	top: -280px;
+	text-align: center;
+	background: #c0c0c0;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.sidebar-seven .s7_1{
+	background: #fafafa;
+}
+
+/* 联系人显示 */
+.content_seven{ table-layout: fixed;}
+.page7_contacts_show{ table-layout: fixed; font-size: 14px;}
+.page7_contacts_show tr:FIRST-CHILD{ background: #999999;}
+.page7_contacts_show tr:NTH-CHILD(odd):NOT(:FIRST-CHILD){ background: #f2f2f2;}
+.page7_contacts_show tr:NTH-CHILD(even):NOT(:LAST-CHILD){ background: #cccccc;}
+.page7_contacts_show tr:LAST-CHILD{ background: #a4aab2;}
+.page7_contacts_show td{ text-align: center; }
+/* 联系人编辑 */
+.page7_contact_set{width: 300px; height: 583px; text-align: center; font-size: 14px;}
+.page7_contact_set select{width: 173px;}
+.page7_contact_set tr:FIRST-CHILD td{ font-weight: bold;}
+.page7_contact_set tr:NOT(:LAST-CHILD){ height: 30px;}
+/* 群组和导入联系人 */
+.page7_contact_group{width: 300px; height: 583px; text-align: left; font-size: 14px;}
+.page7_contact_group select{width: 173px;}
+.page7_contact_group tr:NOT(:LAST-CHILD){ height: 30px;}
+
 /* -------page 8--------- */
 .sidebar-eight div{
 	position: relative;
@@ -290,7 +322,7 @@ border: 10px solid #ffffff;
 
 /* 设置所有页面标题和说明的间距 */
 .content th span,.explain-box-one div,.content_two th span,.explain-box-two div,.content_three th span,.explain-box-three div,.explain-box-four div,
-.content_five th span,.explain-box-five div,.explain-box-six div,.explain-box-eight div{
+.content_five th span,.explain-box-five div,.explain-box-six div,.explain-box-seven div,.explain-box-eight div{
 	padding-left: 16px;
 }
 
@@ -299,7 +331,7 @@ border: 10px solid #ffffff;
 	display: block;
 }
 
-.two,.three,.four,.five,.six,.eight{
+.two,.three,.four,.five,.six,.seven,.eight{
 	display: none;
 }
 

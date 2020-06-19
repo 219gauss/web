@@ -21,6 +21,7 @@ function tabsix() {
 		content_4.style.display = "none";
 		content_5.style.display = "none";
 		content_6.style.display = "block";
+		content_7.style.display = "none";
 		content_8.style.display = "none";
 	}
 
@@ -37,6 +38,8 @@ function tabsix() {
 		tab_5.style.color = "";
 		tab_6.style.background = "#fafafa";
 		tab_6.style.color = "#000000";
+		tab_7.style.background = "";
+		tab_7.style.color = "";
 		tab_8.style.background = "";
 		tab_8.style.color = "";
 	}
