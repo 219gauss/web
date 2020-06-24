@@ -1111,7 +1111,7 @@
 								<table class="content_seven" width="600px" height="850px" cellspacing="0">
 									<tr>
 										<td colspan="2" height="267px">
-											<table class="page7_contacts_show" width="580px" height="267px" cellspacing="0">
+											<table id="page7_contacts_show" class="page7_contacts_show" width="580px" height="267px" cellspacing="0">
 												<tr>
 													<td class="i18n" name='page7_index' width="50px"></td>			<!-- 索引 -->
 													<td class="i18n" name='page7_name'></td>			<!-- 姓名 -->
@@ -1119,118 +1119,117 @@
 													<td class="i18n" name='page7_mobile_number'></td>	<!-- 移动电话 -->
 													<td class="i18n" name='page7_other_numbe'></td>		<!-- 其他电话 -->
 													<td>
-														<select id="">
-															<option class="i18n" name='page7_all_contacts'></option>
-															<option class="i18n" name='page7_blacklist'></option>
+														<select id="page7_group1" onchange="page7_group1_onchange(this.value)">
+															<option class="i18n" name='page7_all_contacts' value="1"></option>
+															<option class="i18n" name='page7_blacklist' value="0"></option>
 														</select>
 													</td>
 													<td width="30px"><input type="checkbox" /></td>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><input type="checkbox" /></td>
+												<tr id="page7_contact_1">
+													<td id="data_1_1"></td>
+													<td id="data_1_2"></td>
+													<td id="data_1_3"></td>
+													<td id="data_1_4"></td>
+													<td id="data_1_5"></td>
+													<td id="data_1_6"></td>
+													<td ><input id="data_1_7" type="checkbox" /></td>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><input type="checkbox" /></td>
+												<tr id="page7_contact_2">
+													<td id="data_2_1"></td>
+													<td id="data_2_2"></td>
+													<td id="data_2_3"></td>
+													<td id="data_2_4"></td>
+													<td id="data_2_5"></td>
+													<td id="data_2_6"></td>
+													<td ><input id="data_2_7" type="checkbox" /></td>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><input type="checkbox" /></td>
+												<tr id="page7_contact_3">
+													<td id="data_3_1"></td>
+													<td id="data_3_2"></td>
+													<td id="data_3_3"></td>
+													<td id="data_3_4"></td>
+													<td id="data_3_5"></td>
+													<td id="data_3_6"></td>
+													<td ><input id="data_3_7" type="checkbox" /></td>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><input type="checkbox" /></td>
+												<tr id="page7_contact_4">
+													<td id="data_4_1"></td>
+													<td id="data_4_2"></td>
+													<td id="data_4_3"></td>
+													<td id="data_4_4"></td>
+													<td id="data_4_5"></td>
+													<td id="data_4_6"></td>
+													<td ><input id="data_4_7" type="checkbox" /></td>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><input type="checkbox" /></td>
+												<tr id="page7_contact_5">
+													<td id="data_5_1"></td>
+													<td id="data_5_2"></td>
+													<td id="data_5_3"></td>
+													<td id="data_5_4"></td>
+													<td id="data_5_5"></td>
+													<td id="data_5_6"></td>
+													<td ><input id="data_5_7" type="checkbox" /></td>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><input type="checkbox" /></td>
+												<tr id="page7_contact_6">
+													<td id="data_6_1"></td>
+													<td id="data_6_2"></td>
+													<td id="data_6_3"></td>
+													<td id="data_6_4"></td>
+													<td id="data_6_5"></td>
+													<td id="data_6_6"></td>
+													<td ><input id="data_6_7" type="checkbox" /></td>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><input type="checkbox" /></td>
+												<tr id="page7_contact_7">
+													<td id="data_7_1"></td>
+													<td id="data_7_2"></td>
+													<td id="data_7_3"></td>
+													<td id="data_7_4"></td>
+													<td id="data_7_5"></td>
+													<td id="data_7_6"></td>
+													<td ><input id="data_7_7" type="checkbox" /></td>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><input type="checkbox" /></td>
+												<tr id="page7_contact_8">
+													<td id="data_8_1"></td>
+													<td id="data_8_2"></td>
+													<td id="data_8_3"></td>
+													<td id="data_8_4"></td>
+													<td id="data_8_5"></td>
+													<td id="data_8_6"></td>
+													<td ><input id="data_8_7" type="checkbox" /></td>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><input type="checkbox" /></td>
+												<tr id="page7_contact_9">
+													<td id="data_9_1"></td>
+													<td id="data_9_2"></td>
+													<td id="data_9_3"></td>
+													<td id="data_9_4"></td>
+													<td id="data_9_5"></td>
+													<td id="data_9_6"></td>
+													<td ><input id="data_9_7" type="checkbox" /></td>
 												</tr>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><input type="checkbox" /></td>
+												<tr id="page7_contact_10">
+													<td id="data_10_1"></td>
+													<td id="data_10_2"></td>
+													<td id="data_10_3"></td>
+													<td id="data_10_4"></td>
+													<td id="data_10_5"></td>
+													<td id="data_10_6"></td>
+													<td><input id="data_10_7" type="checkbox" /></td>
 												</tr>
 												<tr>
 													<td colspan="7">
 														<span class="i18n" name='page7_page'></span>
-														<select id="">
-															<option value="1">1</option>
+														<select id="page7_page">
 														</select>
-														<input class="i18n-input" selectname='page7_prev_page' type="button" />
-														<input class="i18n-input" selectname='page7_next_page' type="button" />
+														<input id="page7_prev_page" class="i18n-input" selectname='page7_prev_page' type="button" />	<!-- 前页 -->
+														<input id="page7_next_page" class="i18n-input" selectname='page7_next_page' type="button" />	<!-- 后页 -->
 														<input class="i18n-input" selectname='page7_hang_up' type="button" />
-														<input class="i18n-input" selectname='page7_delete_all' type="button" />
-														<input class="i18n-input" selectname='page7_delete' type="button" />
-														<input class="i18n-input" selectname='page7_move_to' type="button" />
-														<select id="">
-															<option class="i18n" name='page7_all_contacts' value="0">1</option>
-															<option class="i18n" name='page7_blacklist' value="1">1</option>
+														<input id="page7_delete_all" class="i18n-input" selectname='page7_delete_all' type="button" />	<!-- 全部删除 -->
+														<input id="page7_delete" class="i18n-input" selectname='page7_delete' type="button" />	<!-- 删除 -->
+														<input id="page7_move_to" class="i18n-input" selectname='page7_move_to' type="button" />	<!-- 移动到 -->
+														<select id="page7_group2">
+															<option class="i18n" name='page7_all_contacts' value="1"></option>
+															<option class="i18n" name='page7_blacklist' value="0"></option>
 														</select>
 													</td>
 												</tr>
@@ -1244,24 +1243,24 @@
 													<tr><td class="i18n" name='page7_contacts'></td></tr>	<!-- 联系人 -->
 													<tr>
 														<td class="i18n" name='page7_name'></td>	<!-- 姓名 -->
-														<td><input type="text" /></td>
+														<td><input id="page7_name" type="text" /></td>
 													</tr>
 													<tr>
 														<td class="i18n" name='page7_office_numbe'></td>	<!-- 办公电话 -->
-														<td><input type="text" /></td>
+														<td><input id="page7_office_numbe" type="text" /></td>
 													</tr>
 													<tr>
 														<td class="i18n" name='page7_mobile_number'></td>	<!-- 移动电话 -->
-														<td><input type="text" /></td>
+														<td><input id="page7_mobile_number" type="text" /></td>
 													</tr>
 													<tr>
 														<td class="i18n" name='page7_other_numbe'></td>	<!-- 其他电话 -->
-														<td><input type="text" /></td>
+														<td><input id="page7_other_numbe" type="text" /></td>
 													</tr>
 													<tr>
 														<td class="i18n" name='page7_ring_tone'></td>	<!-- 响铃 -->
 														<td>
-															<select id="page7_ring_type">
+															<select id="page7_ring_tone">
 																<option class="i18n" name='page6_ring_type_1' value="1"></option>
 																<option class="i18n" name='page6_ring_type_2' value="2"></option>
 																<option class="i18n" name='page6_ring_type_3' value="3"></option>
@@ -1273,16 +1272,16 @@
 													<tr>
 														<td class="i18n" name='page7_group'></td>	<!-- 群组 -->
 														<td>
-															<select id="">
-																<option class="i18n" name='page7_all_contacts' value=""></option>	<!-- 本地联系人 -->
-																<option class="i18n" name='page7_blacklist' value=""></option>	<!-- 黑名单  -->
+															<select id="page7_add_group">
+																<option class="i18n" name='page7_all_contacts' value="1"></option>	<!-- 本地联系人 -->
+																<option class="i18n" name='page7_blacklist' value="0"></option>	<!-- 黑名单  -->
 															</select>
 														</td>
 													</tr>
 													<tr>
 														<td class="i18n" name='page2_account'></td>	<!-- 账号 -->
 														<td>
-															<select >
+															<select id="page7_account">
 																<option value="account_1" class="i18n" name='page2_account_1'></option>
 																<option value="account_2" class="i18n" name='page2_account_2'></option>
 																<option value="account_3" class="i18n" name='page2_account_3'></option>
@@ -1291,13 +1290,13 @@
 													</tr>
 													<tr>
 														<td class="i18n" name='page7_auto_divert'></td>	<!-- 自动移除 -->
-														<td><input type="text" /></td>
+														<td><input id="page7_auto_divert" type="text" /></td>
 													</tr>
 													<tr>
 														<td colspan="2">
-															<input class="i18n-input" selectname='page7_add' type="submit" />	<!-- 添加 -->
+															<input id="page7_add" class="i18n-input" selectname='page7_add' type="submit" />	<!-- 添加 -->
 															&emsp;
-															<input class="i18n-input" selectname='page7_edit' type="button" />	<!-- 编辑 -->
+															<input id="page7_edit" class="i18n-input" selectname='page7_edit' type="button" />	<!-- 编辑 -->
 														</td>
 													</tr>
 													<tr></tr>
@@ -1309,12 +1308,12 @@
 												<tr><th class="i18n" name='page7_group_setting'></th></tr>	<!-- 群组设置 -->
 												<tr>
 													<td class="i18n" name='page7_group'></td>	<!-- 群组 -->
-													<td><input type="text" /></td>
+													<td><input id="page7_group" type="text" /></td>
 												</tr>
 												<tr>
 													<td class="i18n" name='page7_ring_tone'></td>	<!-- 响铃 -->
 													<td>
-														<select id="">
+														<select id="page7_group_ring_tone">
 															<option class="i18n" name='page6_ring_type_1' value="1"></option>
 															<option class="i18n" name='page6_ring_type_2' value="2"></option>
 															<option class="i18n" name='page6_ring_type_3' value="3"></option>
@@ -1325,10 +1324,10 @@
 												</tr>
 												<tr>
 													<td colspan="2" style="text-align: center;">
-														<input class="i18n-input" selectname='page7_group_add' type="button" />	<!-- 添加 -->
-														<input class="i18n-input" selectname='page7_group_edit' type="button" />	<!-- 编辑 -->
-														<input class="i18n-input" selectname='page7_group_delete' type="button" />	<!-- 删除 -->
-														<input class="i18n-input" selectname='page7_group_delete_all' type="button" />	<!-- 全部删除 -->
+														<input id="page7_group_add" class="i18n-input" selectname='page7_group_add' type="button" />	<!-- 添加 -->
+														<input id="page7_group_edit" class="i18n-input" selectname='page7_group_edit' type="button" />	<!-- 编辑 -->
+														<input id="page7_group_delete" class="i18n-input" selectname='page7_group_delete' type="button" />	<!-- 删除 -->
+														<input id="page7_group_delete_all" class="i18n-input" selectname='page7_group_delete_all' type="button" />	<!-- 全部删除 -->
 													</td>
 												</tr>
 												<tr></tr>
@@ -1337,15 +1336,15 @@
 												</tr>
 												<tr>
 													<td colspan="2">
-														<input class="i18n-input" selectname="page6_select_file" readonly="readonly" style="background:#f2f2f2" type="text">
-														<input class="i18n-input" selectname='page6_browse' type="button">
-														<input type="file" style="opacity:0; position:absolute; width:0px; ">
+														<input id="page7_xml_show" class="i18n-input" selectname="page6_select_file" readonly="readonly" style="background:#f2f2f2" type="text" onclick="page7_xml_select()">
+														<input class="i18n-input" selectname='page6_browse' type="button" onclick="page7_xml_select()">
+														<input id="page7_xml_select" type="file" name="page7_xml_select" onchange="page7_xml_select_change(this)" style="opacity:0; position:absolute; width:0px; " accept=".xml">
 													</td>
 												</tr>
 												<tr>
 													<td colspan="2">
-														<input class="i18n-input" selectname="page7_import_xml" type="button" />	<!-- xml导入 -->
-														<input class="i18n-input" selectname="page7_export_xml" type="button" />	<!-- xml导出 -->
+														<input id="page7_import_xml" class="i18n-input" selectname="page7_import_xml" type="button" />	<!-- xml导入 -->
+														<input id="page7_export_xml" class="i18n-input" selectname="page7_export_xml" type="button" />	<!-- xml导出 -->
 													</td>
 												</tr>
 												<tr>
