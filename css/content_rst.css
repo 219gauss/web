@@ -161,6 +161,10 @@ border: 10px solid #ffffff;
 	width: 173px;
 }
 
+.s1,.s2,.s3,.s4:HOVER{
+	cursor: pointer;
+}
+
 /* -------page 3--------- */
 .sidebar-three div{
 	position: relative;

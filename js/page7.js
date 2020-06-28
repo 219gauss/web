@@ -715,7 +715,7 @@ _page7_import_xml.onclick = function(){
 	}
 }
 
-//点击删除群组
+//点击导出xml
 $(document).ready(function(){
 	$("#page7_export_xml").click(function(){
 		$.post("php/page7_export_xml.php",
