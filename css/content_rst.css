@@ -144,6 +144,8 @@ border: 10px solid #ffffff;
 	font-weight: bold;
 }
 
+.content_two tr:FIRST-CHILD{ background: #999999; }
+
 .sidebar-two .s1{
 	background: #fafafa;
 }
@@ -161,10 +163,25 @@ border: 10px solid #ffffff;
 	width: 173px;
 }
 
-.s1,.s2,.s3,.s4:HOVER{
+.s1,.s2,.s3,.s4,.s5:HOVER{
 	cursor: pointer;
 }
-
+/* ----------page 2-2-------------- */
+.content_two_2 tr:FIRST-CHILD{ background: #999999; }
+.content_two_2 td{ text-align: center; font-size: 14px; height: 30px; }
+.content_two_2 select{ width: 173px; }
+/* ----------page 2-3-------------- */
+.content_two_3 td{ text-align: center; font-size: 14px; height: 30px; }
+.content_two_3 select{ width: 173px; }
+.content_two_3 table [type="button"]{ width: 20px;height: 20px; }
+/* ----------page 2-4-------------- */
+.content_two_4 tr:FIRST-CHILD{ background: #999999; }
+.content_two_4 td{ text-align: center; font-size: 14px;}
+.content_two_4 select{ width: 173px; }
+/* ----------page 2-5-------------- */
+.content_two_5 tr:FIRST-CHILD{ background: #999999; }
+.content_two_5 td{ text-align: center; font-size: 14px;}
+.content_two_5 select{ width: 173px; }
 /* -------page 3--------- */
 .sidebar-three div{
 	position: relative;

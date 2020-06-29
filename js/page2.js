@@ -63,10 +63,12 @@ function tabtwo() {
     $(".s2")[0].style.background = "#c0c0c0";
     $(".s3")[0].style.background = "#c0c0c0";
     $(".s4")[0].style.background = "#c0c0c0";
+    $(".s5")[0].style.background = "#c0c0c0";
 	$("#page2_1")[0].style.display = "block";
 	$("#page2_2")[0].style.display = "none";
 	$("#page2_3")[0].style.display = "none";
 	$("#page2_4")[0].style.display = "none";
+    $("#page2_5")[0].style.display = "none";
 
 	//显示数据
 	var xhr = new XMLHttpRequest();

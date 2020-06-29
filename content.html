@@ -191,7 +191,8 @@
 								<div class="s1 i18n" name='page2_register'></div>	<!-- 注册 -->
 								<div class="s2 i18n" name='page2_basic'></div>	<!-- 基础 -->
 								<div class="s3 i18n" name='page2_codec'></div>	<!-- 编解码 -->
-								<div class="s4 i18n" name='page2_advanced'></div>	<!-- 高级 -->
+								<div class="s4 i18n" name='page2_advanced_1'></div>	<!-- 高级1 -->
+								<div class="s5 i18n" name='page2_advanced_2'></div>	<!-- 高级2 -->
 							</td>
 							<td class="two-1" width="600px" bgcolor="#fafafa">
 								<div id="page2_1">
@@ -206,6 +207,8 @@
 														<option value="account_3" class="i18n" name='page2_account_3'></option>
 													</select>
 												</td>
+												<td></td>
+												<td></td>
 											</tr>
 											<tr>	<!-- 注册状态 -->
 												<td class="i18n" name='page2_register_status'></td>
@@ -312,7 +315,7 @@
 									</form>
 								</div>
 								<div id="page2_2">
-									<table width="600px" height="850px">
+									<table class="content_two_2" width="600px" height="850px" cellspacing="0">
 										<tr>
 											<td class="i18n" name='page2_2_account'></td>	<!-- 账号 -->
 											<td>
@@ -420,8 +423,8 @@
 									</table>
 								</div>
 								<div id="page2_3">
-									<table width="600px" height="850px" border="1">
-										<tr>
+									<table class="content_two_3" width="600px" height="850px" cellspacing="0">
+										<tr style="background: #999999;">
 											<td class="i18n" name='page2_3_account'></td>	<!-- 账号 -->
 											<td>
 												<select id="">
@@ -440,36 +443,30 @@
 										</tr>
 										<tr>
 											<td colspan="2">
-												<div>
-													<select id="">
-														<option value="">1</option>
-														<option value="">2</option>
-														<option value="">3</option>
-														<option value="">4</option>
-														<option value="">5</option>
-														<option value="">6</option>
-														<option value="">7</option>
-													</select>
-												</div>
-												<div>
-													<input type="button" value="&rarr;">
-													<input type="button" value="&larr;">
-												</div>
-												<div>
-													<select id="">
-														<option value="">1</option>
-														<option value="">2</option>
-														<option value="">3</option>
-														<option value="">4</option>
-														<option value="">5</option>
-														<option value="">6</option>
-														<option value="">7</option>
-													</select>
-												</div>
-												<div>
-													<input type="button" value="&uarr;">
-													<input type="button" value="&darr;">
-												</div>
+												<table width="600px" height="200px">
+													<tr>
+														<td width="60px"></td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&larr;">
+															<input type="button" value="&rarr;">
+														</td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&uarr;">
+															<input type="button" value="&darr;">
+														</td>
+														<td width="60px"></td>
+													</tr>
+												</table>
 											</td>
 										</tr>
 										<tr>
@@ -483,7 +480,7 @@
 									</table>
 								</div>
 								<div id="page2_4">
-									<table width="600px" height="1500px">
+									<table class="content_two_4" width="600px" height="850px" cellspacing="0">
 										<tr>
 											<td class="i18n" name='page2_4_account'></td>	<!-- 账号 -->
 											<td>
@@ -706,169 +703,191 @@
 												<input type="text">
 											</td>
 										</tr>
+										
 										<tr>
-											<td class="i18n" name='page2_4_shared_line'></td>	<!-- 线路共享 -->
+											<td colspan="2">
+												<input id="page2_4_submit" class="i18n-input" selectname='page2_4_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page2_4_cancel" class="i18n-input" selectname='page2_4_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div id="page2_5">
+									<table class="content_two_5" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page2_5_account'></td>	<!-- 账号 -->
 											<td>
 												<select id="">
-													<option class="i18n" name='page2_4_shared_line_disable'></option>
-													<option class="i18n" name='page2_4_shared_line_SCA'></option>
-													<option class="i18n" name='page2_4_shared_line_DB'></option>
+													<option class="i18n" name='page2_5_account1' value="1"></option>	<!-- 账号1 -->
+													<option class="i18n" name='page2_5_account2' value="2"></option>	<!-- 账号2 -->
+													<option class="i18n" name='page2_5_account3' value="3"></option>	<!-- 账号3 -->
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_DICP'></td>	<!-- Dialog-Info截答方式 -->
+											<td class="i18n" name='page2_5_shared_line'></td>	<!-- 线路共享 -->
 											<td>
 												<select id="">
-													<option class="i18n" name='page2_4_DICP_disable'></option>
-													<option class="i18n" name='page2_4_DICP_enable'></option>
+													<option class="i18n" name='page2_5_shared_line_disable'></option>
+													<option class="i18n" name='page2_5_shared_line_SCA'></option>
+													<option class="i18n" name='page2_5_shared_line_DB'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_bla_number'></td>	<!-- 共享线路号码 -->
+											<td class="i18n" name='page2_5_DICP'></td>	<!-- Dialog-Info截答方式 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page2_5_DICP_disable'></option>
+													<option class="i18n" name='page2_5_DICP_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page2_5_bla_number'></td>	<!-- 共享线路号码 -->
 											<td>
 												<input type="text">
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_BSP'></td>	<!-- 共享线路订阅周期 -->
+											<td class="i18n" name='page2_5_BSP'></td>	<!-- 共享线路订阅周期 -->
 											<td>
 												<input type="text">
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_sip_send_mac'></td>	<!-- SIP携带MAC信息 -->
+											<td class="i18n" name='page2_5_sip_send_mac'></td>	<!-- SIP携带MAC信息 -->
 											<td>
 												<select id="">
-													<option class="i18n" name='page2_4_sip_send_mac_disable'></option>
-													<option class="i18n" name='page2_4_sip_send_mac_enable'></option>
+													<option class="i18n" name='page2_5_sip_send_mac_disable'></option>
+													<option class="i18n" name='page2_5_sip_send_mac_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_sip_send_line'></td>	<!-- SIP携带账号信息 -->
+											<td class="i18n" name='page2_5_sip_send_line'></td>	<!-- SIP携带账号信息 -->
 											<td>
 												<select id="">
-													<option class="i18n" name='page2_4_sip_send_line_disable'></option>
-													<option class="i18n" name='page2_4_sip_send_line_enable'></option>
+													<option class="i18n" name='page2_5_sip_send_line_disable'></option>
+													<option class="i18n" name='page2_5_sip_send_line_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_SRRT'></td>	<!-- SIP注册重试时间（0~1800秒） -->
+											<td class="i18n" name='page2_5_SRRT'></td>	<!-- SIP注册重试时间（0~1800秒） -->
 											<td>
 												<input type="text">
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_conference_type'></td>	<!-- 会议类型 -->
+											<td class="i18n" name='page2_5_conference_type'></td>	<!-- 会议类型 -->
 											<td>
 												<select id="">
-													<option class="i18n" name='page2_4_conference_type_local'></option>
-													<option class="i18n" name='page2_4_conference_type_network'></option>
+													<option class="i18n" name='page2_5_conference_type_local'></option>
+													<option class="i18n" name='page2_5_conference_type_network'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_conference_uri'></td>	<!-- 会议 URI -->
+											<td class="i18n" name='page2_5_conference_uri'></td>	<!-- 会议 URI -->
 											<td>
 												<input type="text">
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_ASP'></td>	<!-- ACD Subscribe Period -->
+											<td class="i18n" name='page2_5_ASP'></td>	<!-- ACD Subscribe Period -->
 											<td>
 												<input type="text">
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_early_media'></td>	<!-- 早期媒体 -->
+											<td class="i18n" name='page2_5_early_media'></td>	<!-- 早期媒体 -->
 											<td>
 												<select id="">
-													<option class="i18n" name='page2_4_early_media_disable'></option>
-													<option class="i18n" name='page2_4_early_media_enable'></option>
+													<option class="i18n" name='page2_5_early_media_disable'></option>
+													<option class="i18n" name='page2_5_early_media_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_sip_server_type'></td>	<!-- SIP服务器类型 -->
+											<td class="i18n" name='page2_5_sip_server_type'></td>	<!-- SIP服务器类型 -->
 											<td>
 												<select id="">
-													<option class="i18n" name='page2_4_sip_server_type_default'></option>
-													<option class="i18n" name='page2_4_sip_server_type_genesys'></option>
-													<option class="i18n" name='page2_4_sip_server_type_genesys_advanced'></option>
-													<option class="i18n" name='page2_4_sip_server_type_star2star'></option>
-													<option class="i18n" name='page2_4_sip_server_type_GSAS'></option>
+													<option class="i18n" name='page2_5_sip_server_type_default'></option>
+													<option class="i18n" name='page2_5_sip_server_type_genesys'></option>
+													<option class="i18n" name='page2_5_sip_server_type_genesys_advanced'></option>
+													<option class="i18n" name='page2_5_sip_server_type_star2star'></option>
+													<option class="i18n" name='page2_5_sip_server_type_GSAS'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_music_server_uri'></td>	<!-- 媒体服务器URI -->
+											<td class="i18n" name='page2_5_music_server_uri'></td>	<!-- 媒体服务器URI -->
 											<td>
 												<input type="text">
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_DCPC'></td>	<!-- 指定截答特征码 -->
+											<td class="i18n" name='page2_5_DCPC'></td>	<!-- 指定截答特征码 -->
 											<td>
 												<input type="text">
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_GCPC'></td>	<!-- 群组截答特征码 -->
+											<td class="i18n" name='page2_5_GCPC'></td>	<!-- 群组截答特征码 -->
 											<td></td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_DRT'></td>	<!-- 区别振铃 -->
+											<td class="i18n" name='page2_5_DRT'></td>	<!-- 区别振铃 -->
 											<td>
 												<select id="">
-													<option class="i18n" name='page2_4_DRT_disable'></option>
-													<option class="i18n" name='page2_4_DRT_enable'></option>
+													<option class="i18n" name='page2_5_DRT_disable'></option>
+													<option class="i18n" name='page2_5_DRT_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_UWR'></td>	<!-- 重启注销 -->
+											<td class="i18n" name='page2_5_UWR'></td>	<!-- 重启注销 -->
 											<td>
 												<select id="">
-													<option class="i18n" name='page2_4_UWR_disable'></option>
-													<option class="i18n" name='page2_4_UWR_enable'></option>
+													<option class="i18n" name='page2_5_UWR_disable'></option>
+													<option class="i18n" name='page2_5_UWR_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_ODB'></td>	<!-- RFC3856实现BLF -->
+											<td class="i18n" name='page2_5_ODB'></td>	<!-- RFC3856实现BLF -->
 											<td>
 												<select id="">
-													<option class="i18n" name='page2_4_ODB_disable'></option>
-													<option class="i18n" name='page2_4_ODB_enable'></option>
+													<option class="i18n" name='page2_5_ODB_disable'></option>
+													<option class="i18n" name='page2_5_ODB_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_VRCN'></td>	<!-- VQ RTCP-XR监控服务器名字 -->
+											<td class="i18n" name='page2_5_VRCN'></td>	<!-- VQ RTCP-XR监控服务器名字 -->
 											<td>
 												<input type="text">
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_VRCA'></td>	<!-- VQ RTCP-XR监控服务器地址 -->
+											<td class="i18n" name='page2_5_VRCA'></td>	<!-- VQ RTCP-XR监控服务器地址 -->
 											<td>
 												<input type="text">
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page2_4_VRCP'></td>	<!-- VQ RTCP-XR监控服务器端口 -->
+											<td class="i18n" name='page2_5_VRCP'></td>	<!-- VQ RTCP-XR监控服务器端口 -->
 											<td>
 												<input type="text">
 											</td>
 										</tr>
 										<tr>
 											<td colspan="2">
-												<input id="page2_4_submit" class="i18n-input" selectname='page2_4_submit' type="submit" />	<!-- 提交 -->
+												<input id="page2_5_submit" class="i18n-input" selectname='page2_5_submit' type="submit" />	<!-- 提交 -->
 												&emsp;
-												<input id="page2_4_cancel" class="i18n-input" selectname='page2_4_cancel' type="button" />	<!-- 取消 -->
+												<input id="page2_5_cancel" class="i18n-input" selectname='page2_5_cancel' type="button" />	<!-- 取消 -->
 											</td>
 										</tr>
 									</table>
@@ -2070,6 +2089,7 @@
 	<script type="text/javascript" src="js/page2_2.js"></script>
 	<script type="text/javascript" src="js/page2_3.js"></script>
 	<script type="text/javascript" src="js/page2_4.js"></script>
+	<script type="text/javascript" src="js/page2_5.js"></script>
 	<script type="text/javascript" src="js/page3.js"></script>
 	<script type="text/javascript" src="js/page4.js"></script>
 	<script type="text/javascript" src="js/page5.js"></script>
