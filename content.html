@@ -1590,200 +1590,718 @@
 						<tr>
 							<td class="sidebar-four" width="200px" bgcolor="#c0c0c0">
 								<div class="s4_1 i18n" name='page4_line_key'></div>		<!-- 账号键 -->
-								<div class="i18n" name='page4_programmable_key'></div>	<!-- 可编程功能键 -->
+								<div class="s4_2 i18n" name='page4_programmable_key'></div>	<!-- 可编程功能键 -->
 							</td>
 							<td class="four-1" width="600px" bgcolor="#fafafa">
-								<form action="php/page4_submit.php" method="post">
-									<table class="content_four" width="600px" height="850px" cellspacing="0">
+								<div id="page4_1">
+									<form action="php/page4_submit.php" method="post">
+										<table class="content_four" width="600px" height="850px" cellspacing="0">
+											<tr>
+												<td class="i18n" name='page4_Key'></td>		<!-- 按键 -->
+												<td class="i18n" name='page4_type'></td>		<!-- 类型 -->
+												<td class="i18n" name='page4_value'></td>		<!-- 值 -->
+												<td class="i18n" name='page4_label'></td>		<!-- 标签 -->
+												<td class="i18n" name='page4_line'></td>		<!-- 线路 -->
+												<td class="i18n" name='page4_extension'></td>		<!-- 分机号 -->
+											</tr>
+											<tr>
+												<td class="i18n" name='page4_line_key1'></td>	<!-- 账号键1 -->
+												<td>
+													<select id="page4_account1_type" name="page4_account1_type" onchange="page4_account_type_select(this.name,this.value)">
+														<option class="i18n" name='page4_type_empty' value="empty"></option>				<!-- 空 -->
+														<option class="i18n" name='page4_type_line' value="line" selected="selected"></option>					<!-- 线路 -->
+														<option class="i18n" name='page4_type_speed_dial' value="speed_dial"></option>		<!-- 速拨 -->
+														<option class="i18n" name='page4_type_blf' value="blf"></option>					<!-- BLF -->
+														<option class="i18n" name='page4_type_blf_list' value="blf_list"></option>			<!-- BLF List -->
+														<option class="i18n" name='page4_type_voice_mail' value="voice_mail"></option>		<!-- 语音留言 -->
+														<option class="i18n" name='page4_type_pickup' value="pickup"></option>				<!-- 截答 -->
+														<option class="i18n" name='page4_type_group_pickup' value="group_pickup"></option>	<!-- 群组截答 -->
+														<option class="i18n" name='page4_type_call_park' value="call_park"></option>		<!-- 通话驻留 -->
+														<option class="i18n" name='page4_type_intercom' value="intercom"></option>			<!-- 对讲机 -->
+														<option class="i18n" name='page4_type_dtmf' value="dtmf"></option>					<!-- DTMF -->
+														<option class="i18n" name='page4_type_prefix' value="prefix"></option>				<!-- 前缀 -->
+														<option class="i18n" name='page4_type_local_group' value="local_group"></option>	<!-- 本地群组 -->
+														<option class="i18n" name='page4_type_xml_group' value="xml_group"></option>		<!-- XML群组 -->
+														<option class="i18n" name='page4_type_xml_browser' value="xml_browser"></option>	<!-- XML浏览 -->
+														<option class="i18n" name='page4_type_conference' value="conference"></option>		<!-- 会议 -->
+														<option class="i18n" name='page4_type_forward' value="forward"></option>			<!-- 呼叫转移 -->
+														<option class="i18n" name='page4_type_transfer' value="transfer"></option>			<!-- 通话转接 -->
+														<option class="i18n" name='page4_type_hold' value="hold"></option>					<!-- 保持 -->
+														<option class="i18n" name='page4_type_dnd' value="dnd"></option>					<!-- 免打扰 -->
+														<option class="i18n" name='page4_type_recall' value="recall"></option>				<!-- 回呼 -->
+														<option class="i18n" name='page4_type_sms' value="sms"></option>					<!-- 短信息 -->
+														<option class="i18n" name='page4_type_record' value="record"></option>				<!-- 录音 -->
+														<option class="i18n" name='page4_type_url_record' value="url_record"></option>		<!-- URL录音 -->
+														<option class="i18n" name='page4_type_paging' value="paging"></option>				<!-- 组播 -->
+														<option class="i18n" name='page4_type_group_listening' value="group_listening"></option>	<!-- 群听 -->
+														<option class="i18n" name='page4_type_private_hold' value="private_hold"></option>	<!-- 私有保持 -->
+														<option class="i18n" name='page4_type_hot_desking' value="hot_desking"></option>	<!-- 移动办公 -->
+														<option class="i18n" name='page4_type_acd' value="acd"></option>					<!-- ACD -->
+														<option class="i18n" name='page4_type_zero_touch' value="zero_touch"></option>		<!-- 一键更新 -->
+														<option class="i18n" name='page4_type_url' value="url"></option>					<!-- URL -->
+														<option class="i18n" name='page4_type_phone_lock' value="phone_lock"></option>		<!-- 键盘锁 -->
+														<option class="i18n" name='page4_type_retrieve_park' value="retrieve_park"></option>	<!-- 取回驻留 -->
+														<option class="i18n" name='page4_type_directory' value="directory"></option>		<!-- 联系人 -->
+														<option class="i18n" name='page4_type_paging_list' value="paging_list"></option>	<!-- 组播列表 -->
+													</select>
+												</td>
+												<td><input id="page4_account1_value" type="text" style="width: 100px;"/></td>
+												<td><input id="page4_account1_lable" type="text" style="width: 100px;"/></td>
+												<td>
+													<select id="page4_account1_line_select" name="page4_account1_line_select">
+
+													</select>
+												</td>
+												<td><input id="page4_account1_extension" type="text" style="width: 100px;"/></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page4_line_key2'></td>	<!-- 账号键2 -->
+												<td>
+													<select id="page4_account2_type" name="page4_account2_type" onchange="page4_account_type_select(this.name,this.value)">
+														<option class="i18n" name='page4_type_empty' value="empty"></option>				<!-- 空 -->
+														<option class="i18n" name='page4_type_line' value="line" selected="selected"></option>					<!-- 线路 -->
+														<option class="i18n" name='page4_type_speed_dial' value="speed_dial"></option>		<!-- 速拨 -->
+														<option class="i18n" name='page4_type_blf' value="blf"></option>					<!-- BLF -->
+														<option class="i18n" name='page4_type_blf_list' value="blf_list"></option>			<!-- BLF List -->
+														<option class="i18n" name='page4_type_voice_mail' value="voice_mail"></option>		<!-- 语音留言 -->
+														<option class="i18n" name='page4_type_pickup' value="pickup"></option>				<!-- 截答 -->
+														<option class="i18n" name='page4_type_group_pickup' value="group_pickup"></option>	<!-- 群组截答 -->
+														<option class="i18n" name='page4_type_call_park' value="call_park"></option>		<!-- 通话驻留 -->
+														<option class="i18n" name='page4_type_intercom' value="intercom"></option>			<!-- 对讲机 -->
+														<option class="i18n" name='page4_type_dtmf' value="dtmf"></option>					<!-- DTMF -->
+														<option class="i18n" name='page4_type_prefix' value="prefix"></option>				<!-- 前缀 -->
+														<option class="i18n" name='page4_type_local_group' value="local_group"></option>	<!-- 本地群组 -->
+														<option class="i18n" name='page4_type_xml_group' value="xml_group"></option>		<!-- XML群组 -->
+														<option class="i18n" name='page4_type_xml_browser' value="xml_browser"></option>	<!-- XML浏览 -->
+														<option class="i18n" name='page4_type_conference' value="conference"></option>		<!-- 会议 -->
+														<option class="i18n" name='page4_type_forward' value="forward"></option>			<!-- 呼叫转移 -->
+														<option class="i18n" name='page4_type_transfer' value="transfer"></option>			<!-- 通话转接 -->
+														<option class="i18n" name='page4_type_hold' value="hold"></option>					<!-- 保持 -->
+														<option class="i18n" name='page4_type_dnd' value="dnd"></option>					<!-- 免打扰 -->
+														<option class="i18n" name='page4_type_recall' value="recall"></option>				<!-- 回呼 -->
+														<option class="i18n" name='page4_type_sms' value="sms"></option>					<!-- 短信息 -->
+														<option class="i18n" name='page4_type_record' value="record"></option>				<!-- 录音 -->
+														<option class="i18n" name='page4_type_url_record' value="url_record"></option>		<!-- URL录音 -->
+														<option class="i18n" name='page4_type_paging' value="paging"></option>				<!-- 组播 -->
+														<option class="i18n" name='page4_type_group_listening' value="group_listening"></option>	<!-- 群听 -->
+														<option class="i18n" name='page4_type_private_hold' value="private_hold"></option>	<!-- 私有保持 -->
+														<option class="i18n" name='page4_type_hot_desking' value="hot_desking"></option>	<!-- 移动办公 -->
+														<option class="i18n" name='page4_type_acd' value="acd"></option>					<!-- ACD -->
+														<option class="i18n" name='page4_type_zero_touch' value="zero_touch"></option>		<!-- 一键更新 -->
+														<option class="i18n" name='page4_type_url' value="url"></option>					<!-- URL -->
+														<option class="i18n" name='page4_type_phone_lock' value="phone_lock"></option>		<!-- 键盘锁 -->
+														<option class="i18n" name='page4_type_retrieve_park' value="retrieve_park"></option>	<!-- 取回驻留 -->
+														<option class="i18n" name='page4_type_directory' value="directory"></option>		<!-- 联系人 -->
+														<option class="i18n" name='page4_type_paging_list' value="paging_list"></option>	<!-- 组播列表 -->
+													</select>
+												</td>
+												<td><input id="page4_account2_value" type="text" style="width: 100px;"/></td>
+												<td><input id="page4_account2_lable" type="text" style="width: 100px;"/></td>
+												<td>
+													<select id="page4_account2_line_select" name="page4_account2_line_select">
+
+													</select>
+												</td>
+												<td><input id="page4_account2_extension" type="text" style="width: 100px;"/></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page4_line_key3'></td>	<!-- 账号键3 -->
+												<td>
+													<select id="page4_account3_type" name="page4_account3_type" onchange="page4_account_type_select(this.name,this.value)">
+														<option class="i18n" name='page4_type_empty' value="empty"></option>				<!-- 空 -->
+														<option class="i18n" name='page4_type_line' value="line" selected="selected"></option>					<!-- 线路 -->
+														<option class="i18n" name='page4_type_speed_dial' value="speed_dial"></option>		<!-- 速拨 -->
+														<option class="i18n" name='page4_type_blf' value="blf"></option>					<!-- BLF -->
+														<option class="i18n" name='page4_type_blf_list' value="blf_list"></option>			<!-- BLF List -->
+														<option class="i18n" name='page4_type_voice_mail' value="voice_mail"></option>		<!-- 语音留言 -->
+														<option class="i18n" name='page4_type_pickup' value="pickup"></option>				<!-- 截答 -->
+														<option class="i18n" name='page4_type_group_pickup' value="group_pickup"></option>	<!-- 群组截答 -->
+														<option class="i18n" name='page4_type_call_park' value="call_park"></option>		<!-- 通话驻留 -->
+														<option class="i18n" name='page4_type_intercom' value="intercom"></option>			<!-- 对讲机 -->
+														<option class="i18n" name='page4_type_dtmf' value="dtmf"></option>					<!-- DTMF -->
+														<option class="i18n" name='page4_type_prefix' value="prefix"></option>				<!-- 前缀 -->
+														<option class="i18n" name='page4_type_local_group' value="local_group"></option>	<!-- 本地群组 -->
+														<option class="i18n" name='page4_type_xml_group' value="xml_group"></option>		<!-- XML群组 -->
+														<option class="i18n" name='page4_type_xml_browser' value="xml_browser"></option>	<!-- XML浏览 -->
+														<option class="i18n" name='page4_type_conference' value="conference"></option>		<!-- 会议 -->
+														<option class="i18n" name='page4_type_forward' value="forward"></option>			<!-- 呼叫转移 -->
+														<option class="i18n" name='page4_type_transfer' value="transfer"></option>			<!-- 通话转接 -->
+														<option class="i18n" name='page4_type_hold' value="hold"></option>					<!-- 保持 -->
+														<option class="i18n" name='page4_type_dnd' value="dnd"></option>					<!-- 免打扰 -->
+														<option class="i18n" name='page4_type_recall' value="recall"></option>				<!-- 回呼 -->
+														<option class="i18n" name='page4_type_sms' value="sms"></option>					<!-- 短信息 -->
+														<option class="i18n" name='page4_type_record' value="record"></option>				<!-- 录音 -->
+														<option class="i18n" name='page4_type_url_record' value="url_record"></option>		<!-- URL录音 -->
+														<option class="i18n" name='page4_type_paging' value="paging"></option>				<!-- 组播 -->
+														<option class="i18n" name='page4_type_group_listening' value="group_listening"></option>	<!-- 群听 -->
+														<option class="i18n" name='page4_type_private_hold' value="private_hold"></option>	<!-- 私有保持 -->
+														<option class="i18n" name='page4_type_hot_desking' value="hot_desking"></option>	<!-- 移动办公 -->
+														<option class="i18n" name='page4_type_acd' value="acd"></option>					<!-- ACD -->
+														<option class="i18n" name='page4_type_zero_touch' value="zero_touch"></option>		<!-- 一键更新 -->
+														<option class="i18n" name='page4_type_url' value="url"></option>					<!-- URL -->
+														<option class="i18n" name='page4_type_phone_lock' value="phone_lock"></option>		<!-- 键盘锁 -->
+														<option class="i18n" name='page4_type_retrieve_park' value="retrieve_park"></option>	<!-- 取回驻留 -->
+														<option class="i18n" name='page4_type_directory' value="directory"></option>		<!-- 联系人 -->
+														<option class="i18n" name='page4_type_paging_list' value="paging_list"></option>	<!-- 组播列表 -->
+													</select>
+												</td>
+												<td><input id="page4_account3_value" type="text" style="width: 100px;"/></td>
+												<td><input id="page4_account3_lable" type="text" style="width: 100px;"/></td>
+												<td>
+													<select id="page4_account3_line_select" name="page4_account3_line_select">
+
+													</select>
+												</td>
+												<td><input id="page4_account3_extension" type="text" style="width: 100px;"/></td>
+											</tr>
+											<tr>
+												<td></td>
+												<td></td>
+												<td><input id="page4_submit" class="i18n-input" selectname='page4_submit' type="submit"/></td>	<!-- 确认 -->
+												<td><input id="page4_cancel" class="i18n-input" selectname='page4_cancel' type="button"/></td>	<!-- 取消 -->
+												<td></td>
+												<td></td>
+											</tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+										</table>
+									</form>
+								</div>
+								<div id="page4_2">
+									<table class="content_four_2" width="600px" height="850px" cellspacing="0">
 										<tr>
 											<td class="i18n" name='page4_Key'></td>		<!-- 按键 -->
 											<td class="i18n" name='page4_type'></td>		<!-- 类型 -->
+											<td class="i18n" name='page4_line'></td>		<!-- 线路 -->
 											<td class="i18n" name='page4_value'></td>		<!-- 值 -->
 											<td class="i18n" name='page4_label'></td>		<!-- 标签 -->
-											<td class="i18n" name='page4_line'></td>		<!-- 线路 -->
 											<td class="i18n" name='page4_extension'></td>		<!-- 分机号 -->
 										</tr>
 										<tr>
-											<td class="i18n" name='page4_line_key1'></td>	<!-- 账号键1 -->
+											<td class="i18n" name='page4_2_soltkey1'></td>	<!-- 软键 1 -->
 											<td>
-												<select id="page4_account1_type" name="page4_account1_type" onchange="page4_account_type_select(this.name,this.value)">
-													<option class="i18n" name='page4_type_empty' value="empty"></option>				<!-- 空 -->
-													<option class="i18n" name='page4_type_line' value="line" selected="selected"></option>					<!-- 线路 -->
-													<option class="i18n" name='page4_type_speed_dial' value="speed_dial"></option>		<!-- 速拨 -->
-													<option class="i18n" name='page4_type_blf' value="blf"></option>					<!-- BLF -->
-													<option class="i18n" name='page4_type_blf_list' value="blf_list"></option>			<!-- BLF List -->
-													<option class="i18n" name='page4_type_voice_mail' value="voice_mail"></option>		<!-- 语音留言 -->
-													<option class="i18n" name='page4_type_pickup' value="pickup"></option>				<!-- 截答 -->
-													<option class="i18n" name='page4_type_group_pickup' value="group_pickup"></option>	<!-- 群组截答 -->
-													<option class="i18n" name='page4_type_call_park' value="call_park"></option>		<!-- 通话驻留 -->
-													<option class="i18n" name='page4_type_intercom' value="intercom"></option>			<!-- 对讲机 -->
-													<option class="i18n" name='page4_type_dtmf' value="dtmf"></option>					<!-- DTMF -->
-													<option class="i18n" name='page4_type_prefix' value="prefix"></option>				<!-- 前缀 -->
-													<option class="i18n" name='page4_type_local_group' value="local_group"></option>	<!-- 本地群组 -->
-													<option class="i18n" name='page4_type_xml_group' value="xml_group"></option>		<!-- XML群组 -->
-													<option class="i18n" name='page4_type_xml_browser' value="xml_browser"></option>	<!-- XML浏览 -->
-													<option class="i18n" name='page4_type_conference' value="conference"></option>		<!-- 会议 -->
-													<option class="i18n" name='page4_type_forward' value="forward"></option>			<!-- 呼叫转移 -->
-													<option class="i18n" name='page4_type_transfer' value="transfer"></option>			<!-- 通话转接 -->
-													<option class="i18n" name='page4_type_hold' value="hold"></option>					<!-- 保持 -->
-													<option class="i18n" name='page4_type_dnd' value="dnd"></option>					<!-- 免打扰 -->
-													<option class="i18n" name='page4_type_recall' value="recall"></option>				<!-- 回呼 -->
-													<option class="i18n" name='page4_type_sms' value="sms"></option>					<!-- 短信息 -->
-													<option class="i18n" name='page4_type_record' value="record"></option>				<!-- 录音 -->
-													<option class="i18n" name='page4_type_url_record' value="url_record"></option>		<!-- URL录音 -->
-													<option class="i18n" name='page4_type_paging' value="paging"></option>				<!-- 组播 -->
-													<option class="i18n" name='page4_type_group_listening' value="group_listening"></option>	<!-- 群听 -->
-													<option class="i18n" name='page4_type_private_hold' value="private_hold"></option>	<!-- 私有保持 -->
-													<option class="i18n" name='page4_type_hot_desking' value="hot_desking"></option>	<!-- 移动办公 -->
-													<option class="i18n" name='page4_type_acd' value="acd"></option>					<!-- ACD -->
-													<option class="i18n" name='page4_type_zero_touch' value="zero_touch"></option>		<!-- 一键更新 -->
-													<option class="i18n" name='page4_type_url' value="url"></option>					<!-- URL -->
-													<option class="i18n" name='page4_type_phone_lock' value="phone_lock"></option>		<!-- 键盘锁 -->
-													<option class="i18n" name='page4_type_retrieve_park' value="retrieve_park"></option>	<!-- 取回驻留 -->
-													<option class="i18n" name='page4_type_directory' value="directory"></option>		<!-- 联系人 -->
-													<option class="i18n" name='page4_type_paging_list' value="paging_list"></option>	<!-- 组播列表 -->
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
 												</select>
 											</td>
-											<td><input id="page4_account1_value" type="text" style="width: 100px;"/></td>
-											<td><input id="page4_account1_lable" type="text" style="width: 100px;"/></td>
-											<td>
-												<select id="page4_account1_line_select" name="page4_account1_line_select">
-
-												</select>
-											</td>
-											<td><input id="page4_account1_extension" type="text" style="width: 100px;"/></td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page4_line_key2'></td>	<!-- 账号键2 -->
+											<td class="i18n" name='page4_2_soltkey2'></td>	<!-- 软键 2 -->
 											<td>
-												<select id="page4_account2_type" name="page4_account2_type" onchange="page4_account_type_select(this.name,this.value)">
-													<option class="i18n" name='page4_type_empty' value="empty"></option>				<!-- 空 -->
-													<option class="i18n" name='page4_type_line' value="line" selected="selected"></option>					<!-- 线路 -->
-													<option class="i18n" name='page4_type_speed_dial' value="speed_dial"></option>		<!-- 速拨 -->
-													<option class="i18n" name='page4_type_blf' value="blf"></option>					<!-- BLF -->
-													<option class="i18n" name='page4_type_blf_list' value="blf_list"></option>			<!-- BLF List -->
-													<option class="i18n" name='page4_type_voice_mail' value="voice_mail"></option>		<!-- 语音留言 -->
-													<option class="i18n" name='page4_type_pickup' value="pickup"></option>				<!-- 截答 -->
-													<option class="i18n" name='page4_type_group_pickup' value="group_pickup"></option>	<!-- 群组截答 -->
-													<option class="i18n" name='page4_type_call_park' value="call_park"></option>		<!-- 通话驻留 -->
-													<option class="i18n" name='page4_type_intercom' value="intercom"></option>			<!-- 对讲机 -->
-													<option class="i18n" name='page4_type_dtmf' value="dtmf"></option>					<!-- DTMF -->
-													<option class="i18n" name='page4_type_prefix' value="prefix"></option>				<!-- 前缀 -->
-													<option class="i18n" name='page4_type_local_group' value="local_group"></option>	<!-- 本地群组 -->
-													<option class="i18n" name='page4_type_xml_group' value="xml_group"></option>		<!-- XML群组 -->
-													<option class="i18n" name='page4_type_xml_browser' value="xml_browser"></option>	<!-- XML浏览 -->
-													<option class="i18n" name='page4_type_conference' value="conference"></option>		<!-- 会议 -->
-													<option class="i18n" name='page4_type_forward' value="forward"></option>			<!-- 呼叫转移 -->
-													<option class="i18n" name='page4_type_transfer' value="transfer"></option>			<!-- 通话转接 -->
-													<option class="i18n" name='page4_type_hold' value="hold"></option>					<!-- 保持 -->
-													<option class="i18n" name='page4_type_dnd' value="dnd"></option>					<!-- 免打扰 -->
-													<option class="i18n" name='page4_type_recall' value="recall"></option>				<!-- 回呼 -->
-													<option class="i18n" name='page4_type_sms' value="sms"></option>					<!-- 短信息 -->
-													<option class="i18n" name='page4_type_record' value="record"></option>				<!-- 录音 -->
-													<option class="i18n" name='page4_type_url_record' value="url_record"></option>		<!-- URL录音 -->
-													<option class="i18n" name='page4_type_paging' value="paging"></option>				<!-- 组播 -->
-													<option class="i18n" name='page4_type_group_listening' value="group_listening"></option>	<!-- 群听 -->
-													<option class="i18n" name='page4_type_private_hold' value="private_hold"></option>	<!-- 私有保持 -->
-													<option class="i18n" name='page4_type_hot_desking' value="hot_desking"></option>	<!-- 移动办公 -->
-													<option class="i18n" name='page4_type_acd' value="acd"></option>					<!-- ACD -->
-													<option class="i18n" name='page4_type_zero_touch' value="zero_touch"></option>		<!-- 一键更新 -->
-													<option class="i18n" name='page4_type_url' value="url"></option>					<!-- URL -->
-													<option class="i18n" name='page4_type_phone_lock' value="phone_lock"></option>		<!-- 键盘锁 -->
-													<option class="i18n" name='page4_type_retrieve_park' value="retrieve_park"></option>	<!-- 取回驻留 -->
-													<option class="i18n" name='page4_type_directory' value="directory"></option>		<!-- 联系人 -->
-													<option class="i18n" name='page4_type_paging_list' value="paging_list"></option>	<!-- 组播列表 -->
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
 												</select>
 											</td>
-											<td><input id="page4_account2_value" type="text" style="width: 100px;"/></td>
-											<td><input id="page4_account2_lable" type="text" style="width: 100px;"/></td>
-											<td>
-												<select id="page4_account2_line_select" name="page4_account2_line_select">
-
-												</select>
-											</td>
-											<td><input id="page4_account2_extension" type="text" style="width: 100px;"/></td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page4_line_key3'></td>	<!-- 账号键3 -->
+											<td class="i18n" name='page4_2_soltkey3'></td>	<!-- 软键 3 -->
 											<td>
-												<select id="page4_account3_type" name="page4_account3_type" onchange="page4_account_type_select(this.name,this.value)">
-													<option class="i18n" name='page4_type_empty' value="empty"></option>				<!-- 空 -->
-													<option class="i18n" name='page4_type_line' value="line" selected="selected"></option>					<!-- 线路 -->
-													<option class="i18n" name='page4_type_speed_dial' value="speed_dial"></option>		<!-- 速拨 -->
-													<option class="i18n" name='page4_type_blf' value="blf"></option>					<!-- BLF -->
-													<option class="i18n" name='page4_type_blf_list' value="blf_list"></option>			<!-- BLF List -->
-													<option class="i18n" name='page4_type_voice_mail' value="voice_mail"></option>		<!-- 语音留言 -->
-													<option class="i18n" name='page4_type_pickup' value="pickup"></option>				<!-- 截答 -->
-													<option class="i18n" name='page4_type_group_pickup' value="group_pickup"></option>	<!-- 群组截答 -->
-													<option class="i18n" name='page4_type_call_park' value="call_park"></option>		<!-- 通话驻留 -->
-													<option class="i18n" name='page4_type_intercom' value="intercom"></option>			<!-- 对讲机 -->
-													<option class="i18n" name='page4_type_dtmf' value="dtmf"></option>					<!-- DTMF -->
-													<option class="i18n" name='page4_type_prefix' value="prefix"></option>				<!-- 前缀 -->
-													<option class="i18n" name='page4_type_local_group' value="local_group"></option>	<!-- 本地群组 -->
-													<option class="i18n" name='page4_type_xml_group' value="xml_group"></option>		<!-- XML群组 -->
-													<option class="i18n" name='page4_type_xml_browser' value="xml_browser"></option>	<!-- XML浏览 -->
-													<option class="i18n" name='page4_type_conference' value="conference"></option>		<!-- 会议 -->
-													<option class="i18n" name='page4_type_forward' value="forward"></option>			<!-- 呼叫转移 -->
-													<option class="i18n" name='page4_type_transfer' value="transfer"></option>			<!-- 通话转接 -->
-													<option class="i18n" name='page4_type_hold' value="hold"></option>					<!-- 保持 -->
-													<option class="i18n" name='page4_type_dnd' value="dnd"></option>					<!-- 免打扰 -->
-													<option class="i18n" name='page4_type_recall' value="recall"></option>				<!-- 回呼 -->
-													<option class="i18n" name='page4_type_sms' value="sms"></option>					<!-- 短信息 -->
-													<option class="i18n" name='page4_type_record' value="record"></option>				<!-- 录音 -->
-													<option class="i18n" name='page4_type_url_record' value="url_record"></option>		<!-- URL录音 -->
-													<option class="i18n" name='page4_type_paging' value="paging"></option>				<!-- 组播 -->
-													<option class="i18n" name='page4_type_group_listening' value="group_listening"></option>	<!-- 群听 -->
-													<option class="i18n" name='page4_type_private_hold' value="private_hold"></option>	<!-- 私有保持 -->
-													<option class="i18n" name='page4_type_hot_desking' value="hot_desking"></option>	<!-- 移动办公 -->
-													<option class="i18n" name='page4_type_acd' value="acd"></option>					<!-- ACD -->
-													<option class="i18n" name='page4_type_zero_touch' value="zero_touch"></option>		<!-- 一键更新 -->
-													<option class="i18n" name='page4_type_url' value="url"></option>					<!-- URL -->
-													<option class="i18n" name='page4_type_phone_lock' value="phone_lock"></option>		<!-- 键盘锁 -->
-													<option class="i18n" name='page4_type_retrieve_park' value="retrieve_park"></option>	<!-- 取回驻留 -->
-													<option class="i18n" name='page4_type_directory' value="directory"></option>		<!-- 联系人 -->
-													<option class="i18n" name='page4_type_paging_list' value="paging_list"></option>	<!-- 组播列表 -->
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
 												</select>
 											</td>
-											<td><input id="page4_account3_value" type="text" style="width: 100px;"/></td>
-											<td><input id="page4_account3_lable" type="text" style="width: 100px;"/></td>
-											<td>
-												<select id="page4_account3_line_select" name="page4_account3_line_select">
-
-												</select>
-											</td>
-											<td><input id="page4_account3_extension" type="text" style="width: 100px;"/></td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
 										</tr>
 										<tr>
-											<td></td>
-											<td></td>
-											<td><input id="page4_submit" class="i18n-input" selectname='page4_submit' type="submit"/></td>	<!-- 确认 -->
-											<td><input id="page4_cancel" class="i18n-input" selectname='page4_cancel' type="button"/></td>	<!-- 取消 -->
-											<td></td>
-											<td></td>
+											<td class="i18n" name='page4_2_soltkey4'></td>	<!-- 软键 4 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
+												</select>
+											</td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
 										</tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
+										<tr>
+											<td class="i18n" name='page4_2_key_up'></td>	<!-- 向上 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
+												</select>
+											</td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page4_2_key_down'></td>	<!-- 向下 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
+												</select>
+											</td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page4_2_key_left'></td>	<!-- 向左 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
+												</select>
+											</td>
+											<td><select name="" id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page4_2_key_right'></td>	<!-- 向右 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
+												</select>
+											</td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page4_2_key_ok'></td>	<!-- OK -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
+												</select>
+											</td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page4_2_key_cancel'></td>	<!-- 取消 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
+												</select>
+											</td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page4_2_key_tran'></td>	<!-- 转接 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
+												</select>
+											</td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page4_2_key_redial'></td>	<!-- 重播 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
+												</select>
+											</td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page4_2_key_message'></td>	<!-- 信号提示音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page4_2_NA'></option>
+													<option class="i18n" name='page4_2_speedDial'></option>
+													<option class="i18n" name='page4_2_pickUp'></option>
+													<option class="i18n" name='page4_2_groud_pickUp'></option>
+													<option class="i18n" name='page4_2_intercom'></option>
+													<option class="i18n" name='page4_2_prefix'></option>
+													<option class="i18n" name='page4_2_localGroup'></option>
+													<option class="i18n" name='page4_2_xmlGroup'></option>
+													<option class="i18n" name='page4_2_xmlBrowser'></option>
+													<option class="i18n" name='page4_2_history'></option>
+													<option class="i18n" name='page4_2_menu'></option>
+													<option class="i18n" name='page4_2_forward'></option>
+													<option class="i18n" name='page4_2_dnd'></option>
+													<option class="i18n" name='page4_2_recall'></option>
+													<option class="i18n" name='page4_2_sms'></option>
+													<option class="i18n" name='page4_2_newSMS'></option>
+													<option class="i18n" name='page4_2_xmlPhoneBook'></option>
+													<option class="i18n" name='page4_2_status'></option>
+													<option class="i18n" name='page4_2_paging'></option>
+													<option class="i18n" name='page4_2_localPhoneBook'></option>
+													<option class="i18n" name='page4_2_hotDesking'></option>
+													<option class="i18n" name='page4_2_zeroTouch'></opion>
+													<option class="i18n" name='page4_2_phoneLock'></option>
+													<option class="i18n" name='page4_2_switchAccountUp'></option>
+													<option class="i18n" name='page4_2_switchAccountDown'></option>
+													<option class="i18n" name='page4_2_directory'></option>
+													<option class="i18n" name='page4_2_pagingList'></option>
+												</select>
+											</td>
+											<td><select id=""></select></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="6">
+												<input id="page4_2_submit" class="i18n-input" selectname='page4_2_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page4_2_cancel" class="i18n-input" selectname='page4_2_cancel' type="button" />	<!-- 取消 -->
+												&emsp;
+												<input id="page4_2_reset" class="i18n-input" selectname='page4_2_reset' type="button" />	<!-- 重置 -->
+											</td>
+										</tr>
 										<tr></tr>
 									</table>
-								</form>
+								</div>
 							</td>
 							<td width="200px" bgcolor="#c0c0c0">
 								<table class="explain_title" cellspacing="0">
@@ -2611,6 +3129,8 @@
 	<script type="text/javascript" src="js/page3_5.js"></script>
 	<script type="text/javascript" src="js/page3_6.js"></script>
 	<script type="text/javascript" src="js/page4.js"></script>
+	<script type="text/javascript" src="js/page4_1.js"></script>
+	<script type="text/javascript" src="js/page4_2.js"></script>
 	<script type="text/javascript" src="js/page5.js"></script>
 	<script type="text/javascript" src="js/page6.js"></script>
 	<script type="text/javascript" src="js/page7.js"></script>

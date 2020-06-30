@@ -265,6 +265,18 @@ border: 10px solid #ffffff;
 	font-size: 12px;
 }
 
+.s4_1,.s4_2:HOVER{
+	cursor: pointer;
+}
+
+#page4_2{ display: none; }
+/* ----------page 4-2-------------- */
+.content_four_2 tr:FIRST-CHILD{ background: #999999; }
+.content_four_2 tr:NOT(:LAST-CHILD){ height: 40px; }
+.content_four_2 tr td{ text-align: center; font-size: 12px; }
+.content_four_2 [type="text"]{ width: 100px; }
+.content_four_2 select{ width: 100px; }
+
 /* -------page 5--------- */
 .sidebar-five div{
 	position: relative;
