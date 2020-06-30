@@ -929,122 +929,635 @@
 					<table  height="850px" cellspacing="0" >
 						<tr>
 							<td class="sidebar-three" width="200px" bgcolor="#c0c0c0">
-								<div class="s3_1 i18n" name='page3_basic'></div>
-								<div class="i18n" name='page3_pc_Port'></div>
-								<div class="i18n" name='page3_nat'></div>
-								<div class="i18n" name='page3_advanced'></div>
-								<div class="i18n" name='page3_diagnostics'></div>
+								<div class="s3_1 i18n" name='page3_basic'></div>	<!-- 基础 -->
+								<div class="s3_2 i18n" name='page3_pc_Port'></div>		<!-- pc接口 -->
+								<div class="s3_3 i18n" name='page3_nat'></div>			<!-- NAT -->
+								<div class="s3_4 i18n" name='page3_advanced1'></div>		<!-- 高级1 -->
+								<div class="s3_5 i18n" name='page3_advanced2'></div>		<!-- 高级2 -->
+								<div class="s3_6 i18n" name='page3_diagnostics'></div>	<!-- 诊断 -->
 							</td>
 							<td class="three-1" width="600px" bgcolor="#fafafa">
-								<form action="php/page3_submit.php" method="post">
-									<table class="content_three" width="600px" height="850px" cellspacing="0" >
-										<tr><th><span class="i18n" name='page3_internet_port'></span></th></tr>
+								<div id="page3_1">
+									<form action="php/page3_submit.php" method="post">
+										<table class="content_three" width="600px" height="850px" cellspacing="0" >
+											<tr><th><span class="i18n" name='page3_internet_port'></span></th></tr>
+											<tr>
+												<td class="i18n" name='page3_Mode'></td>
+												<td>
+													<select id="page3_internet" name="page3_internet" onchange="page3_internet_select(this.value)">
+														<option value="ipv4">IPv4</option>
+														<option value="ipv6">IPv6</option>
+													</select>
+												</td>
+											</tr>
+											<tr><th><span class="i18n" name='page3_ipv4_config'></span></th></tr>
+											<tr>
+												<td>
+													<input id="page3_ipv4_dhcp_id" type="radio" name="ipv4_type_set" value="dhcp" checked="checked" onclick="ipv4_dhcp()">
+													<label for="page3_ipv4_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label> <!-- DHCP -->
+												</td>
+											</tr>
+											<tr>	<!-- 静态IP地址 -->
+												<td>
+													<input id="page3_ipv4_staticip_id" type="radio" name="ipv4_type_set" value="static" onclick="ipv4_staticip()">
+													<label class="i18n" name='page3_ipv4_staticip_id' for="page3_ipv4_staticip_id" style="cursor: pointer;"></label>
+												</td>
+											</tr>
+											<tr>	<!-- IP地址 -->
+												<td class="i18n" name='page3_ipv4_ipaddress'></td>
+												<td><input id="page3_ipv4_ipaddress" name="page3_ipv4_ipaddress" type="text" disabled="disabled"></td>
+											</tr>
+											<tr>	<!-- 子网掩码 -->
+												<td class="i18n" name='page3_ipv4_mask'></td>
+												<td><input id="page3_ipv4_mask" name="page3_ipv4_mask" type="text" disabled="disabled"></td>
+											</tr>
+											<tr>	<!-- 网关地址 -->
+												<td class="i18n" name='page3_ipv4_gateway'></td>
+												<td><input id="page3_ipv4_gateway" name="page3_ipv4_gateway" type="text" disabled="disabled"></td>
+											</tr>
+											<tr>	<!-- 静态 DNS -->
+												<td class="i18n" name='page3_ipv4_staticdns'></td>
+												<td>
+													<input id="page3_ipv4_staticdns_open_id" type="radio" name="ipv4_staticDNS" value="open" onclick="ipv4_staticdns_open()">
+													<label class="i18n" name='page3_ipv4_staticdns_open_id' for="page3_ipv4_staticdns_open_id" style="cursor: pointer;"></label>
+													<input id="page3_ipv4_staticdns_close_id" type="radio" name="ipv4_staticDNS" value="close" checked="checked" onclick="ipv4_staticdns_close()">
+													<label class="i18n" name='page3_ipv4_staticdns_close_id' for="page3_ipv4_staticdns_close_id" style="cursor: pointer;"></label>
+												</td>
+											</tr>
+											<tr>	<!-- 首选DNS -->
+												<td class="i18n" name='page3_ipv4_firstDNS'></td>
+												<td><input id="page3_ipv4_firstDNS" name="page3_ipv4_firstDNS" type="text" disabled="disabled"></td>
+											</tr>
+											<tr>	<!-- 备选DNS -->
+												<td class="i18n" name='page3_ipv4_secondDNS'></td>
+												<td><input id="page3_ipv4_secondDNS" name="page3_ipv4_secondDNS" type="text" disabled="disabled"></td>
+											</tr>
+											<tr><th><span class="i18n" name='page3_ipv6_config'></span></th></tr>
+											<tr>
+												<td>
+													<input id="page3_ipv6_dhcp_id" type="radio" name="ipv6_type_set" value="dhcp" checked="checked" onclick="ipv6_dhcp()">
+													<label for="page3_ipv6_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<input id="page3_ipv6_staticip_id" type="radio" name="ipv6_type_set" value="static" onclick="ipv6_staticip()">
+													<label class="i18n" name='page3_ipv6_staticip_id' for="page3_ipv6_staticip_id" style="cursor: pointer;"></label>
+												</td>
+											</tr>
+											<tr>	<!-- IP地址 -->
+												<td class="i18n" name='page3_ipv6_ipaddress'></td>
+												<td><input id="page3_ipv6_ipaddress" name="page3_ipv6_ipaddress" type="text" disabled="disabled"></td>
+											</tr>
+											<tr>	<!-- IPv6前缀(0~128) -->
+												<td class="i18n" name='page3_ipv6_mask'></td>
+												<td><input id="page3_ipv6_mask" name="page3_ipv6_mask" type="text" disabled="disabled"></td>
+											</tr>
+											<tr>	<!-- 网关地址 -->
+												<td class="i18n" name='page3_ipv6_gateway'></td>
+												<td><input id="page3_ipv6_gateway" name="page3_ipv6_gateway" type="text" disabled="disabled"></td>
+											</tr>
+											<tr>	<!-- 静态IPv6 DNS -->
+												<td class="i18n" name='page3_ipv6_staticdns'></td>
+												<td>
+													<input id="page3_ipv6_staticdns_open_id" type="radio" name="ipv6_staticDNS" value="open" onclick="ipv6_staticdns_open()">
+													<label class="i18n" name='page3_ipv6_staticdns_open_id' for="page3_ipv6_staticdns_open_id" style="cursor: pointer;"></label>
+													<input id="page3_ipv6_staticdns_close_id" type="radio" name="ipv6_staticDNS" value="close" checked="checked" onclick="ipv6_staticdns_close()">
+													<label class="i18n" name='page3_ipv6_staticdns_close_id' for="page3_ipv6_staticdns_close_id" style="cursor: pointer;"></label>
+												</td>
+											</tr>
+											<tr>	<!-- 首选DNS -->
+												<td class="i18n" name='page3_ipv6_firstDNS'></td>
+												<td><input id="page3_ipv6_firstDNS" name="page3_ipv6_firstDNS" type="text" disabled="disabled"></td>
+											</tr>
+											<tr>	<!-- 备选DNS -->
+												<td class="i18n" name='page3_ipv6_secondDNS'></td>
+												<td><input id="page3_ipv6_secondDNS" name="page3_ipv6_secondDNS" type="text" disabled="disabled"></td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<input id="page3_submit" class="i18n-input" selectname='page3_submit' type="submit"/>
+													&emsp;
+													<input id="page3_cancel" class="i18n-input" selectname='page3_button' type="button"/>
+												</td>
+											</tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+										</table>
+									</form>
+								</div>
+								<div id="page3_2">
+									<table class="content_three_2" width="600px" height="850px" cellspacing="0">
 										<tr>
-											<td class="i18n" name='page3_Mode'></td>
+											<td class="i18n" name='page3_2_pc_port_active_title'></td>	<!-- PC接口激活 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_2_pc_port_active'></td>	<!-- PC接口激活 -->
 											<td>
-												<select id="page3_internet" name="page3_internet" onchange="page3_internet_select(this.value)">
-													<option value="ipv4">IPv4</option>
-													<option value="ipv6">IPv6</option>
+												<select id="">
+													<option class="i18n" name='page3_2_pc_port_active_disable'></option>
+													<option class="i18n" name='page3_2_pc_port_active_auto'></option>
 												</select>
 											</td>
 										</tr>
-										<tr><th><span class="i18n" name='page3_ipv4_config'></span></th></tr>
 										<tr>
-											<td>
-												<input id="page3_ipv4_dhcp_id" type="radio" name="ipv4_type_set" value="dhcp" checked="checked" onclick="ipv4_dhcp()">
-												<label for="page3_ipv4_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label> <!-- DHCP -->
-											</td>
-										</tr>
-										<tr>	<!-- 静态IP地址 -->
-											<td>
-												<input id="page3_ipv4_staticip_id" type="radio" name="ipv4_type_set" value="static" onclick="ipv4_staticip()">
-												<label class="i18n" name='page3_ipv4_staticip_id' for="page3_ipv4_staticip_id" style="cursor: pointer;"></label>
-											</td>
-										</tr>
-										<tr>	<!-- IP地址 -->
-											<td class="i18n" name='page3_ipv4_ipaddress'></td>
-											<td><input id="page3_ipv4_ipaddress" name="page3_ipv4_ipaddress" type="text" disabled="disabled"></td>
-										</tr>
-										<tr>	<!-- 子网掩码 -->
-											<td class="i18n" name='page3_ipv4_mask'></td>
-											<td><input id="page3_ipv4_mask" name="page3_ipv4_mask" type="text" disabled="disabled"></td>
-										</tr>
-										<tr>	<!-- 网关地址 -->
-											<td class="i18n" name='page3_ipv4_gateway'></td>
-											<td><input id="page3_ipv4_gateway" name="page3_ipv4_gateway" type="text" disabled="disabled"></td>
-										</tr>
-										<tr>	<!-- 静态 DNS -->
-											<td class="i18n" name='page3_ipv4_staticdns'></td>
-											<td>
-												<input id="page3_ipv4_staticdns_open_id" type="radio" name="ipv4_staticDNS" value="open" onclick="ipv4_staticdns_open()">
-												<label class="i18n" name='page3_ipv4_staticdns_open_id' for="page3_ipv4_staticdns_open_id" style="cursor: pointer;"></label>
-												<input id="page3_ipv4_staticdns_close_id" type="radio" name="ipv4_staticDNS" value="close" checked="checked" onclick="ipv4_staticdns_close()">
-												<label class="i18n" name='page3_ipv4_staticdns_close_id' for="page3_ipv4_staticdns_close_id" style="cursor: pointer;"></label>
-											</td>
-										</tr>
-										<tr>	<!-- 首选DNS -->
-											<td class="i18n" name='page3_ipv4_firstDNS'></td>
-											<td><input id="page3_ipv4_firstDNS" name="page3_ipv4_firstDNS" type="text" disabled="disabled"></td>
-										</tr>
-										<tr>	<!-- 备选DNS -->
-											<td class="i18n" name='page3_ipv4_secondDNS'></td>
-											<td><input id="page3_ipv4_secondDNS" name="page3_ipv4_secondDNS" type="text" disabled="disabled"></td>
-										</tr>
-										<tr><th><span class="i18n" name='page3_ipv6_config'></span></th></tr>
-										<tr>
-											<td>
-												<input id="page3_ipv6_dhcp_id" type="radio" name="ipv6_type_set" value="dhcp" checked="checked" onclick="ipv6_dhcp()">
-												<label for="page3_ipv6_dhcp_id" style="cursor: pointer;">DHCP&emsp;&emsp;</label>
+											<td colspan="2">
+												<input id="page3_2_submit" class="i18n-input" selectname='page3_2_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page3_2_cancel" class="i18n-input" selectname='page3_2_cancel' type="button" />	<!-- 取消 -->
 											</td>
 										</tr>
 										<tr>
+											<td></td>
+											<td></td>
+										</tr>
+									</table>
+								</div>
+								<div id="page3_3">
+									<table class="content_three_3" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left;"><span class="i18n" name='page3_3_manual_nat'></span></td>	<!-- 手动设置Nat -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_3_active'></td>	<!-- 激活 -->
 											<td>
-												<input id="page3_ipv6_staticip_id" type="radio" name="ipv6_type_set" value="static" onclick="ipv6_staticip()">
-												<label class="i18n" name='page3_ipv6_staticip_id' for="page3_ipv6_staticip_id" style="cursor: pointer;"></label>
+												<select id="">
+													<option class="i18n" name='page3_3_active_disable'></option>
+													<option class="i18n" name='page3_3_active_enable'></option>
+												</select>
 											</td>
 										</tr>
-										<tr>	<!-- IP地址 -->
-											<td class="i18n" name='page3_ipv6_ipaddress'></td>
-											<td><input id="page3_ipv6_ipaddress" name="page3_ipv6_ipaddress" type="text" disabled="disabled"></td>
-										</tr>
-										<tr>	<!-- IPv6前缀(0~128) -->
-											<td class="i18n" name='page3_ipv6_mask'></td>
-											<td><input id="page3_ipv6_mask" name="page3_ipv6_mask" type="text" disabled="disabled"></td>
-										</tr>
-										<tr>	<!-- 网关地址 -->
-											<td class="i18n" name='page3_ipv6_gateway'></td>
-											<td><input id="page3_ipv6_gateway" name="page3_ipv6_gateway" type="text" disabled="disabled"></td>
-										</tr>
-										<tr>	<!-- 静态IPv6 DNS -->
-											<td class="i18n" name='page3_ipv6_staticdns'></td>
+										<tr>
+											<td class="i18n" name='page3_3_ip_address'></td>	<!-- IP地址 -->
 											<td>
-												<input id="page3_ipv6_staticdns_open_id" type="radio" name="ipv6_staticDNS" value="open" onclick="ipv6_staticdns_open()">
-												<label class="i18n" name='page3_ipv6_staticdns_open_id' for="page3_ipv6_staticdns_open_id" style="cursor: pointer;"></label>
-												<input id="page3_ipv6_staticdns_close_id" type="radio" name="ipv6_staticDNS" value="close" checked="checked" onclick="ipv6_staticdns_close()">
-												<label class="i18n" name='page3_ipv6_staticdns_close_id' for="page3_ipv6_staticdns_close_id" style="cursor: pointer;"></label>
+												<input type="text">
 											</td>
 										</tr>
-										<tr>	<!-- 首选DNS -->
-											<td class="i18n" name='page3_ipv6_firstDNS'></td>
-											<td><input id="page3_ipv6_firstDNS" name="page3_ipv6_firstDNS" type="text" disabled="disabled"></td>
+										<tr>
+											<td style="text-align:left;"><span class="i18n" name='page3_3_ice'></span></td>	<!-- ICE -->
 										</tr>
-										<tr>	<!-- 备选DNS -->
-											<td class="i18n" name='page3_ipv6_secondDNS'></td>
-											<td><input id="page3_ipv6_secondDNS" name="page3_ipv6_secondDNS" type="text" disabled="disabled"></td>
+										<tr>
+											<td class="i18n" name='page3_3_ice_active'></td>	<!-- 激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_3_ice_active_disable'></option>
+													<option class="i18n" name='page3_3_ice_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="i18n" name='page3_3_stun'></span></td>	<!-- STUN -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_3_stun_active'></td>	<!-- 激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_3_stun_active_disable'></option>
+													<option class="i18n" name='page3_3_stun_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_3_stun_server'></td>	<!-- STUN服务器 -->
+											<td>
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_3_stun_port'></td>	<!-- STUN端口(1024~65535) -->
+											<td>
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="i18n" name='page3_3_turn'></span></td>	<!-- TURN -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_3_turn_active'></td>	<!-- 激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_3_turn_active_disable'></option>
+													<option class="i18n" name='page3_3_turn_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_3_turn_server'></td>	<!-- TURN服务器 -->
+											<td>
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_3_turn_port'></td>	<!-- TURN端口(1024~65535) -->
+											<td>
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_3_turn_user_name'></td>	<!-- 用户名称 -->
+											<td>
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_3_turn_password'></td>	<!-- 密码 -->
+											<td>
+												<input type="password">
+											</td>
 										</tr>
 										<tr>
 											<td colspan="2">
-												<input id="page3_submit" class="i18n-input" selectname='page3_submit' type="submit"/>
+												<input id="page3_3_submit" class="i18n-input" selectname='page3_3_submit' type="submit" />	<!-- 提交 -->
 												&emsp;
-												<input id="page3_cancel" class="i18n-input" selectname='page3_button' type="button"/>
+												<input id="page3_3_cancel" class="i18n-input" selectname='page3_3_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td></td>
+										</tr>
+									</table>
+								</div>
+								<div id="page3_4">
+									<table class="content_three_4" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left;"><span class="page3_4_content_title i18n" name='page3_4_lldp'></span></td>	<!-- LLDP -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_lldp_active'></td>	<!-- 激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_4_lldp_active_disable'></option>
+													<option class="i18n" name='page3_4_lldp_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_lldp_packet_interval'></td>	<!-- 发包间隔（1~3600秒） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="page3_4_content_title i18n" name='page3_4_cpd'></span></td>	<!-- CDP -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_cpd_active'></td>	<!-- 激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_4_cpd_active_disable'></option>
+													<option class="i18n" name='page3_4_cpd_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_cpd_packet_interval'></td>	<!-- 发包间隔（1~3600秒） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="page3_4_content_title i18n" name='page3_4_vlan'></span></td>	<!-- VLAN -->
+										</tr>
+										<tr>
+											<td style="text-align: left;"><span class="i18n" name='page3_4_wan_port' style="padding-left:28px;"></span></td>	<!-- WAN接口 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_wan_port_active'></td>	<!-- 激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_4_wan_active_disable'></option>
+													<option class="i18n" name='page3_4_wan_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_wan_port_vid'></td>	<!-- VID (1-4094) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_wan_port_priority'></td>	<!-- 优先级 -->
+											<td>
+												<select id="">
+													<option value="0">0</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="i18n" name='page3_4_pc_port' style="padding-left:28px;"></span></td>	<!-- PC接口 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_pc_port_active'></td>	<!-- 激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_4_pc_active_disable'></option>
+													<option class="i18n" name='page3_4_pc_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_pc_port_vid'></td>	<!-- VID (1-4094) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_pc_port_priority'></td>	<!-- 优先级 -->
+											<td>
+												<select id="">
+													<option value="0">0</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="i18n" name='page3_4_dhcp_vlan' style="padding-left:28px;"></span></td>	<!-- DHCP VLAN -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_dhcp_vlan_active'></td>	<!-- 激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_4_dhcp_active_disable'></option>
+													<option class="i18n" name='page3_4_dhcp_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_dhcp_vlan_option'></td>	<!-- Option (128-254) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="page3_4_content_title i18n" name='page3_4_port_link'></span></td>	<!-- 端口连接 -->
+										</tr>
+										<tr>
+											<td <td class="i18n" name='page3_4_wan_port_link'></td>	<!-- WAN端口连接 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_4_wpl_AN'></option>
+													<option class="i18n" name='page3_4_wpl_FD10'></option>
+													<option class="i18n" name='page3_4_wpl_FD100'></option>
+													<option class="i18n" name='page3_4_wpl_HD10'></option>
+													<option class="i18n" name='page3_4_wpl_HD100'></option>
+													<option class="i18n" name='page3_4_wpl_HD1000'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td <td class="i18n" name='page3_4_pc_port_link'></td>	<!-- PC端口连接 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_4_ppl_AN'></option>
+													<option class="i18n" name='page3_4_ppl_FD10'></option>
+													<option class="i18n" name='page3_4_ppl_FD100'></option>
+													<option class="i18n" name='page3_4_ppl_HD10'></option>
+													<option class="i18n" name='page3_4_ppl_HD100'></option>
+													<option class="i18n" name='page3_4_ppl_HD1000'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="page3_4_content_title i18n" name='page3_4_VQ'></span></td>	<!-- 语音QoS -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_voice_qos'></td>	<!-- 语音QoS（0~63） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_sip_qos'></td>	<!-- SIP Qos（0~63） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="page3_4_content_title i18n" name='page3_4_LRP'></span></td>	<!-- 本地RTP端口 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_max_rtp_port'></td>	<!-- 最大本地RTP端口（1024~65535） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_4_mins_rtp_port'></td>	<!-- 最小本地RTP端口（1024~65535） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page3_4_submit" class="i18n-input" selectname='page3_4_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page3_4_cancel" class="i18n-input" selectname='page3_4_cancel' type="button" />	<!-- 取消 -->
 											</td>
 										</tr>
 										<tr></tr>
-										<tr></tr>
-										<tr></tr>
+									</table>
+								</div>
+								<div id="page3_5">
+									<table class="content_three_5" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left;"><span class="page3_5_content_title i18n" name='page3_5_web_server'></span></td>	<!-- 网页访问类型 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_http'></td>	<!-- HTTP -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_5_http_disable'></option>
+													<option class="i18n" name='page3_5_http_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_http_port'></td>	<!-- HTTP监听端口(1~65535) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_https'></td>	<!-- HTTPS -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_5_https_disable'></option>
+													<option class="i18n" name='page3_5_https_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_https_port'></td>	<!-- HTTPS监听端口(1~65535) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="page3_5_content_title i18n" name='page3_5_802_1x'></span></td>	<!-- 802.1x 模式 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_802_1x_mode'></td>	<!-- 802.1x Mode -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_5_802_1x_mode_1'></option>
+													<option class="i18n" name='page3_5_802_1x_mode_2'></option>
+													<option class="i18n" name='page3_5_802_1x_mode_3'></option>
+													<option class="i18n" name='page3_5_802_1x_mode_4'></option>
+													<option class="i18n" name='page3_5_802_1x_mode_5'></option>
+													<option class="i18n" name='page3_5_802_1x_mode_6'></option>
+													<option class="i18n" name='page3_5_802_1x_mode_7'></option>
+													<option class="i18n" name='page3_5_802_1x_mode_8'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_provisioning_mode'></td>	<!-- 配置模式 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_5_provisioning_mode_UP'></option>
+													<option class="i18n" name='page3_5_provisioning_mode_AP'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_anonymous_identity'></td>	<!-- 匿名身份 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_identity'></td>	<!-- 账号 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_md5_password'></td>	<!-- MD5密钥 -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_ca_certificates'></td>	<!-- CA证书 -->
+											<td>
+												<input class="i18n-input" selectname="page3_5_ca_certificates_file" readonly="readonly" style="background:#f2f2f2" type="text">
+												<input class="i18n-input" selectname='page3_5_ca_certificates_browse' type="button">
+												<input type="file" style="opacity:0; position:absolute; width:0px; ">
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<input class="i18n-input" selectname='page3_5_upload' type="button">
+												<input class="i18n-input" selectname='page3_5_cancel' type="button">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_device_certificates'></td>	<!-- 设备证书 -->
+											<td>
+												<input class="i18n-input" selectname="page3_5_device_certificates_file" readonly="readonly" style="background:#f2f2f2" type="text">
+												<input class="i18n-input" selectname='page3_5_device_certificates_browse' type="button">
+												<input type="file" style="opacity:0; position:absolute; width:0px; ">
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<input class="i18n-input" selectname='page3_5_upload' type="button">
+												<input class="i18n-input" selectname='page3_5_cancel' type="button">
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="page3_5_content_title i18n" name='page3_5_span_to_pc'></span></td>	<!-- 透传到PC -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_span_to_pc_port'></td>	<!-- 透传到PC端口 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_5_span_to_pc_port_disable'></option>
+													<option class="i18n" name='page3_5_span_to_pc_port_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="page3_5_content_title i18n" name='page3_5_RR'></span></td>	<!-- 随机注册 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_registration_random'></td>	<!-- 随机注册（0~60秒） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="page3_5_content_title i18n" name='page3_5_icmpv6_status'></span></td>	<!-- ICMPv6状态 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_icmpv6_status_active'></td>	<!-- 激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_5_icmpv6_status_active_disable'></option>
+													<option class="i18n" name='page3_5_icmpv6_status_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left;"><span class="page3_5_content_title i18n" name='page3_5_vpn'></span></td>	<!-- VPN -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_vpn_active'></td>	<!-- 激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_5_vpn_active_disable'></option>
+													<option class="i18n" name='page3_5_vpn_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_5_vpn_upload'></td>	<!-- 上传VPN配置 -->
+											<td>
+												<input class="i18n-input" selectname="page3_5_vpn_upload_file" readonly="readonly" style="background:#f2f2f2" type="text">
+												<input class="i18n-input" selectname='page3_5_vpn_upload_browse' type="button">
+												<input type="file" style="opacity:0; position:absolute; width:0px; ">
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<input class="i18n-input" selectname='page3_5_upload' type="button">
+												<input class="i18n-input" selectname='page3_5_cancel' type="button">
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input id="page3_5_submit" class="i18n-input" selectname='page3_5_submit' type="submit" />	<!-- 提交 -->
+											</td>
+											<td>
+												<input id="page3_5_cancel" class="i18n-input" selectname='page3_5_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
 										<tr></tr>
 									</table>
-								</form>
+								</div>
+								<div id="page3_6">
+									<table class="content_three_6" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="page3_6_content_title i18n" name='page3_6_diagnostics'></span></td>	<!-- 诊断 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_6_command'></td>	<!-- 诊断 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page3_6_ping'></option>
+													<option class="i18n" name='page3_6_traceroute'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page3_6_ip_address'></td>	<!-- IP地址 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<textarea readonly="readonly" disabled="disabled"></textarea>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page3_6_start" class="i18n-input" selectname='page3_6_start' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page3_6_stop" class="i18n-input" selectname='page3_6_stop' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
 							</td>
 							<td width="200px" bgcolor="#c0c0c0">
 								<table class="explain_title" cellspacing="0">
@@ -2091,6 +2604,12 @@
 	<script type="text/javascript" src="js/page2_4.js"></script>
 	<script type="text/javascript" src="js/page2_5.js"></script>
 	<script type="text/javascript" src="js/page3.js"></script>
+	<script type="text/javascript" src="js/page3_1.js"></script>
+	<script type="text/javascript" src="js/page3_2.js"></script>
+	<script type="text/javascript" src="js/page3_3.js"></script>
+	<script type="text/javascript" src="js/page3_4.js"></script>
+	<script type="text/javascript" src="js/page3_5.js"></script>
+	<script type="text/javascript" src="js/page3_6.js"></script>
 	<script type="text/javascript" src="js/page4.js"></script>
 	<script type="text/javascript" src="js/page5.js"></script>
 	<script type="text/javascript" src="js/page6.js"></script>

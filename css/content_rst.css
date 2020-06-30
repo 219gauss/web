@@ -209,6 +209,39 @@ border: 10px solid #ffffff;
 	width: 173px;
 }
 
+.s3_1,.s3_2,.s3_3,.s3_4,.s3_5,.s3_6:HOVER{
+	cursor: pointer;
+}
+
+#page3_2,#page3_3,#page3_4,#page3_5,#page3_6{
+	display: none;
+}
+
+/* ----------page 3-2-------------- */
+.content_three_2 tr:NOT(:LAST-CHILD){ height: 30px; }
+.content_three_2 td{ text-align: center; font-size: 14px;}
+.content_three_2 select{text-align: left; width: 173px; }
+/* ----------page 3-3-------------- */
+.content_three_3 tr td span{ font-weight: bold; padding-left: 14px;}
+.content_three_3 tr:NOT(:LAST-CHILD){ height: 30px; }
+.content_three_3 td{ text-align: center; font-size: 14px;}
+.content_three_3 select{ width: 173px; }
+/* ----------page 3-4-------------- */
+.content_three_4 .page3_4_content_title{ font-weight: bold; padding-left: 14px;}
+.content_three_4 td{ text-align: center; font-size: 14px;}
+.content_three_4 select{ width: 173px; }
+/* ----------page 3-5-------------- */
+.content_three_5 .page3_5_content_title{ font-weight: bold; padding-left: 14px;}
+.content_three_5 td{ text-align: center; font-size: 14px;}
+.content_three_5 select{ width: 173px; }
+.content_three_5 td:nth-child(2){ text-align: left; }
+/* ----------page 3-6-------------- */
+.content_three_6 .page3_6_content_title{ font-weight: bold; padding-left: 14px;}
+.content_three_6 tr:NOT(:LAST-CHILD){ height: 30px; }
+.content_three_6 td{ text-align: center; font-size: 14px;}
+.content_three_6 select{ width: 173px; }
+.content_three_6 textarea{ width: 450px; height: 250px; background: #fafafa; resize: none;}
+
 /* -------page 4--------- */
 .sidebar-four div{
 	position: relative;
