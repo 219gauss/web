@@ -280,7 +280,7 @@ border: 10px solid #ffffff;
 /* -------page 5--------- */
 .sidebar-five div{
 	position: relative;
-	top: -180px;
+	top: -140px;
 	text-align: center;
 	background: #c0c0c0;
 	line-height: 30px;
@@ -303,6 +303,94 @@ border: 10px solid #ffffff;
 .content_five select{
 	width: 173px;
 }
+
+.s5_1,.s5_2,.s5_3,.s5_4,.s5_5,.s5_6,.s5_7,.s5_8,.s5_9,.s5_10,.s5_11,.s5_12,.s5_13,.s5_14,.s5_15,
+.s5_16:HOVER{ cursor: pointer; }
+
+#page5_2,#page5_3,#page5_4,#page5_5,#page5_6,#page5_7,#page5_8,#page5_9,#page5_10,#page5_11,#page5_12
+,#page5_13,#page5_14,#page5_15,#page5_16{ display: none; }
+
+/* ----------page 5-2-------------- */
+.content_five_2 select{ width: 173px; }
+.content_five_2 tr td{ text-align: center; font-size: 14px; }
+.content_five_2 tr:FIRST-CHILD{ font-weight: bold; }
+.content_five_2 tr span{ padding-left: 14px; }
+/* ----------page 5-3-------------- */
+.content_five_3 select{ width: 173px; }
+.content_five_3 tr td{ text-align: center; font-size: 14px; }
+.content_five_3 tr:FIRST-CHILD{ font-weight: bold; }
+.content_five_3 tr span{ padding-left: 14px; }
+/* ----------page 5-4-------------- */
+.content_five_4 select{ width: 173px; }
+.content_five_4 tr td{ font-size: 14px; }
+.content_five_4 tr td:FIRST-CHILD{ text-align: center;}
+.content_five_4 tr:FIRST-CHILD{ font-weight: bold; }
+.content_five_4 tr span{ padding-left: 14px; }
+/* ----------page 5-5-------------- */
+.content_five_5 select{ width: 173px; }
+.content_five_5 tr td{ text-align: center; font-size: 14px; }
+.content_five_5 tr:FIRST-CHILD{ font-weight: bold; }
+.content_five_5 tr span{ padding-left: 14px; }
+.content_five_5 tr:NOT(:LAST-CHILD){ height: 40px; }
+/* ----------page 5-6-------------- */
+.content_five_6 select{ width: 173px; }
+.content_five_6 tr td{ text-align: center; font-size: 14px; }
+.content_five_6 tr:FIRST-CHILD{ font-weight: bold; }
+.content_five_6 tr span{ padding-left: 14px; }
+.content_five_6 tr:NOT(:LAST-CHILD){ height: 40px; }
+/* ----------page 5-7-------------- */
+.content_five_7 select{ width: 173px; }
+.content_five_7 tr td{ text-align: center; font-size: 14px; }
+.content_five_7 tr:FIRST-CHILD{ font-weight: bold; }
+.content_five_7 tr span{ padding-left: 14px; }
+.content_five_7 tr:NOT(:LAST-CHILD){ height: 40px; }
+/* ----------page 5-8-------------- */
+.content_five_8 select{ width: 173px; }
+.content_five_8 tr td{ text-align: center; font-size: 14px; }
+.content_five_8 tr:FIRST-CHILD,.content_five_8 tr:nth-child(9){ font-weight: bold; }
+.content_five_8 tr span{ padding-left: 14px; }
+.content_five_8 tr:NOT(:LAST-CHILD){ height: 40px; }
+/* ----------page 5-9-------------- */
+.content_five_9 select{ width: 173px; }
+.content_five_9 tr td{ text-align: center; font-size: 14px; }
+.content_five_9 tr:FIRST-CHILD{ font-weight: bold; }
+.content_five_9 tr span{ padding-left: 14px; }
+.content_five_9 tr:NOT(:LAST-CHILD){ height: 40px; }
+/* ----------page 5-10-------------- */
+.content_five_10 select{ width: 173px; }
+.content_five_10 tr td{ text-align: center; font-size: 14px; }
+.content_five_10 tr span{ padding-left: 14px; }
+.content_five_10 tr:NOT(:LAST-CHILD){ height: 40px; }
+/* ----------page 5-11-------------- */
+.content_five_11 select{ width: 173px; }
+.content_five_11 tr td{ text-align: center; font-size: 14px; }
+.content_five_11 tr:FIRST-CHILD{ font-weight: bold; }
+.content_five_11 tr span{ padding-left: 14px; }
+.content_five_11 tr:NOT(:LAST-CHILD){ height: 40px; }
+/* ----------page 5-12-------------- */
+.content_five_12 select,.content_five_12 [type="text"],.content_five_12 textarea{ width: 280px; }
+.content_five_12 textarea{ height: 200px; }
+.content_five_12 tr td{ text-align: center; font-size: 14px; }
+.content_five_12 tr span{ padding-left: 14px; }
+.content_five_12 tr:NOT(:LAST-CHILD){ height: 40px; }
+/* ----------page 5-13-------------- */
+.content_five_13 tr td{ text-align: center; font-size: 14px; }
+.content_five_13 [type="text"]{ width: 280px }
+/* ----------page 5-14-------------- */
+.content_five_14 tr td{ text-align: center; font-size: 14px; }
+.content_five_14 [type="text"]{ width: 280px }
+/* ----------page 5-15-------------- */
+.content_five_15 select{ width: 173px; }
+.content_five_15 tr td{ text-align: center; font-size: 14px; }
+.content_five_15 tr:FIRST-CHILD{ font-weight: bold; }
+.content_five_15 tr span{ padding-left: 14px; }
+.content_five_15 tr:NOT(:LAST-CHILD){ height: 40px; }
+/* ----------page 5-16-------------- */
+.content_five_16 select{ width: 173px; }
+.content_five_16 tr td{ text-align: center; font-size: 14px; }
+.content_five_16 tr:FIRST-CHILD{ font-weight: bold; }
+.content_five_16 tr span{ padding-left: 14px; }
+.content_five_16 tr:NOT(:LAST-CHILD){ height: 40px; }
 
 /* -------page 6--------- */
 .sidebar-six div{

@@ -2337,183 +2337,1462 @@
 						<tr>
 							<td class="sidebar-five" width="200px" bgcolor="#c0c0c0">
 								<div class="s5_1 i18n" name='page5_forward_dnd'></div>		<!-- 呼叫转移 & 免打扰 -->
-								<div class="i18n" name='page5_general_information'></div>	<!-- 基本信息 -->
-								<div class="i18n" name='page5_audio'></div>					<!-- 声音 -->
-								<div class="i18n" name='page5_intercom'></div>				<!-- 对讲机 -->
-								<div class="i18n" name='page5_transfer'></div>				<!-- 对讲机 -->
-								<div class="i18n" name='page5_pick_up_park'></div>			<!-- 呼叫截答 -->
-								<div class="i18n" name='page5_remote_control'></div>		<!-- 远程控制 -->
-								<div class="i18n" name='page5_phone_lock'></div>			<!-- 键盘锁 -->
-								<div class="i18n" name='page5_acd'></div>					<!-- ACD -->
-								<div class="i18n" name='page5_sms'></div>					<!-- 短信息 -->
-								<div class="i18n" name='page5_action_url'></div>			<!-- Action URL -->
-								<div class="i18n" name='page5_power_led'></div>				<!-- 电源灯 -->
-								<div class="i18n" name='page5_notification_popups'></div>	<!-- 弹出通知窗口 -->
+								<div class="s5_2 i18n" name='page5_general_information1'></div>	<!-- 基本信息1 -->
+								<div class="s5_3 i18n" name='page5_general_information2'></div>	<!-- 基本信息2 -->
+								<div class="s5_4 i18n" name='page5_general_information3'></div>	<!-- 基本信息3 -->
+								<div class="s5_5 i18n" name='page5_audio'></div>					<!-- 声音 -->
+								<div class="s5_6 i18n" name='page5_intercom'></div>				<!-- 对讲机 -->
+								<div class="s5_7 i18n" name='page5_transfer'></div>				<!-- 对讲机 -->
+								<div class="s5_8 i18n" name='page5_pick_up_park'></div>			<!-- 呼叫截答 -->
+								<div class="s5_9 i18n" name='page5_remote_control'></div>		<!-- 远程控制 -->
+								<div class="s5_10 i18n" name='page5_phone_lock'></div>			<!-- 键盘锁 -->
+								<div class="s5_11 i18n" name='page5_acd'></div>					<!-- ACD -->
+								<div class="s5_12 i18n" name='page5_sms'></div>					<!-- 短信息 -->
+								<div class="s5_13 i18n" name='page5_action_url_1'></div>			<!-- Action URL 1-->
+								<div class="s5_14 i18n" name='page5_action_url_2'></div>			<!-- Action URL 2-->
+								<div class="s5_15 i18n" name='page5_power_led'></div>				<!-- 电源灯 -->
+								<div class="s5_16 i18n" name='page5_notification_popups'></div>	<!-- 弹出通知窗口 -->
 							</td>
 							<td class="five-1" width="600px" bgcolor="#fafafa">
-								<form action="php/page5_submit.php" method="post">
-									<table class="content_five" width="600px" height="850px" cellspacing="0">
-										<tr><th><span class="i18n" name='page5_forward'></span></th></tr>	<!-- 呼叫转移 -->
+								<div id="page5_1">
+									<form action="php/page5_submit.php" method="post">
+										<table class="content_five" width="600px" height="850px" cellspacing="0">
+											<tr><th><span class="i18n" name='page5_forward'></span></th></tr>	<!-- 呼叫转移 -->
+											<tr>
+												<td class="i18n" name='page5_forward_emergency'></td>	<!-- 呼叫转移紧急号码 -->
+												<td>
+													<select id="page5_forward_emergency">
+														<option class="i18n" name='page5_forward_disable' value="0"></option>	<!-- 禁用 -->
+														<option class="i18n" name='page5_forward_enable' value="1"></option>	<!-- 启用 -->
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_forward_authorized_numbers'></td>	<!-- 呼叫转移鉴权号码 -->
+												<td><input id="page5_forward_authorized_numbers" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_forward_mode'></td>	<!-- 模式 -->
+												<td>
+													<input id="page5_forward_mode_phone" type="radio" name="page5_forward_mode" onclick="forward_mode_phone_click()">
+													<label class="i18n" name='page5_forward_mode_phone' for="page5_forward_mode_phone" style="cursor: pointer;"></label>	<!-- 话机 -->
+													<input id="page5_forward_mode_custom" type="radio" name="page5_forward_mode" onclick="forward_mode_custom_click()">
+													<label class="i18n" name='page5_forward_mode_custom' for="page5_forward_mode_custom" style="cursor: pointer;"></label>	<!-- 自定义 -->
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_forward_account'></td>	<!-- 账号 -->
+												<td>
+													<select id="page5_forward_account">
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_always_forward'></td>	<!-- 无条件转移 -->
+												<td>
+													<input id="page5_always_forward_on" type="radio" name="page5_always_forward">
+													<label class="i18n" name='page5_always_forward_on' for="page5_always_forward_on" style="cursor: pointer;"></label>	<!-- 开 -->
+													<input id="page5_always_forward_off" type="radio" name="page5_always_forward">
+													<label class="i18n" name='page5_always_forward_off' for="page5_always_forward_off" style="cursor: pointer;"></label>	<!-- 关 -->
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_always_forward_target'></td>	<!-- 目标号码 -->
+												<td><input id="page5_always_forward_target" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_always_forward_on_code'></td>	<!-- 开启特征码 -->
+												<td><input id="page5_always_forward_on_code" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_always_forward_off_code'></td>	<!-- 关闭特征码 -->
+												<td><input id="page5_always_forward_off_code" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_busy_forward'></td>	<!-- 遇忙转移 -->
+												<td>
+													<input id="page5_busy_forward_on" type="radio" name="page5_busy_forward">
+													<label class="i18n" name='page5_busy_forward_on' for="page5_busy_forward_on" style="cursor: pointer;"></label>	<!-- 开 -->
+													<input id="page5_busy_forward_off" type="radio" name="page5_busy_forward">
+													<label class="i18n" name='page5_busy_forward_off' for="page5_busy_forward_off" style="cursor: pointer;"></label>	<!-- 关 -->
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_busy_forward_target'></td>	<!-- 目标号码 -->
+												<td><input id="page5_busy_forward_target" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_busy_forward_on_code'></td>	<!-- 开启特征码 -->
+												<td><input id="page5_busy_forward_on_code" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_busy_forward_off_code'></td>	<!-- 关闭特征码 -->
+												<td><input id="page5_busy_forward_off_code" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_no_answer_forward'></td>	<!-- 无应答转移 -->
+												<td>
+													<input id="page5_no_answer_forward_on" type="radio" name="page5_no_answer_forward">
+													<label class="i18n" name='page5_no_answer_forward_on' for="page5_no_answer_forward_on" style="cursor: pointer;"></label>	<!-- 开 -->
+													<input id="page5_no_answer_forward_off" type="radio" name="page5_no_answer_forward">
+													<label class="i18n" name='page5_no_answer_forward_off' for="page5_no_answer_forward_off" style="cursor: pointer;"></label>	<!-- 关 -->
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_ring_time'></td>	<!-- 响铃时间（秒） -->
+												<td>
+													<select id="page5_ring_time">
+														<option value="0">0</option>
+														<option value="10">10</option>
+														<option value="20">20</option>
+														<option value="30">30</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_no_answer_forward_target'></td>	<!-- 目标号码 -->
+												<td><input id="page5_no_answer_forward_target" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_no_answer_forward_on_code'></td>	<!-- 开启特征码 -->
+												<td><input id="page5_no_answer_forward_on_code" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_no_answer_forward_off_code'></td>	<!-- 关闭特征码 -->
+												<td><input id="page5_no_answer_forward_off_code" type="text"></td>
+											</tr>
+											<tr><th><span class="i18n" name='page5_dnd'></span></th></tr>	<!-- 免打扰 -->
+											<tr>
+												<td class="i18n" name='page5_dnd_emergency'></td>	<!-- 紧急号码 -->
+												<td>
+													<select id="page5_dnd_emergency">
+														<option class="i18n" name='page5_dnd_disable' value="0"></option>	<!-- 禁用 -->
+														<option class="i18n" name='page5_dnd_enable' value="1"></option>	<!-- 启用 -->
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_dnd_authorized_numbers'></td>	<!-- 免打扰鉴权号码 -->
+												<td><input id="page5_dnd_authorized_numbers" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_dnd_mode'></td>	<!-- 模式 -->
+												<td>
+													<input id="page5_dnd_mode_phone" type="radio" name="page5_dnd_mode" onclick="dnd_mode_phone_click()">
+													<label class="i18n" name='page5_dnd_mode_phone' for="page5_dnd_mode_phone" style="cursor: pointer;"></label>	<!-- 话机 -->
+													<input id="page5_dnd_mode_custom" type="radio" name="page5_dnd_mode" onclick="dnd_mode_custom_click()">
+													<label class="i18n" name='page5_dnd_mode_custom' for="page5_dnd_mode_custom" style="cursor: pointer;"></label>	<!-- 自定义 -->
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_dnd_account'></td>	<!-- 账号 -->
+												<td>
+													<select id="page5_dnd_account">
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_dnd_status'></td>	<!-- 免打扰状态 -->
+												<td>
+													<input id="page5_dnd_status_on" type="radio" name="page5_dnd_status">
+													<label class="i18n" name='page5_dnd_status_on' for="page5_dnd_status_on" style="cursor: pointer;"></label>	<!-- 开 -->
+													<input id="page5_dnd_status_off" type="radio" name="page5_dnd_status">
+													<label class="i18n" name='page5_dnd_status_off' for="page5_dnd_status_off" style="cursor: pointer;"></label>	<!-- 关 -->
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_dnd_on_code'></td>	<!-- 开启特征码 -->
+												<td><input id="page5_dnd_on_code" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page5_dnd_off_code'></td>	<!-- 关闭特征码 -->
+												<td><input id="page5_dnd_off_code" type="text"></td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<input id="page5_submit" class="i18n-input" selectname='page5_submit' type="submit"/>	<!-- 确认 -->
+													&emsp;
+													<input id="page5_cancel" class="i18n-input" selectname='page5_cancel' type="button"/>	<!-- 取消 -->
+												</td>
+											</tr>
+
+										</table>
+									</form>
+								</div>
+								<div id="page5_2">
+									<table class="content_five_2" width="600px" height="850px" cellspacing="0">
 										<tr>
-											<td class="i18n" name='page5_forward_emergency'></td>	<!-- 呼叫转移紧急号码 -->
+											<td style="text-align:left"><span class="i18n" name='page5_2_general_information'></span></td>	<!-- 基本信息 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_2_call_waiting'></td>	<!-- 呼叫等待 -->
 											<td>
-												<select id="page5_forward_emergency">
-													<option class="i18n" name='page5_forward_disable' value="0"></option>	<!-- 禁用 -->
-													<option class="i18n" name='page5_forward_enable' value="1"></option>	<!-- 启用 -->
+												<select  id="">
+													<option class="i18n" name='page5_2_call_waiting_disable'></option>
+													<option class="i18n" name='page5_2_call_waiting_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_forward_authorized_numbers'></td>	<!-- 呼叫转移鉴权号码 -->
-											<td><input id="page5_forward_authorized_numbers" type="text"></td>
+											<td class="i18n" name='page5_2_call_waiting_on_code'></td>	<!-- 呼叫等待启用特征码 -->
+											<td><input type="text"></td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_forward_mode'></td>	<!-- 模式 -->
-											<td>
-												<input id="page5_forward_mode_phone" type="radio" name="page5_forward_mode" onclick="forward_mode_phone_click()">
-												<label class="i18n" name='page5_forward_mode_phone' for="page5_forward_mode_phone" style="cursor: pointer;"></label>	<!-- 话机 -->
-												<input id="page5_forward_mode_custom" type="radio" name="page5_forward_mode" onclick="forward_mode_custom_click()">
-												<label class="i18n" name='page5_forward_mode_custom' for="page5_forward_mode_custom" style="cursor: pointer;"></label>	<!-- 自定义 -->
-											</td>
+											<td class="i18n" name='page5_2_call_waiting_off_code'></td>	<!-- 呼叫等待禁用特征码 -->
+											<td><input type="text"></td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_forward_account'></td>	<!-- 账号 -->
+											<td class="i18n" name='page5_2_auto_redial'></td>	<!-- 自动重拨 -->
 											<td>
-												<select id="page5_forward_account">
+												<select  id="">
+													<option class="i18n" name='page5_2_auto_redial_disable'></option>
+													<option class="i18n" name='page5_2_auto_redial_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_always_forward'></td>	<!-- 无条件转移 -->
+											<td class="i18n" name='page5_2_auto_redial_interval'></td>	<!-- 自动重拨间隔（1~300秒） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_2_auto_redial_times'></td>	<!-- 自动重拨次数（1~300） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_2_key_as_send'></td>	<!-- 送号键 -->
 											<td>
-												<input id="page5_always_forward_on" type="radio" name="page5_always_forward">
-												<label class="i18n" name='page5_always_forward_on' for="page5_always_forward_on" style="cursor: pointer;"></label>	<!-- 开 -->
-												<input id="page5_always_forward_off" type="radio" name="page5_always_forward">
-												<label class="i18n" name='page5_always_forward_off' for="page5_always_forward_off" style="cursor: pointer;"></label>	<!-- 关 -->
-											</td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_always_forward_target'></td>	<!-- 目标号码 -->
-											<td><input id="page5_always_forward_target" type="text"></td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_always_forward_on_code'></td>	<!-- 开启特征码 -->
-											<td><input id="page5_always_forward_on_code" type="text"></td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_always_forward_off_code'></td>	<!-- 关闭特征码 -->
-											<td><input id="page5_always_forward_off_code" type="text"></td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_busy_forward'></td>	<!-- 遇忙转移 -->
-											<td>
-												<input id="page5_busy_forward_on" type="radio" name="page5_busy_forward">
-												<label class="i18n" name='page5_busy_forward_on' for="page5_busy_forward_on" style="cursor: pointer;"></label>	<!-- 开 -->
-												<input id="page5_busy_forward_off" type="radio" name="page5_busy_forward">
-												<label class="i18n" name='page5_busy_forward_off' for="page5_busy_forward_off" style="cursor: pointer;"></label>	<!-- 关 -->
-											</td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_busy_forward_target'></td>	<!-- 目标号码 -->
-											<td><input id="page5_busy_forward_target" type="text"></td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_busy_forward_on_code'></td>	<!-- 开启特征码 -->
-											<td><input id="page5_busy_forward_on_code" type="text"></td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_busy_forward_off_code'></td>	<!-- 关闭特征码 -->
-											<td><input id="page5_busy_forward_off_code" type="text"></td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_no_answer_forward'></td>	<!-- 无应答转移 -->
-											<td>
-												<input id="page5_no_answer_forward_on" type="radio" name="page5_no_answer_forward">
-												<label class="i18n" name='page5_no_answer_forward_on' for="page5_no_answer_forward_on" style="cursor: pointer;"></label>	<!-- 开 -->
-												<input id="page5_no_answer_forward_off" type="radio" name="page5_no_answer_forward">
-												<label class="i18n" name='page5_no_answer_forward_off' for="page5_no_answer_forward_off" style="cursor: pointer;"></label>	<!-- 关 -->
-											</td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_ring_time'></td>	<!-- 响铃时间（秒） -->
-											<td>
-												<select id="page5_ring_time">
-													<option value="0">0</option>
-													<option value="10">10</option>
-													<option value="20">20</option>
-													<option value="30">30</option>
+												<select  id="">
+													<option class="i18n" name='page5_2_key_as_send_disable'></option>
+													<option class="i18n" name='page5_2_key_as_send_pound'></option>
+													<option class="i18n" name='page5_2_key_as_sends_star'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_no_answer_forward_target'></td>	<!-- 目标号码 -->
-											<td><input id="page5_no_answer_forward_target" type="text"></td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_no_answer_forward_on_code'></td>	<!-- 开启特征码 -->
-											<td><input id="page5_no_answer_forward_on_code" type="text"></td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page5_no_answer_forward_off_code'></td>	<!-- 关闭特征码 -->
-											<td><input id="page5_no_answer_forward_off_code" type="text"></td>
-										</tr>
-										<tr><th><span class="i18n" name='page5_dnd'></span></th></tr>	<!-- 免打扰 -->
-										<tr>
-											<td class="i18n" name='page5_dnd_emergency'></td>	<!-- 紧急号码 -->
+											<td class="i18n" name='page5_2_reserve_pound'></td>	<!-- 保留#送号 -->
 											<td>
-												<select id="page5_dnd_emergency">
-													<option class="i18n" name='page5_dnd_disable' value="0"></option>	<!-- 禁用 -->
-													<option class="i18n" name='page5_dnd_enable' value="1"></option>	<!-- 启用 -->
+												<select  id="">
+													<option class="i18n" name='page5_2_reserve_pound_disable'></option>
+													<option class="i18n" name='page5_2_reserve_pound_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_dnd_authorized_numbers'></td>	<!-- 免打扰鉴权号码 -->
-											<td><input id="page5_dnd_authorized_numbers" type="text"></td>
+											<td class="i18n" name='page5_2_hotline_number'></td>	<!-- 热线号码 -->
+											<td><input type="text"></td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_dnd_mode'></td>	<!-- 模式 -->
-											<td>
-												<input id="page5_dnd_mode_phone" type="radio" name="page5_dnd_mode" onclick="dnd_mode_phone_click()">
-												<label class="i18n" name='page5_dnd_mode_phone' for="page5_dnd_mode_phone" style="cursor: pointer;"></label>	<!-- 话机 -->
-												<input id="page5_dnd_mode_custom" type="radio" name="page5_dnd_mode" onclick="dnd_mode_custom_click()">
-												<label class="i18n" name='page5_dnd_mode_custom' for="page5_dnd_mode_custom" style="cursor: pointer;"></label>	<!-- 自定义 -->
-											</td>
+											<td class="i18n" name='page5_2_hotline_delay'></td>	<!-- 热线延迟（0~10秒） -->
+											<td><input type="text"></td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_dnd_account'></td>	<!-- 账号 -->
+											<td class="i18n" name='page5_2_busy_tone_delay'></td>	<!-- 忙音时长（秒） -->
 											<td>
-												<select id="page5_dnd_account">
+												<select id="">
+													<option >0</option>
+													<option >3</option>
+													<option >5</option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_dnd_status'></td>	<!-- 免打扰状态 -->
+											<td class="i18n" name='page5_2_return_code_when_refuse'></td>	<!-- 拒接返回码 -->
 											<td>
-												<input id="page5_dnd_status_on" type="radio" name="page5_dnd_status">
-												<label class="i18n" name='page5_dnd_status_on' for="page5_dnd_status_on" style="cursor: pointer;"></label>	<!-- 开 -->
-												<input id="page5_dnd_status_off" type="radio" name="page5_dnd_status">
-												<label class="i18n" name='page5_dnd_status_off' for="page5_dnd_status_off" style="cursor: pointer;"></label>	<!-- 关 -->
+												<select id="">
+													<option class="i18n" name='page5_2_return_code_when_refuse_404'></option>
+													<option class="i18n" name='page5_2_return_code_when_refuse_480'></option>
+													<option class="i18n" name='page5_2_return_code_when_refuse_486'></option>
+													<option class="i18n" name='page5_2_return_code_when_refuse_603'></option>
+												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_dnd_on_code'></td>	<!-- 开启特征码 -->
-											<td><input id="page5_dnd_on_code" type="text"></td>
+											<td class="i18n" name='page5_2_return_code_when_dbd'></td>	<!-- 免打扰返回码 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_2_return_code_when_dnd_404'></option>
+													<option class="i18n" name='page5_2_return_code_when_dnd_480'></option>
+													<option class="i18n" name='page5_2_return_code_when_dnd_486'></option>
+													<option class="i18n" name='page5_2_return_code_when_dnd_603'></option>
+												</select>
+											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page5_dnd_off_code'></td>	<!-- 关闭特征码 -->
-											<td><input id="page5_dnd_off_code" type="text"></td>
+											<td class="i18n" name='page5_2_call_completion'></td>	<!-- 呼叫完成 -->
+											<td>
+												<select  id="">
+													<option class="i18n" name='page5_2_call_completion_disable'></option>
+													<option class="i18n" name='page5_2_call_completion_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_2_time_out_for_dial_now_rule'></td>	<!-- 即时呼出延迟 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_2_rfc_2543_hold'></td>	<!-- RFC 2543保持模式 -->
+											<td>
+												<select  id="">
+													<option class="i18n" name='page5_2_rfc_2543_hold_disable'></option>
+													<option class="i18n" name='page5_2_rfc_2543_hold_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_2_use_outbound_proxy'></td>	<!-- 会话中使用Outbound代理 -->
+											<td>
+												<select  id="">
+													<option class="i18n" name='page5_2_use_outbound_proxy_disable'></option>
+													<option class="i18n" name='page5_2_use_outbound_proxy_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_2_180_ring_workaround'></td>	<!-- 180 Ring工作域 -->
+											<td>
+												<select  id="">
+													<option class="i18n" name='page5_2_180_ring_workaround_disable'></option>
+													<option class="i18n" name='page5_2_180_ring_workaround_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_2_logon_wizard'></td>	<!-- 注册向导 -->
+											<td>
+												<select  id="">
+													<option class="i18n" name='page5_2_logon_wizard_disable'></option>
+													<option class="i18n" name='page5_2_logon_wizard_enable'></option>
+												</select>
+											</td>
 										</tr>
 										<tr>
 											<td colspan="2">
-												<input id="page5_submit" class="i18n-input" selectname='page5_submit' type="submit"/>	<!-- 确认 -->
+												<input id="page5_2_submit" class="i18n-input" selectname='page5_2_submit' type="submit" />	<!-- 提交 -->
 												&emsp;
-												<input id="page5_cancel" class="i18n-input" selectname='page5_cancel' type="button"/>	<!-- 取消 -->
+												<input id="page5_2_cancel" class="i18n-input" selectname='page5_2_cancel' type="button" />	<!-- 取消 -->
 											</td>
 										</tr>
-
 									</table>
-								</form>
+								</div>
+								<div id="page5_3">
+									<table class="content_five_3" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_2_general_information'></span></td>	<!-- 基本信息 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_pswPrefix'></td>	<!-- 密码呼叫前缀 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_pswLength'></td>	<!-- 密码长度 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_pswDial'></td>	<!-- 密码呼叫 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_pswDial_disable'></option>
+													<option class="i18n" name='page5_3_pswDial_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_save_call_log'></td>	<!-- 保存呼叫记录 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_save_call_log_disable'></option>
+													<option class="i18n" name='page5_3_save_call_log_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_suppress_dtmf_display'></td>	<!-- 抑制DTMF显示 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_suppress_dtmf_display_disable'></option>
+													<option class="i18n" name='page5_3_suppress_dtmf_display_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_suppress_dtmf_display_delay'></td>	<!-- 抑制DTMF显示延迟 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_suppress_dtmf_display_delay_disable'></option>
+													<option class="i18n" name='page5_3_suppress_dtmf_display_delay_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_play_local_dtmf_tone'></td>	<!-- 本地拨号DTMF音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_play_local_dtmf_tone_disable'></option>
+													<option class="i18n" name='page5_3_play_local_dtmf_tone_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_dtmf_repetition'></td>	<!-- DTMF重发 -->
+											<td>
+												<select id="">
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_multicast_codec'></td>	<!-- 多播编解码 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_multicast_codec_pcmu'></option>
+													<option class="i18n" name='page5_3_multicast_codec_pcma'></option>
+													<option class="i18n" name='page5_3_multicast_codec_g729'></option>
+													<option class="i18n" name='page5_3_multicast_codec_g722'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_play_hold_tone'></td>	<!-- 通话Hold提示音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_play_hold_tone_disable'></option>
+													<option class="i18n" name='page5_3_play_hold_tone_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_play_hold_tone_delay'></td>	<!-- 通话Hold提示音延迟 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_hold_tone_interval'></td>	<!-- Hold提示音间隔（秒） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_play_held_tone'></td>	<!-- 播放Held提示音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_play_held_tone_disable'></option>
+													<option class="i18n" name='page5_3_play_held_tone_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_play_held_tone_delay'></td>	<!-- 播放Held提示音延迟 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_play_held_tone_interval'></td>	<!-- Held提示音间隔（秒） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_allow_mute'></td>	<!-- 允许静音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_allow_mute_disable'></option>
+													<option class="i18n" name='page5_3_allow_mute_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_dual_headset'></td>	<!-- 双耳机功能 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_dual_headset_disable'></option>
+													<option class="i18n" name='page5_3_dual_headset_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_auto_answer_delay'></td>	<!-- 自动接听延迟 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_enable_auto_answer_tone'></td>	<!-- 启用自动应答提示音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_enable_auto_answer_tone_disable'></option>
+													<option class="i18n" name='page5_3_enable_auto_answer_tone_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_3_headset_prior'></td>	<!-- 耳机优先 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_3_headset_prior_disable'></option>
+													<option class="i18n" name='page5_3_headset_prior_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_3_submit" class="i18n-input" selectname='page5_3_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_3_cancel" class="i18n-input" selectname='page5_3_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div id="page5_4">
+									<table class="content_five_4" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_2_general_information'></span></td>	<!-- 基本信息 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_dtmf_replace_tran'></td>	<!-- DTMF透明替代 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_dtmf_replace_tran_disable'></option>
+													<option class="i18n" name='page5_4_dtmf_replace_tran_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_tran_send_dtmf'></td>	<!-- DTMF透传 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_send_pound_key'></td>	<!-- 发送#键 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_send_pound_key_disable'></option>
+													<option class="i18n" name='page5_4_send_pound_key_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_fwd_international'></td>	<!-- 国际前转来电 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_fwd_international_disable'></option>
+													<option class="i18n" name='page5_4_fwd_international_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_diversion_history_info'></td>	<!-- 转移/历史信息 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_diversion_history_info_disable'></option>
+													<option class="i18n" name='page5_4_diversion_history_info_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_allow_trans_exist_call'></td>	<!-- 允许转移已有呼叫 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_allow_trans_exist_call_disable'></option>
+													<option class="i18n" name='page5_4_allow_trans_exist_call_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_blf_led_mode'></td>	<!-- BLF LED Mode -->
+											<td>
+												<select id="">
+													<option>0</option>
+													<option>1</option>
+													<option>2</option>
+													<option>3</option>
+													<option>4</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_auto_logout_time'></td>	<!-- 登入超时（1~1000分钟） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_call_number_filter'></td>	<!-- 呼叫号码过滤 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_use_logo'></td>	<!-- 使用徽标 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_use_logo_off'></option>
+													<option class="i18n" name='page5_4_use_logo_systemLogo'></option>
+													<option class="i18n" name='page5_4_use_logo_customLogo'></option>
+												</select>
+											</td>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_upload_logo'></td>	<!-- 导入徽标 -->
+											<td>
+												<input class="i18n-input" selectname="page5_4_upload_logo_file" readonly="readonly" style="background:#f2f2f2" type="text">
+												<input class="i18n-input" selectname='page5_4_upload_logo_browse' type="button">
+												<input type="file" style="opacity:0; position:absolute; width:0px; ">
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<input class="i18n-input" selectname='page5_4_upload' type="button">
+												<input class="i18n-input" selectname='page5_4_cancel' type="button">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_accept_spi_trust_server_only'></td>	<!-- 只支持SIP信任服务器 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_accept_spi_trust_server_only_disable'></option>
+													<option class="i18n" name='page5_4_accept_spi_trust_server_only_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_allow_ip_call'></td>	<!-- 允许IP呼叫 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_allow_ip_call_disable'></option>
+													<option class="i18n" name='page5_4_allow_ip_call_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_ip_direct_auto_answer'></td>	<!-- IP直拨自动应答 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_ip_direct_auto_answer_disable'></option>
+													<option class="i18n" name='page5_4_ip_direct_auto_answer_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_call_list_show_number'></td>	<!-- 呼叫列表显示号码 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_call_list_show_number_name'></option>
+													<option class="i18n" name='page5_4_call_list_show_number_number'></option>
+													<option class="i18n" name='page5_4_call_list_show_number_nameNumber'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_voice_mail_tone'></td>	<!-- 语音信息音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_voice_mail_tone_disable'></option>
+													<option class="i18n" name='page5_4_voice_mail_tone_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_dhcp_hostname'></td>	<!-- DHCP设备名称 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_reboot_in_talking'></td>	<!-- 通话中允许重启 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_reboot_in_talking_disable'></option>
+													<option class="i18n" name='page5_4_reboot_in_talking_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_hide_feature_access_codes'></td>	<!-- 隐藏特征码 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_hide_feature_access_codes_disable'></option>
+													<option class="i18n" name='page5_4_hide_feature_access_codes_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_display_method_on_dialing'></td>	<!-- 拨号界面标题栏取值 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_display_method_on_dialing_label'></option>
+													<option class="i18n" name='page5_4_display_method_on_dialing_displayName'></option>
+													<option class="i18n" name='page5_4_display_method_on_dialing_userName'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_4_auto_linekeys'></td>	<!-- 自动配置帐号 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_4_auto_linekeys_disable'></option>
+													<option class="i18n" name='page5_4_auto_linekeys_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_4_submit" class="i18n-input" selectname='page5_4_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_4_cancel" class="i18n-input" selectname='page5_4_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div id="page5_5">
+									<table class="content_five_5" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_5_audio_settings'></span></td>	<!-- 声音配置 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_5_call_waiting_tone'></td>	<!-- 呼叫等待音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_5_call_waiting_tone_disable'></option>
+													<option class="i18n" name='page5_5_call_waiting_tone_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_5_key_tone'></td>	<!-- 按键音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_5_key_tone_disable'></option>
+													<option class="i18n" name='page5_5_key_tone_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_5_send_tone'></td>	<!-- 发送按键音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_5_send_tone_disable'></option>
+													<option class="i18n" name='page5_5_send_tone_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_5_redial_tone'></td>	<!-- 拨号音恢复 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_5_headset_send_volume'></td>	<!-- 耳机发送音量 (-50~50) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_5_handset_send_volume'></td>	<!-- 手柄发送音量 (-50~50) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_5_handsfree_send_volume'></td>	<!-- 免提发送音量 (-50~50) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_5_ringer_device_for_headset'></td>	<!-- 耳机振铃方式 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_5_ringer_device_for_headset_speaker'></option>
+													<option class="i18n" name='page5_5_ringer_device_for_headset_headset'></option>
+													<option class="i18n" name='page5_5_ringer_device_for_headset_speaker_headset'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_5_submit" class="i18n-input" selectname='page5_5_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_5_cancel" class="i18n-input" selectname='page5_5_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page5_6">
+									<table class="content_five_6" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_6_intercom'></span></td>	<!-- 对讲机 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_6_intercom_allow'></td>	<!-- 启用对讲机 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_6_intercom_allow_disable'></option>
+													<option class="i18n" name='page5_6_intercom_allow_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_6_intercom_mute'></td>	<!-- 对讲机静音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_6_intercom_mute_disable'></option>
+													<option class="i18n" name='page5_6_intercom_mute_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_6_intercom_tone'></td>	<!-- 对讲提示音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_6_intercom_tone_disable'></option>
+													<option class="i18n" name='page5_6_intercom_tone_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_6_intercom_barge'></td>	<!-- 对讲介入 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_6_intercom_barge_disable'></option>
+													<option class="i18n" name='page5_6_intercom_barge_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_6_submit" class="i18n-input" selectname='page5_6_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_6_cancel" class="i18n-input" selectname='page5_6_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page5_7">
+									<table class="content_five_7" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_7_transfer'></span></td>	<!-- 通话转接 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_7_semi_attended_transfer'></td>	<!-- 启用半咨询转 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_7_semi_attended_transfer_disable'></option>
+													<option class="i18n" name='page5_7_semi_attended_transfer_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_7_blind_transfer_on_hook'></td>	<!-- 挂机盲转 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_7_blind_transfer_on_hook_disable'></option>
+													<option class="i18n" name='page5_7_blind_transfer_on_hook_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_7_attended_transfer_on_hook'></td>	<!-- 挂机咨询转 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_7_attended_transfer_on_hook_disable'></option>
+													<option class="i18n" name='page5_7_attended_transfer_on_hook_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_7_transfer_on_conference_hang_up'></td>	<!-- 会议挂机转接 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_7_transfer_on_conference_hang_up_disable'></option>
+													<option class="i18n" name='page5_7_transfer_on_conference_hang_up_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_7_transfer_mode_via_dsskey'></td>	<!-- 可编程按键触发转接 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_7_transfer_mode_via_dsskey_newCall'></option>
+													<option class="i18n" name='page5_7_transfer_mode_via_dsskey_attendedTransfer'></option>
+													<option class="i18n" name='page5_7_transfer_mode_via_dsskey_buildTransfer'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_7_submit" class="i18n-input" selectname='page5_7_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_7_cancel" class="i18n-input" selectname='page5_7_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page5_8">
+									<table class="content_five_8" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_8_call_pickup'></span></td>	<!-- 指定截答 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_directed_call_pickup'></td>	<!-- 指定截答 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_8_directed_call_pickup_disable'></option>
+													<option class="i18n" name='page5_8_directed_call_pickup_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_directed_call_pickup_code'></td>	<!-- 指定截答特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_group_call_pickup'></td>	<!-- 群组截答 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_8_group_call_pickup_disable'></option>
+													<option class="i18n" name='page5_8_group_call_pickup_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_group_call_pickup_code'></td>	<!-- 群组截答特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_visual_alert_for_blf_pickup'></td>	<!-- 截答提示窗口 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_8_visual_alert_for_blf_pickup_disable'></option>
+													<option class="i18n" name='page5_8_visual_alert_for_blf_pickup_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_audio_alert_for_blf_pickup'></td>	<!-- 截答提示音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_8_audio_alert_for_blf_pickup_disable'></option>
+													<option class="i18n" name='page5_8_audio_alert_for_blf_pickup_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_ring_type_for_blf_pickup'></td>	<!-- 截答铃声 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_ring_type_1'></option>
+													<option class="i18n" name='page6_ring_type_2'></option>
+													<option class="i18n" name='page6_ring_type_3'></option>
+													<option class="i18n" name='page6_ring_type_4'></option>
+													<option class="i18n" name='page6_ring_type_5'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_8_call_park_title'></span></td>	<!-- 通话驻留 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_call_park_mode'></td>	<!-- 驻留方式 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_8_call_park_mode_fac'></option>
+													<option class="i18n" name='page5_8_call_park_mode_transfer'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_call_park'></td>	<!-- 通话驻留 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_8_call_park_disable'></option>
+													<option class="i18n" name='page5_8_call_park_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_call_park_code'></td>	<!-- 驻留特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_8_park_retrieve_code'></td>	<!-- 驻留取回特征码 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_8_submit" class="i18n-input" selectname='page5_8_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_8_cancel" class="i18n-input" selectname='page5_8_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page5_9">
+									<table class="content_five_9" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_9_remote_control'></span></td>	<!-- 远程控制 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_9_push_xml_server_ip_address'></td>	<!-- XML推送服务器地址 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_9_user_name'></td>	<!-- 用户名称 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_9_password'></td>	<!-- 密码 -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_9_sip_notify'></td>	<!-- SIP通知 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_9_sip_notify_disable'></option>
+													<option class="i18n" name='page5_9_sip_notify_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_9_block_xml_in_calling'></td>	<!-- 通话中阻止XML推送 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_9_block_xml_in_calling_disable'></option>
+													<option class="i18n" name='page5_9_block_xml_in_calling_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_9_action_uri_allow_ip_list'></td>	<!-- 允许控制IP列表 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_9_csta_control'></td>	<!-- CSTA控制 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_9_csta_control_disable'></option>
+													<option class="i18n" name='page5_9_csta_control_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_9_submit" class="i18n-input" selectname='page5_9_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_9_cancel" class="i18n-input" selectname='page5_9_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page5_10">
+									<table class="content_five_10" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page5_10_phone_lock_enable'></td>	<!-- 启用键盘锁 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_10_phone_lock_enable_disable'></option>
+													<option class="i18n" name='page5_10_phone_lock_enable_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_10_phone_lock_type'></td>	<!-- 键盘锁类型 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_10_phone_lock_type_allKey'></option>
+													<option class="i18n" name='page5_10_phone_lock_type_funckey'></option>
+													<option class="i18n" name='page5_10_phone_lock_type_menukey'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_10_phone_unlock_pin'></td>	<!-- 解锁密码（0~15位数字） -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_10_auto_lock'></td>	<!-- 上锁延迟（0~3600秒） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_10_emergency'></td>	<!-- 紧急呼叫 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_10_submit" class="i18n-input" selectname='page5_10_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_10_cancel" class="i18n-input" selectname='page5_10_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page5_11">
+									<table class="content_five_11" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_11_acd'></span></td>	<!-- ACD -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_11_acd_auto_available'></td>	<!-- ACD自动激活 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_11_acd_auto_available_disable'></option>
+													<option class="i18n" name='page5_11_acd_auto_available_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_11_acd_auto_available_timer'></td>	<!-- ACD自动激活定时器（0~120s）	 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_11_submit" class="i18n-input" selectname='page5_11_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_11_cancel" class="i18n-input" selectname='page5_11_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page5_12">
+									<table class="content_five_12" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page5_12_account'></td>	
+											<td>
+												<select id=""></select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_12_sms_target_number'></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_12_sms_message'></td>
+											<td>
+												<textarea id=""></textarea>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_12_submit" class="i18n-input" selectname='page5_12_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_12_cancel" class="i18n-input" selectname='page5_12_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page5_13">
+									<table class="content_five_13" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td  class="i18n" name='page5_13_setup_completed'></td>	<!-- 启动完成 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_registered'></td>	<!-- 已注册 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_unregistered'></td>	<!-- 注册失败 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_register_failed'></td>	<!-- 注册失败 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_off_hook'></td>	<!-- 放下手柄 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_on_hook'></td>	<!-- 拿起手柄 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_incoming_call'></td>	<!-- 来电 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_outgoing_call'></td>	<!-- 去电 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_established'></td>	<!-- 建立会话 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_terminated'></td>	<!-- 结束 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_open_dnd'></td>	<!-- 开启免打扰 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_close_dnd'></td>	<!-- 关闭免打扰 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_always_forward_on'></td>	<!-- 开启无条件前转 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_always_forward_off'></td>	<!-- 关闭无条件前转 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_busy_forward_on'></td>	<!-- 开启遇忙前转 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_busy_forward_off'></td>	<!-- 关闭遇忙前转 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_no_answer_forward_on'></td>	<!-- 开启无应答前转 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_no_answer_forward_off'></td>	<!-- 关闭无应答前转 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_transfer_call'></td>	<!-- 转接呼叫 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_blind_transfer'></td>	<!-- 盲转 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_13_attended_transfer'></td>	<!-- 咨询转 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_13_submit" class="i18n-input" selectname='page5_13_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_13_cancel" class="i18n-input" selectname='page5_13_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div id="page5_14">
+									<table class="content_five_14" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page5_14_hold'></td>	<!-- 保持 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_unHold'></td>	<!-- 取消保持 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_mute'></td>	<!-- 静音 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_unMute'></td>	<!-- 取消静音 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_missed_call'></td>	<!-- 未接来电 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_ip_changed'></td>	<!-- IP变更 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_idle_to_busy'></td>	<!-- 闲置进入通话 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_busy_to_idle'></td>	<!-- 通话进入闲置 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_reject_incoming_call'></td>	<!-- 拒绝来电 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_answer_new_incoming_call'></td>	<!-- Answer New Incoming Call -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_transfer_failed'></td>	<!-- 转接失败 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_transfer_finished'></td>	<!-- 转接完成 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_forward_incoming_call'></td>	<!-- 前转来电 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_autop_finish'></td>	<!-- 自动完成更新 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_call_waiting_on'></td>	<!-- 开启呼叫等待 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_call_waiting_off'></td>	<!-- 关闭呼叫等待 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_headset'></td>	<!-- 使用耳麦 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_handsfree'></td>	<!-- 使用免提 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_cancel_call_out'></td>	<!-- 取消呼出 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_remote_busy'></td>	<!-- 远程忙 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_call_remote_canceled'></td>	<!-- 取消远程呼叫 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_14_peripheral_information'></td>	<!-- 外设信息 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_14_submit" class="i18n-input" selectname='page5_14_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_14_cancel" class="i18n-input" selectname='page5_14_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div id="page5_15">
+									<table class="content_five_15" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_15_power_led'></span></td>	<!-- 电源灯 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_15_common_power_light_on'></td>	<!-- 默认电源指示灯 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_15_common_power_light_on_disable'></option>
+													<option class="i18n" name='page5_15_common_power_light_on_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_15_ringing_power_light_flash'></td>	<!-- 响铃时电源灯闪烁 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_15_ringing_power_light_flash_disable'></option>
+													<option class="i18n" name='page5_15_ringing_power_light_flash_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_15_voiceText_mail_power_light_flash'></td>	<!-- 有语音、文本信息时电源灯闪烁 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_15_voiceText_mail_power_light_flash_disable'></option>
+													<option class="i18n" name='page5_15_voiceText_mail_power_light_flash_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_15_mute_power_light_flash'></td>	<!-- 静音时电源指示灯闪烁 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_15_mute_power_light_flash_disable'></option>
+													<option class="i18n" name='page5_15_mute_power_light_flash_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_15_holdHeld_power_light_flash'></td>	<!-- 保持通话时电源指示灯闪烁 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_15_holdHeld_power_light_flash_disable'></option>
+													<option class="i18n" name='page5_15_holdHeld_power_light_flash_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_15_talkDial_power_light_on'></td>	<!-- 通话、拨号时开启电源灯 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_15_talkDial_power_light_on_disable'></option>
+													<option class="i18n" name='page5_15_talkDial_power_light_on_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_15_missCall_power_light_flash'></td>	<!-- 未接电话电源灯闪烁 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_15_missCall_power_light_flash_disable'></option>
+													<option class="i18n" name='page5_15_missCall_power_light_flash_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_15_submit" class="i18n-input" selectname='page5_15_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_15_cancel" class="i18n-input" selectname='page5_15_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page5_16">
+									<table class="content_five_16" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page5_16_notification_popups'></span></td>	<!-- 弹出通知窗口 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_16_display_voice_mail_popup'></td>	<!-- 显示语言留言弹窗 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_16_display_voice_mail_popup_disable'></option>
+													<option class="i18n" name='page5_16_display_voice_mail_popup_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_16_display_missed_call_popup'></td>	<!-- 显示未接来电弹窗 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_16_display_missed_call_popup_disable'></option>
+													<option class="i18n" name='page5_16_display_missed_call_popup_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_16_display_forward_call_popup'></td>	<!-- 显示转移来电弹窗 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page5_16_display_forward_call_popup_disable'></option>
+													<option class="i18n" name='page5_16_display_forward_call_popup_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page5_16_display_text_message_popup'></td>	<!-- 显示文本信息弹窗 -->
+											<td>
+											<select id="">
+													<option class="i18n" name='page5_16_display_text_message_popup_disable'></option>
+													<option class="i18n" name='page5_16_display_text_message_popup_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page5_16_submit" class="i18n-input" selectname='page5_16_submit' type="submit" />	<!-- 提交 -->
+												&emsp;
+												<input id="page5_16_cancel" class="i18n-input" selectname='page5_16_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
 							</td>
 							<td width="200px" bgcolor="#c0c0c0">
 								<table class="explain_title" cellspacing="0">
@@ -3132,6 +4411,22 @@
 	<script type="text/javascript" src="js/page4_1.js"></script>
 	<script type="text/javascript" src="js/page4_2.js"></script>
 	<script type="text/javascript" src="js/page5.js"></script>
+	<script type="text/javascript" src="js/page5_1.js"></script>
+	<script type="text/javascript" src="js/page5_2.js"></script>
+	<script type="text/javascript" src="js/page5_3.js"></script>
+	<script type="text/javascript" src="js/page5_4.js"></script>
+	<script type="text/javascript" src="js/page5_5.js"></script>
+	<script type="text/javascript" src="js/page5_6.js"></script>
+	<script type="text/javascript" src="js/page5_7.js"></script>
+	<script type="text/javascript" src="js/page5_8.js"></script>
+	<script type="text/javascript" src="js/page5_9.js"></script>
+	<script type="text/javascript" src="js/page5_10.js"></script>
+	<script type="text/javascript" src="js/page5_11.js"></script>
+	<script type="text/javascript" src="js/page5_12.js"></script>
+	<script type="text/javascript" src="js/page5_13.js"></script>
+	<script type="text/javascript" src="js/page5_14.js"></script>
+	<script type="text/javascript" src="js/page5_15.js"></script>
+	<script type="text/javascript" src="js/page5_16.js"></script>
 	<script type="text/javascript" src="js/page6.js"></script>
 	<script type="text/javascript" src="js/page7.js"></script>
 	<script type="text/javascript" src="js/page8.js"></script>
