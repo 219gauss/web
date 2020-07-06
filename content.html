@@ -3828,73 +3828,1320 @@
 						<tr>
 							<td class="sidebar-six" width="200px" bgcolor="#c0c0c0">
 								<div class="s6_1 i18n" name='page6_preference'></div>	<!-- 基本设置 -->
-								<div class="i18n" name='page6_time_date'></div>			<!-- 时间 & 日期 -->
-								<div class="i18n" name='page6_call_display'></div>		<!-- 来电显示 -->
-								<div class="i18n" name='page6_upgrade'></div>			<!-- 升级 -->
-								<div class="i18n" name='page6_auto_provision'></div>	<!-- 自动更新 -->
-								<div class="i18n" name='page6_configuration'></div>		<!-- 配置管理 -->
-								<div class="i18n" name='page6_dial_plan'></div>			<!-- 拨号规则 -->
-								<div class="i18n" name='page6_voice'></div>				<!-- 语音 -->
-								<div class="i18n" name='page6_ring'></div>				<!-- 响铃 -->
-								<div class="i18n" name='page6_tones'></div>				<!-- 信号音 -->
-								<div class="i18n" name='page6_softkey_layout'></div>	<!-- 软键设置 -->
-								<div class="i18n" name='page6_tr069'></div>				<!-- TR069 -->
-								<div class="i18n" name='page6_voice_monitoring'></div>	<!-- 声音监测 -->
-								<div class="i18n" name='page6_sip'></div>				<!-- SIP -->
-								<div class="i18n" name='page6_power_saving'></div>		<!-- 节电模式 -->
+								<div class="s6_2 i18n" name='page6_time_date'></div>			<!-- 时间 & 日期 -->
+								<div class="s6_3 i18n" name='page6_call_display'></div>		<!-- 来电显示 -->
+								<div class="s6_4 i18n" name='page6_upgrade'></div>			<!-- 升级 -->
+								<div class="s6_5 i18n" name='page6_auto_provision'></div>	<!-- 自动更新 -->
+								<div class="s6_6 i18n" name='page6_configuration'></div>		<!-- 配置管理 -->
+								<div class="s6_7 i18n" name='page6_dial_plan'></div>			<!-- 拨号规则 -->
+								<div class="s6_8 i18n" name='page6_voice'></div>				<!-- 语音 -->
+								<div class="s6_9 i18n" name='page6_ring'></div>				<!-- 响铃 -->
+								<div class="s6_10 i18n" name='page6_tones'></div>				<!-- 信号音 -->
+								<div class="s6_11 i18n" name='page6_softkey_layout'></div>	<!-- 软键设置 -->
+								<div class="s6_12 i18n" name='page6_tr069'></div>				<!-- TR069 -->
+								<div class="s6_13 i18n" name='page6_voice_monitoring'></div>	<!-- 声音监测 -->
+								<div class="s6_14 i18n" name='page6_sip'></div>				<!-- SIP -->
+								<div class="s6_15 i18n" name='page6_power_saving'></div>		<!-- 节电模式 -->
 							</td>
 							<td class="six-1" width="600px" bgcolor="#fafafa">
-								<form action="php/page6_submit.php" method="post" enctype="multipart/form-data">
-									<table class="content_six" width="600px" height="850px" cellspacing="0">
+								<div id="page6_1">
+									<form action="php/page6_submit.php" method="post" enctype="multipart/form-data">
+										<table class="content_six" width="600px" height="850px" cellspacing="0">
+											<tr>
+												<td class="i18n" name='page6_live_dialpad'></td>	<!-- 自动呼出 -->
+												<td style="text-align:left">
+													<select id="page6_live_dialpad">
+														<option class="i18n" name='page6_live_dialpad_disable' value="0"></option>
+														<option class="i18n" name='page6_live_dialpad_enable' value="1"></option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page6_inter_digit_time'></td>	<!-- 自动呼出激活时间（1~14秒） -->
+												<td style="text-align:left"><input id="page6_inter_digit_time" type="text"></td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page6_backlight_time'></td>	<!-- 背光灯时间 -->
+												<td style="text-align:left">
+													<select id="page6_backlight_time">
+														<option class="i18n" name='page6_backlight_time_0' value="0"></option>
+														<option class="i18n" name='page6_backlight_time_1' value="1"></option>
+														<option class="i18n" name='page6_backlight_time_15' value="15"></option>
+														<option class="i18n" name='page6_backlight_time_30' value="30"></option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page6_contrast'></td>	<!-- 对比度 -->
+												<td style="text-align:left">
+													<select id="page6_contrast">
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+														<option value="5">5</option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page6_watch_dog'></td>	<!-- 看门狗 -->
+												<td style="text-align:left">
+													<select id="page6_watch_dog">
+														<option class="i18n" name='page6_watch_dog_disable' value="0"></option>
+														<option class="i18n" name='page6_watch_dog_enable' value="1"></option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page6_ring_type'></td>	<!-- 铃声类型 -->
+												<td style="text-align:left">
+													<select id="page6_ring_type">
+														<option class="i18n" name='page6_ring_type_1' value="1"></option>
+														<option class="i18n" name='page6_ring_type_2' value="2"></option>
+														<option class="i18n" name='page6_ring_type_3' value="3"></option>
+														<option class="i18n" name='page6_ring_type_4' value="4"></option>
+														<option class="i18n" name='page6_ring_type_5' value="5"></option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page6_upload_ringtone'></td>	<!-- 加载铃声 -->
+												<td style="text-align:left">
+													<input id="page6_filename_show" class="i18n-input" selectname="page6_select_file" readonly="readonly" style="background:#f2f2f2" type="text" onclick="page6_ring_select()">
+													<input class="i18n-input" selectname='page6_browse' type="button" onclick="page6_ring_select()">
+													<input id="page6_file_select" type="file" name="page6_file_select" onchange="page6_file_select_change(this)" style="opacity:0; position:absolute; width:0px; " accept=".wav,.mp3">
+												</td>
+											</tr>
+											<tr>
+												<td></td>
+												<td style="text-align:left">
+													<input id="page6_ring_upload" class="i18n-input" selectname='page6_file_upload' type="button">
+													<input id="page6_ring_cancel" class="i18n-input" selectname='page6_file_cancel' type="button">
+													<span></span>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page6_screensaver_wait_time'></td>	<!-- 屏保待机时间 -->
+												<td style="text-align:left">
+													<select id="page6_screensaver_wait_time">
+														<option class="i18n" name='page6_screensaver_wait_time_15s' value="0"></option>
+														<option class="i18n" name='page6_screensaver_wait_time_30s' value="1"></option>
+														<option class="i18n" name='page6_screensaver_wait_time_1min' value="2"></option>
+														<option class="i18n" name='page6_screensaver_wait_time_5min' value="3"></option>
+														<option class="i18n" name='page6_screensaver_wait_time_10min' value="4"></option>
+													</select>
+												</td>
+											</tr>
+											<tr>
+												<td class="i18n" name='page6_xml_browser_url'></td>	<!-- 	XML浏览器URL -->
+												<td style="text-align:left"><input id="page6_xml_browser_url" type="text"></td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<input id="page6_submit" class="i18n-input" selectname='page6_submit' type="submit"/>	<!-- 确认 -->
+													&emsp;
+													<input id="page6_cancel" class="i18n-input" selectname='page6_cancel' type="button"/>	<!-- 取消 -->
+												</td>
+											</tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+											<tr></tr>
+										</table>
+									</form>
+								</div>
+								<div id="page6_2">
+									<table class="content_six_2" width="600px" height="850px" cellspacing="0">
 										<tr>
-											<td class="i18n" name='page6_live_dialpad'></td>	<!-- 自动呼出 -->
-											<td style="text-align:left">
-												<select id="page6_live_dialpad">
-													<option class="i18n" name='page6_live_dialpad_disable' value="0"></option>
-													<option class="i18n" name='page6_live_dialpad_enable' value="1"></option>
+											<td style="text-align:left"><span class="i18n" name='page6_2_time_date'></span></td>	<!-- 时间 & 日期 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_dhcp_time'></td>	<!-- DHCP时间 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_2_dhcp_time_disable'></option>
+													<option class="i18n" name='page6_2_dhcp_time_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page6_inter_digit_time'></td>	<!-- 自动呼出激活时间（1~14秒） -->
-											<td style="text-align:left"><input id="page6_inter_digit_time" type="text"></td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page6_backlight_time'></td>	<!-- 背光灯时间 -->
-											<td style="text-align:left">
-												<select id="page6_backlight_time">
-													<option class="i18n" name='page6_backlight_time_0' value="0"></option>
-													<option class="i18n" name='page6_backlight_time_1' value="1"></option>
-													<option class="i18n" name='page6_backlight_time_15' value="15"></option>
-													<option class="i18n" name='page6_backlight_time_30' value="30"></option>
+											<td class="i18n" name='page6_2_manual_time'></td>	<!-- 手动设置时间 -->
+											<td>
+												<select id="page6_2_manual_time">
+													<option class="i18n" name='page6_2_manual_time_disable' value="0"></option>
+													<option class="i18n" name='page6_2_manual_time_enable' value="1"></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page6_contrast'></td>	<!-- 对比度 -->
-											<td style="text-align:left">
-												<select id="page6_contrast">
+											<td class="i18n" name='page6_2_time_zone'></td>	<!-- 时区 -->
+											<td>
+												<select id="">
+													<option value="-12">-12 Eniwetok,Kwajalein</option>
+													<option value="-11">-11 Midway Island,Samoa</option>
+													<option value="-10">-10 US-Hawaii-Aleutian,US-Alaska-Aleutian</option>
+													<option value="-9:30">-9:30 French Polynesia</option>
+													<option value="-9">-9 US-Alaska Time</option>
+													<option value="-8">-8 Canada,Mexico,US-Pacific Time...</option>
+													<option value="-7">-7 Canada,Mexico,US,Chihuahua,La Paz...</option>
+													<option value="-6">-6 Guatemala,El Salvador,Honduras...</option>
+													<option value="-5">-5 Bogota,Lima,Quito,Peru,Indiana,Baharmas...</option>
+													<option value="-4:30">-4:30 Venezuela(Caracas)</option>
+													<option value="-4">-4 Canada,Atlantic Time,San Juan...</option>
+													<option value="-3:30">-3:30 Canada-New Foundland(St.Johns)</option>
+													<option value="-3">-3 Greenland,Argentina,Brazil,Brasilia...</option>
+													<option value="-2:30">-2:30 Newfoundland and labeador</option>
+													<option value="-2">-2 Brazil(no DST),Mid-Atlantic</option>
+													<option value="-1">-1 Portugal(Azores),Cape verde Islands</option>
+													<option value="0">0 GMT,Ireland,Portugal,Spain,London...</option>
+													<option value="+1">+1 Spain,France,Germany,Italy,Netherlan...</option>
+													<option value="+2">+2 Greece,Israel,Russia,Turkey,Ukraine...</option>
+													<option value="+3">+3 East Africa Time,Iraq,Russia...</option>
+													<option value="+3:30">+3:30 Iran(Teheran)</option>
+													<option value="+4">+4 Armenia,Georgia,Kazakhstan,Russia...</option>
+													<option value="+4:30">+4:30 Afghanistan(Kabul)</option>
+													<option value="+5">+5 Kazakhstan,Kyrgyzstan,Ekaterinburg...</option>
+													<option value="+5:30">+5:30 India,Mumbai,Chennai,Kolkate,new Delhi...</option>
+													<option value="+5:45">+5:45 Nepal(Katmandu)</option>
+													<option value="+6">+6 Kazakhstan,Russia,Bangladesh</option>
+													<option value="+6:30">+6:30 Myanmar(Naypyitaw),Yangon(Rangoon)</option>
+													<option value="+7">+7 Russia,Thailand,Vietnam,Jakarta</option>
+													<option value="+8">+8 China,Singapore,Hong Kong,Urumqi,Taipei...</option>
+													<option value="+8:45">+8:45 Eucla</option>
+													<option value="+9">+9 Korea(Seoul),Japan(Tokyo),Russia</option>
+													<option value="+9:30">+9:30 Australia(Adelaide),Australia(Darwin)</option>
+													<option value="+10">+10 Australia,Russi,Magadan...</option>
+													<option value="+10:30">+10:30 Australia(Lord Howe Islands)</option>
+													<option value="+11">+11 New Caledonia,Chokurdakh,Russia</option>
+													<option value="+11:30">+11:30 Norfolk Island</option>
+													<option value="+12">+12 New Zealand(Wellington,Auckland)...</option>
+													<option value="+12:45">+12:45 New Zealand(Chatham Islands)</option>
+													<option value="+13">+13 Nuku'alofa,Tonga(Nukualofa)</option>
+													<option value="+13:30">+13:30 Chatham Islands</option>
+													<option value="+14">+14 Kiribati</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_daylight_saving_time'></td>	<!-- 夏令时 -->
+											<td>
+												<input id="page6_2_daylight_saving_time_auto" type="radio" name="page6_2_daylight_saving_time">
+												<label class="i18n" name='page6_2_daylight_saving_time_auto' for="page6_2_daylight_saving_time_auto"></label>
+												<input id="page6_2_daylight_saving_time_enable" type="radio" name="page6_2_daylight_saving_time">
+												<label class="i18n" name='page6_2_daylight_saving_time_enable' for="page6_2_daylight_saving_time_enable"></label>
+												<input id="page6_2_daylight_saving_time_disable" type="radio" name="page6_2_daylight_saving_time">
+												<label class="i18n" name='page6_2_daylight_saving_time_disable' for="page6_2_daylight_saving_time_disable"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_location'></td>	<!-- 位置 -->
+											<td>
+												<select id="">
+													<option value="">None</option>
+													<option value="">Bahamas(Nassau)</option>
+													<option value="">Bogota,Lima</option>
+													<option value="">Canada(Montreal,Ottawa,Quebec)</option>
+													<option value="">Cuba(Havana)</option>
+													<option value="">Indiana(East)</option>
+													<option value="">Peru</option>
+													<option value="">Quito</option>
+													<option value="">United States-Eastern Time</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_fixed_type'></td>	<!-- 计算方式 -->
+											<td>
+												<input id="page6_2_fixed_type_data" type="radio" name="page6_2_fixed_type">
+												<label class="i18n" name='page6_2_fixed_type_data' for="page6_2_fixed_type_data"></label>
+												<input id="page6_2_fixed_type_week" type="radio" name="page6_2_fixed_type">
+												<label class="i18n" name='page6_2_fixed_type_week' for="page6_2_fixed_type_week"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_start_date'></td>	<!-- 开始日期 -->
+											<td>
+												<div class="page6_2_fixed_type_1">
+													<select id="">
+														<option class="i18n" name='page6_2_date_january' value=""></option>
+														<option class="i18n" name='page6_2_date_february' value=""></option>
+														<option class="i18n" name='page6_2_date_march' value=""></option>
+														<option class="i18n" name='page6_2_date_april' value=""></option>
+														<option class="i18n" name='page6_2_date_may' value=""></option>
+														<option class="i18n" name='page6_2_date_june' value=""></option>
+														<option class="i18n" name='page6_2_date_july' value=""></option>
+														<option class="i18n" name='page6_2_date_august' value=""></option>
+														<option class="i18n" name='page6_2_date_september' value=""></option>
+														<option class="i18n" name='page6_2_date_october' value=""></option>
+														<option class="i18n" name='page6_2_date_november' value=""></option>
+														<option class="i18n" name='page6_2_date_december' value=""></option>
+													</select>
+													<select id="">
+														<option class="i18n" name='page6_2_date_week_1' value=""></option>
+														<option class="i18n" name='page6_2_date_week_2' value=""></option>
+														<option class="i18n" name='page6_2_date_week_3' value=""></option>
+														<option class="i18n" name='page6_2_date_week_4' value=""></option>
+														<option class="i18n" name='page6_2_date_week_5' value=""></option>
+													</select>
+													<select id="">
+														<option class="i18n" name='page6_2_date_sunday' value=""></option>
+														<option class="i18n" name='page6_2_date_monday' value=""></option>
+														<option class="i18n" name='page6_2_date_tuesday' value=""></option>
+														<option class="i18n" name='page6_2_date_wednesday' value=""></option>
+														<option class="i18n" name='page6_2_date_thursday' value=""></option>
+														<option class="i18n" name='page6_2_date_friday' value=""></option>
+														<option class="i18n" name='page6_2_date_saturday' value=""></option>
+													</select>
+													<select id="">
+														<option value="0">00:00</option>
+														<option value="1">01:00</option>
+														<option value="2">02:00</option>
+														<option value="3">03:00</option>
+														<option value="4">04:00</option>
+														<option value="5">05:00</option>
+														<option value="6">06:00</option>
+														<option value="7">07:00</option>
+														<option value="8">08:00</option>
+														<option value="9">09:00</option>
+														<option value="10">10:00</option>
+														<option value="11">11:00</option>
+														<option value="12">12:00</option>
+														<option value="13">13:00</option>
+														<option value="14">14:00</option>
+														<option value="15">15:00</option>
+														<option value="16">16:00</option>
+														<option value="17">17:00</option>
+														<option value="18">18:00</option>
+														<option value="19">19:00</option>
+														<option value="20">20:00</option>
+														<option value="21">21:00</option>
+														<option value="22">22:00</option>
+														<option value="23">23:00</option>
+													</select>
+												</div>
+												<div class="page6_2_fixed_type_2">
+													<span class="i18n" name='page6_2_start_date_month'></span>
+													<input type="text">
+													<span class="i18n" name='page6_2_start_date_day'></span>
+													<input type="text">
+													<span class="i18n" name='page6_2_start_date_hour'></span>
+													<input type="text">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_end_date'></td>	<!-- 结束日期 -->
+											<td>
+												<div class="page6_2_fixed_type_1">
+													<select id="">
+														<option class="i18n" name='page6_2_date_january' value=""></option>
+														<option class="i18n" name='page6_2_date_february' value=""></option>
+														<option class="i18n" name='page6_2_date_march' value=""></option>
+														<option class="i18n" name='page6_2_date_april' value=""></option>
+														<option class="i18n" name='page6_2_date_may' value=""></option>
+														<option class="i18n" name='page6_2_date_june' value=""></option>
+														<option class="i18n" name='page6_2_date_july' value=""></option>
+														<option class="i18n" name='page6_2_date_august' value=""></option>
+														<option class="i18n" name='page6_2_date_september' value=""></option>
+														<option class="i18n" name='page6_2_date_october' value=""></option>
+														<option class="i18n" name='page6_2_date_november' value=""></option>
+														<option class="i18n" name='page6_2_date_december' value=""></option>
+													</select>
+													<select id="">
+														<option class="i18n" name='page6_2_date_week_1' value=""></option>
+														<option class="i18n" name='page6_2_date_week_2' value=""></option>
+														<option class="i18n" name='page6_2_date_week_3' value=""></option>
+														<option class="i18n" name='page6_2_date_week_4' value=""></option>
+														<option class="i18n" name='page6_2_date_week_5' value=""></option>
+													</select>
+													<select id="">
+														<option class="i18n" name='page6_2_date_sunday' value=""></option>
+														<option class="i18n" name='page6_2_date_monday' value=""></option>
+														<option class="i18n" name='page6_2_date_tuesday' value=""></option>
+														<option class="i18n" name='page6_2_date_wednesday' value=""></option>
+														<option class="i18n" name='page6_2_date_thursday' value=""></option>
+														<option class="i18n" name='page6_2_date_friday' value=""></option>
+														<option class="i18n" name='page6_2_date_saturday' value=""></option>
+													</select>
+													<select id="">
+														<option value="0">00:00</option>
+														<option value="1">01:00</option>
+														<option value="2">02:00</option>
+														<option value="3">03:00</option>
+														<option value="4">04:00</option>
+														<option value="5">05:00</option>
+														<option value="6">06:00</option>
+														<option value="7">07:00</option>
+														<option value="8">08:00</option>
+														<option value="9">09:00</option>
+														<option value="10">10:00</option>
+														<option value="11">11:00</option>
+														<option value="12">12:00</option>
+														<option value="13">13:00</option>
+														<option value="14">14:00</option>
+														<option value="15">15:00</option>
+														<option value="16">16:00</option>
+														<option value="17">17:00</option>
+														<option value="18">18:00</option>
+														<option value="19">19:00</option>
+														<option value="20">20:00</option>
+														<option value="21">21:00</option>
+														<option value="22">22:00</option>
+														<option value="23">23:00</option>
+													</select>
+												</div>
+												<div class="page6_2_fixed_type_2">
+													<span class="i18n" name='page6_2_end_date_month'></span>
+													<input type="text">
+													<span class="i18n" name='page6_2_end_date_day'></span>
+													<input type="text">
+													<span class="i18n" name='page6_2_end_date_hour'></span>
+													<input type="text">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_offset'></td>	<!-- 偏移（分钟） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_priority'></td>	<!-- NTP由DHCP优先 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_2_priority_high'></option>
+													<option class="i18n" name='page6_2_priority_low'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_primary_server'></td>	<!-- 首选服务器 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_secondary_Server'></td>	<!-- 备选服务器 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_update_interval'></td>	<!-- 同步周期（15~86400秒） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_date'></td>	<!-- 日期 -->
+											<td>
+												<span class="i18n" name='page6_2_date_year'></span>
+												<input type="text">
+												<span class="i18n" name='page6_2_date_month'></span>
+												<input type="text">
+												<span class="i18n" name='page6_2_date_day'></span>
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_time'></td>	<!-- 时间 -->
+											<td>
+												<span class="i18n" name='page6_2_date_hour'></span>
+												<input type="text">
+												<span class="i18n" name='page6_2_date_minute'></span>
+												<input type="text">
+												<span class="i18n" name='page6_2_date_second'></span>
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_time_format'></td>	<!-- 时间格式 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_2_time_format_12'></option>
+													<option class="i18n" name='page6_2_time_format_24'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_2_date_format'></td>	<!-- 日期格式 -->
+											<td>
+												<select name="" id="">
+													<option value="">MM DD WWW</option>
+													<option value="">YY-MM-DD</option>
+													<option value="">YYYY-MM-DD</option>
+													<option value="">YYYY/MM/DD</option>
+													<option value="">YY/MM/DD</option>
+													<option value="">YYYY MM DD</option>
+													<option value="">MM DD WW</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_2_submit" class="i18n-input" selectname='page6_2_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_2_cancel" class="i18n-input" selectname='page6_2_cancel' type="button"/>	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page6_3">
+									<table class="content_six_3" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_3_call_display'></span></td>	<!-- 来电显示 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_3_information'></td>	<!-- 显示被叫方信息 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_3_information_disable'></option>
+													<option class="i18n" name='page6_3_information_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_3_method'></td>	<!-- 呼叫显示方式 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_3_method_nameNumber'></option>
+													<option class="i18n" name='page6_3_method_numberName'></option>
+													<option class="i18n" name='page6_3_method_name'></option>
+													<option class="i18n" name='page6_3_method_number'></option>
+													<option class="i18n" name='page6_3_method_full'></option>
+													<option class="i18n" name='page6_3_method_null'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_3_submit" class="i18n-input" selectname='page6_3_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_3_cancel" class="i18n-input" selectname='page6_3_cancel' type="button"/>	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page6_4">
+									<table class="content_six_4" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_4_version'></span></td>	<!-- 版本 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_4_firmware_version'></td>	<!-- 固件版本 -->
+											<td>44.83.0.30</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_4_hardware_hersion'></td>	<!-- 硬件版本 -->
+											<td>44.0.0.16.0.0.0</td>
+										</tr>
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_4_reset'></span></td>	<!-- 恢复出厂配置 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_4_reset_to_factory'></td>	<!-- 恢复出厂设置 -->
+											<td><input class="i18n-input" selectname='page6_4_reset_to_factory' type="button"></td>
+										</tr>
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_4_reboot'></span></td>	<!-- 重启 -->
+											<td><input class="i18n-input" selectname='page6_4_reboot' type="button"></td>
+										</tr>
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_4_upgrade'></span></td>	<!-- 升级 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_4_select_and_upgrade_firmware'></td>	<!-- 升级固件 -->
+											<td>
+												<input class="i18n-input" selectname="page6_4_upgrade_file" readonly="readonly" style="background:#f2f2f2" type="text">
+												<input class="i18n-input" selectname='page6_4_upgrade_browse' type="button">
+												<input type="file" style="opacity:0; position:absolute; width:0px; ">
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<input class="i18n-input" selectname='page6_4_upgrade' type="button">	<!-- 上传 -->
+												<input class="i18n-input" selectname='page6_4_cancel' type="button">	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page6_5">
+									<table class="content_six_5" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_5_auto_provision'></span></td>	<!-- 自动更新 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_pnp_active'></td>	<!-- PNP激活 -->
+											<td>
+												<input id="page6_5_pnp_active_on" type="radio" name="page6_5_pnp_active">
+												<label class="i18n" name='page6_5_pnp_active_on' for="page6_5_pnp_active_on"></label>
+												<input id="page6_5_pnp_active_off" type="radio" name="page6_5_pnp_active">
+												<label class="i18n" name='page6_5_pnp_active_off' for="page6_5_pnp_active_off"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_dhcp_active'></td>	<!-- DHCP激活 -->
+											<td>
+												<input id="page6_5_dhcp_active_on" type="radio" name="page6_5_dhcp_active">
+												<label class="i18n" name='page6_5_dhcp_active_on' for="page6_5_dhcp_active_on"></label>
+												<input id="page6_5_dhcp_active_off" type="radio" name="page6_5_dhcp_active">
+												<label class="i18n" name='page6_5_dhcp_active_off' for="page6_5_dhcp_active_off"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_ipv4_custom_option'></td>	<!-- 自定义选项 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_ipv4_dhcp_option_value'></td>	<!-- DHCP选项值 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_ipv6_custom_option'></td>	<!-- IPv6自定义选项 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_server_url'></td>	<!-- 服务器地址 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_user_name'></td>	<!-- 用户名称 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_password'></td>	<!-- 密码 -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_attempt_expired_time'></td>	<!-- 获取配置文件超时时间(秒) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_common_aes_key'></td>	<!-- AES密钥 -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_mac_oriented_aes_key'></td>	<!-- 指定MAC的AES密钥 -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_zero_active'></td>	<!-- 一键更新启用 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_5_zero_active_disable'></option>
+													<option class="i18n" name='page6_5_zero_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_wait_time'></td>	<!-- Wait Time(1~100s) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_power_on'></td>	<!-- 上电启动 -->
+											<td>
+												<input id="page6_5_power_on_on" type="radio" name="page6_5_power_on">
+												<label class="i18n" name='page6_5_power_on_on' for="page6_5_power_on_on"></label>
+												<input id="page6_5_power_on_off" type="radio" name="page6_5_power_on">
+												<label class="i18n" name='page6_5_power_on_off' for="page6_5_power_on_off"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_repeatedly'></td>	<!-- 重复周期 -->
+											<td>
+												<input id="page6_5_repeatedly_on" type="radio" name="page6_5_repeatedly">
+												<label class="i18n" name='page6_5_repeatedly_on' for="page6_5_repeatedly_on"></label>
+												<input id="page6_5_repeatedly_off" type="radio" name="page6_5_repeatedly">
+												<label class="i18n" name='page6_5_repeatedly_off' for="page6_5_repeatedly_off"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_interval'></td>	<!-- 间隔（分钟） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_weekly'></td>	<!-- 逐周 -->
+											<td>
+												<input id="page6_5_weekly_on" type="radio" name="page6_5_weekly">
+												<label class="i18n" name='page6_5_weekly_on' for="page6_5_weekly_on"></label>
+												<input id="page6_5_weekly_off" type="radio" name="page6_5_weekly">
+												<label class="i18n" name='page6_5_weekly_off' for="page6_5_weekly_off"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_weekly_upgrade_interval'></td>	<!-- 更新间隔(0~12周) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_inactivity_time_expire'></td>	<!-- 未激活时间期间(0~120min) -->
+											<td><input type="s"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_time'></td>	<!-- 时间 -->
+											<td>
+												<input type="text">
+												:
+												<input type="text">
+												-
+												<input type="text">
+												:
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_day_of_week'></td>	<!-- 周几 -->
+											<td>
+												<input id="page6_5_day_of_week_1" type="checkbox" name="page6_5_day_of_week">
+												<label class="i18n" name='page6_5_day_of_week_1' for="page6_5_day_of_week_1"></label>
+												<input id="page6_5_day_of_week_2" type="checkbox" name="page6_5_day_of_week">
+												<label class="i18n" name='page6_5_day_of_week_2' for="page6_5_day_of_week_2"></label>
+												<input id="page6_5_day_of_week_3" type="checkbox" name="page6_5_day_of_week">
+												<label class="i18n" name='page6_5_day_of_week_3' for="page6_5_day_of_week_3"></label>
+												<input id="page6_5_day_of_week_4" type="checkbox" name="page6_5_day_of_week">
+												<label class="i18n" name='page6_5_day_of_week_4' for="page6_5_day_of_week_4"></label>
+												<input id="page6_5_day_of_week_5" type="checkbox" name="page6_5_day_of_week">
+												<label class="i18n" name='page6_5_day_of_week_5' for="page6_5_day_of_week_5"></label>
+												<input id="page6_5_day_of_week_6" type="checkbox" name="page6_5_day_of_week">
+												<label class="i18n" name='page6_5_day_of_week_6' for="page6_5_day_of_week_6"></label>
+												<input id="page6_5_day_of_week_7" type="checkbox" name="page6_5_day_of_week">
+												<label class="i18n" name='page6_5_day_of_week_7' for="page6_5_day_of_week_7"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_flexible_auto_Provision'></td>	<!-- 自由设置自动更新 -->
+											<td>
+												<input id="page6_5_flexible_auto_Provision_on" type="radio" name="page6_5_flexible_auto_Provision">
+												<label class="i18n" name='page6_5_flexible_auto_Provision_on' for="page6_5_flexible_auto_Provision_on"></label>
+												<input id="page6_5_flexible_auto_Provision_off" type="radio" name="page6_5_flexible_auto_Provision">
+												<label class="i18n" name='page6_5_flexible_auto_Provision_off' for="page6_5_flexible_auto_Provision_off"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_flexible_interval_days'></td>	<!-- 自由设置间隔（天） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_5_flexible_time'></td>	<!-- 自由设置时间 -->
+											<td>
+												<input type="text">
+												:
+												<input type="text">
+												-
+												<input type="text">
+												:
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td><input class="i18n-input" selectname='page6_5_auto_provision_now' type="button"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_5_submit" class="i18n-input" selectname='page6_5_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_5_cancel" class="i18n-input" selectname='page6_5_cancel' type="button"/>	<!-- 取消 -->
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div id="page6_6">
+									<table class="content_six_6" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page6_6_export_or_import_configuration'></td>	<!-- 导入导出配置 -->
+											<td>
+												<input class="i18n-input" selectname="page6_6_export_or_import_configuration_file" readonly="readonly" style="background:#f2f2f2" type="text">
+												<input class="i18n-input" selectname='page6_6_export_or_import_configuration_browse' type="button">
+												<input type="file" style="opacity:0; position:absolute; width:0px; ">
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<input class="i18n-input" selectname='page6_6_import_configuration' type="button">
+												<input class="i18n-input" selectname='page6_6_export_configuration' type="button">
+											</td>
+										</tr>
+										<tr></tr>
+										<tr>
+											<td class="i18n" name='page6_6_export_cfg_configuration_File_title'></td>	<!-- 导出 CFG 配置文件 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_6_export_cfg_configuration_File_static'></option>
+													<option class="i18n" name='page6_6_export_cfg_configuration_File_noStatic'></option>
+													<option class="i18n" name='page6_6_export_cfg_configuration_File_all'></option>
+												</select>
+												<input class="i18n-input" selectname='page6_6_export_cfg_configuration_File' type="button">
+											</td>
+										</tr>
+										<tr></tr>
+										<tr>
+											<td class="i18n" name='page6_6_import_cfg_configuration_file_title'></td>	<!-- 导入CFG 配置文件 -->
+											<td>
+												<input class="i18n-input" selectname="page6_6_import_cfg_configuration_file" readonly="readonly" style="background:#f2f2f2" type="text">
+												<input class="i18n-input" selectname='page6_6_import_cfg_configuration_browse' type="button">
+												<input type="file" style="opacity:0; position:absolute; width:0px; ">
+											</td>
+										</tr>
+										<tr>
+											<td></td>
+											<td>
+												<input class="i18n-input" selectname='page6_6_import_cfg_configuration' type="button">
+												<input class="i18n-input" selectname='page6_6_export_cfg_configuration' type="button">
+											</td>
+										</tr>
+										<tr></tr>
+										<tr>
+											<td class="i18n" name='page6_6_pcap_type'></td>	<!-- Pcap Type -->
+											<td>
+												<select id="page6_6_pcap_type">
+													<option value="normal" class="i18n" name='page6_6_pcap_type_normal'></option>
+													<option value="enhanced" class="i18n" name='page6_6_pcap_type_enhanced'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_6_pcap_feature'></td>	<!-- 抓包功能 -->
+											<td>
+												<input class="i18n-input" selectname='page6_6_pcap_feature_start' type="button">
+												<input class="i18n-input" selectname='page6_6_pcap_feature_stop' type="button">
+												<input class="page6_6_pcap_feature_export i18n-input" selectname='page6_6_pcap_feature_export' type="button">
+											</td>
+										</tr>
+										<tr></tr>
+										<tr></tr>
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_6_local_log'></span></td>	<!-- 本地日志 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_6_enable_local_log'></td>	<!-- 启用本地日志 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_6_enable_local_log_disable'></option>
+													<option class="i18n" name='page6_6_enable_local_log_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_6_local_log_level'></td>	<!-- 本地日志级别 -->
+											<td>
+												<select name="" id="">
+													<option value="0">0</option>
 													<option value="1">1</option>
 													<option value="2">2</option>
 													<option value="3">3</option>
 													<option value="4">4</option>
 													<option value="5">5</option>
+													<option value="6">6</option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page6_watch_dog'></td>	<!-- 看门狗 -->
-											<td style="text-align:left">
-												<select id="page6_watch_dog">
-													<option class="i18n" name='page6_watch_dog_disable' value="0"></option>
-													<option class="i18n" name='page6_watch_dog_enable' value="1"></option>
+											<td class="i18n" name='page6_6_max_log_file_size'></td>	<!-- 最大日志文件大小（256-1024KB） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_6_export_local_log'></td>	<!-- 导出本地日志 -->
+											<td><input class="i18n-input" selectname='page6_6_export_local_log_button' type="button"></td>
+										</tr>
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_6_syslog'></span></td>	<!-- 系统日志 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_6_enable_syslog'></td>	<!-- 启用系统日志 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_6_enable_syslog_disable'></option>
+													<option class="i18n" name='page6_6_enable_syslog_enable'></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page6_ring_type'></td>	<!-- 铃声类型 -->
-											<td style="text-align:left">
-												<select id="page6_ring_type">
+											<td class="i18n" name='page6_6_syslog_server'></td>	<!-- 系统日志服务器 -->
+											<td>
+												<input type="text">
+												<span class="i18n" name='page6_6_syslog_server_port'></span>
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_6_syslog_transport_type'></td>	<!-- 系统日志传输类型 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_6_syslog_transport_type_udp'></option>
+													<option class="i18n" name='page6_6_syslog_transport_type_tcp'></option>
+													<option class="i18n" name='page6_6_syslog_transport_type_tls'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_6_syslog_level'></td>	<!-- 系统日志级别 -->
+											<td>
+												<select id="">
+													<option value="0">0</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_6_syslog_facility'></td>	<!-- 系统日志措施 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_6_syslog_facility_1'></option>
+													<option class="i18n" name='page6_6_syslog_facility_2'></option>
+													<option class="i18n" name='page6_6_syslog_facility_3'></option>
+													<option class="i18n" name='page6_6_syslog_facility_4'></option>
+													<option class="i18n" name='page6_6_syslog_facility_5'></option>
+													<option class="i18n" name='page6_6_syslog_facility_6'></option>
+													<option class="i18n" name='page6_6_syslog_facility_7'></option>
+													<option class="i18n" name='page6_6_syslog_facility_8'></option>
+													<option class="i18n" name='page6_6_syslog_facility_9'></option>
+													<option class="i18n" name='page6_6_syslog_facility_10'></option>
+													<option class="i18n" name='page6_6_syslog_facility_11'></option>
+													<option class="i18n" name='page6_6_syslog_facility_12'></option>
+													<option class="i18n" name='page6_6_syslog_facility_13'></option>
+													<option class="i18n" name='page6_6_syslog_facility_14'></option>
+													<option class="i18n" name='page6_6_syslog_facility_15'></option>
+													<option class="i18n" name='page6_6_syslog_facility_16'></option>
+													<option class="i18n" name='page6_6_syslog_facility_17'></option>
+													<option class="i18n" name='page6_6_syslog_facility_18'></option>
+													<option class="i18n" name='page6_6_syslog_facility_19'></option>
+													<option class="i18n" name='page6_6_syslog_facility_20'></option>
+													<option class="i18n" name='page6_6_syslog_facility_21'></option>
+													<option class="i18n" name='page6_6_syslog_facility_22'></option>
+													<option class="i18n" name='page6_6_syslog_facility_23'></option>
+													<option class="i18n" name='page6_6_syslog_facility_24'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_6_syslog_prepend_mac'></td>	<!-- 系统日志携带MAC -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_6_syslog_prepend_mac_disable'></option>
+													<option class="i18n" name='page6_6_syslog_prepend_mac_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr></tr>
+										<tr>
+											<td class="i18n" name='page6_6_export_all_diagnostic_files'></td>	<!-- 导出所有的诊断文件 -->
+											<td>
+												<input class="i18n-input" selectname='page6_6_export_all_diagnostic_files_start' type="button">
+												<input class="i18n-input" selectname='page6_6_export_all_diagnostic_files_stop' type="button">
+												<input class="i18n-input" selectname='page6_6_export_all_diagnostic_files_export' type="button">
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_6_submit" class="i18n-input" selectname='page6_6_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_6_cancel" class="i18n-input" selectname='page6_6_cancel' type="button"/>	<!-- 取消 -->
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div id="page6_7">
+									<table class="content_six_7" width="600px" height="850px" cellspacing="0">
+										<tr class="content_six_7_head">
+											<td class="s6_7_1 i18n" name='page6_7_1_replace_rule'></td>	<!-- 替换规则 -->
+											<td class="s6_7_2 i18n" name='page6_7_2_dial_now'></td>	<!-- 立即呼出 -->
+											<td class="s6_7_3 i18n" name='page6_7_3_area_code'></td>	<!-- 区域代码 -->
+											<td class="s6_7_4 i18n" name='page6_7_4_block_out'></td>	<!-- 限制呼出 -->
+											<td></td>
+										</tr>
+										<tr>
+											<td colspan="5">
+												<div id="page6_7_1">
+													<table class="content_six_7_1" width="600px" height="810px">
+														<tr>
+															<td class="i18n" name='page6_7_1_index'></td>	<!-- 索引 -->
+															<td class="i18n" name='page6_7_1_prefix'></td>	<!-- 前缀 -->
+															<td class="i18n" name='page6_7_1_replace'></td>	<!-- 替换 -->
+															<td class="i18n" name='page6_7_1_account'></td>	<!-- 账号 -->
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>3</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>4</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>5</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>6</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>7</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>8</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>9</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>10</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td colspan="5">
+																<span class="i18n" name='page6_7_1_prefix'></span>
+																<input type="text">
+																&emsp;
+																<span class="i18n" name='page6_7_1_replace'></span>
+																<input type="text">
+																&emsp;
+																<span class="i18n" name='page6_7_1_account'></span>
+																<input type="text">
+															</td>
+														</tr>
+														<tr>
+															<td colspan="5">
+																<input id="page6_7_1_add" class="i18n-input" selectname='page6_7_1_add' type="button"/>	<!-- 添加 -->
+																&emsp;
+																<input id="page6_7_1_edit" class="i18n-input" selectname='page6_7_1_edit' type="button"/>	<!-- 编辑 -->
+																&emsp;
+																<input id="page6_7_1_delete" class="i18n-input" selectname='page6_7_1_deletes' type="button"/>	<!-- 删除 -->
+															</td>
+														</tr>
+														<tr></tr>
+													</table>
+												</div>
+												<div id="page6_7_2">
+													<table class="content_six_7_2" width="600px" height="810px">
+														<tr>
+															<td class="i18n" name='page6_7_2_index'></td>	<!-- 索引 -->
+															<td class="i18n" name='page6_7_2_dial_now_rule'></td>	<!-- 即时拨号规则 -->
+															<td class="i18n" name='page6_7_2_account'></td>	<!-- 账号 -->
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>1</td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>3</td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>4</td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>5</td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>6</td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>7</td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>8</td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>9</td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr>
+															<td>10</td>
+															<td></td>
+															<td></td>
+															<td><input type="checkbox"></td>
+														</tr>
+														<tr></tr>
+														<tr>
+															<td colspan="4">
+																<span class="i18n" name='page6_7_2_rule'></span>
+																<input type="text">
+																&emsp;
+																<span class="i18n" name='page6_7_2_account'></span>
+																<input type="text">
+															</td>
+														</tr>
+														<tr>
+															<td colspan="4">
+																<input id="page6_7_2_add" class="i18n-input" selectname='page6_7_2_add' type="button"/>	<!-- 添加 -->
+																&emsp;
+																<input id="page6_7_2_edit" class="i18n-input" selectname='page6_7_2_edit' type="button"/>	<!-- 编辑 -->
+																&emsp;
+																<input id="page6_7_2_delete" class="i18n-input" selectname='page6_7_2_deletes' type="button"/>	<!-- 删除 -->
+															</td>
+														</tr>
+														<tr></tr>
+													</table>
+												</div>
+												<div id="page6_7_3">
+													<table class="content_six_7_3" width="600px" height="810px">
+														<tr>
+															<td class="i18n" name='page6_7_3_code'></td>	<!-- 区号 -->
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_3_min_length'></td>	<!-- 最小长度（1~15） -->
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_3_max_length'></td>	<!-- 最大长度（1~15） -->
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_3_account'></td>	<!-- 账号 -->
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td colspan="2">
+																<input id="page6_7_3_submit" class="i18n-input" selectname='page6_7_3_submit' type="submit"/>	<!-- 确认 -->
+																&emsp;
+																<input id="page6_3_cancel" class="i18n-input" selectname='page6_7_3_cancel' type="button"/>	<!-- 取消 -->
+															</td>
+														</tr>
+														<tr></tr>
+													</table>
+												</div>
+												<div id="page6_7_4">
+													<table class="content_six_7_4" width="600px" height="810px">
+														<tr></tr>
+														<tr>
+															<td class="i18n" name='page6_7_4_number_1'></td>
+															<td><input type="text"></td>
+															<td class="i18n" name='page6_7_4_account'></td>
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_4_number_2'></td>
+															<td><input type="text"></td>
+															<td class="i18n" name='page6_7_4_account'></td>
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_4_number_3'></td>
+															<td><input type="text"></td>
+															<td class="i18n" name='page6_7_4_account'></td>
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_4_number_4'></td>
+															<td><input type="text"></td>
+															<td class="i18n" name='page6_7_4_account'></td>
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_4_number_5'></td>
+															<td><input type="text"></td>
+															<td class="i18n" name='page6_7_4_account'></td>
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_4_number_6'></td>
+															<td><input type="text"></td>
+															<td class="i18n" name='page6_7_4_account'></td>
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_4_number_7'></td>
+															<td><input type="text"></td>
+															<td class="i18n" name='page6_7_4_account'></td>
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_4_number_8'></td>
+															<td><input type="text"></td>
+															<td class="i18n" name='page6_7_4_account'></td>
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_4_number_9'></td>
+															<td><input type="text"></td>
+															<td class="i18n" name='page6_7_4_account'></td>
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page6_7_4_number_10'></td>
+															<td><input type="text"></td>
+															<td class="i18n" name='page6_7_4_account'></td>
+															<td><input type="text"></td>
+														</tr>
+														<tr>
+															<td colspan="4">
+																<input id="page6_7_4_submit" class="i18n-input" selectname='page6_7_4_submit' type="submit"/>	<!-- 确认 -->
+																&emsp;
+																<input id="page6_4_cancel" class="i18n-input" selectname='page6_7_4_cancel' type="button"/>	<!-- 取消 -->
+															</td>
+														</tr>
+														<tr></tr>
+													</table>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div id="page6_8">
+									<table class="content_six_8" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_8_echo_cancellation'></span></td>	<!-- 回声消除 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_8_ECHO'></td>	<!-- 回声消除 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_8_ECHO_disable'></option>
+													<option class="i18n" name='page6_8_ECHO_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_8_VAD'></td>	<!-- 语音激活检测 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_8_VAD_disable'></option>
+													<option class="i18n" name='page6_8_VAD_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_8_CNG'></td>	<!-- 舒适噪音 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_8_CNG_disable'></option>
+													<option class="i18n" name='page6_8_CNG_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_8_JITTER_BUFFER'></span></td>	<!-- RTP抖动缓冲区 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_8_type'></td>	<!-- 类型 -->
+											<td>
+												<input id="page6_8_type_adaptive" type="radio" name="page6_8_type">
+												<label class="i18n" name='page6_8_type_adaptive' for="page6_8_type_adaptive"></label>
+												<input id="page6_8_type_fixed" type="radio" name="page6_8_type">
+												<label class="i18n" name='page6_8_type_fixed' for="page6_8_type_fixed"></label>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_8_min_delay'></td>	<!-- 最小延迟 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_8_max_delay'></td>	<!-- 最大延迟 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_8_normal'></td>	<!-- 常态延迟 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_8_submit" class="i18n-input" selectname='page6_8_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_8_cancel" class="i18n-input" selectname='page6_8_cancel' type="button"/>	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page6_9">
+									<table class="content_six_9" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td>1</td>
+											<td class="i18n" name='page6_9_internal_ringer_text'></td>	<!-- 内置铃声文件 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="i18n" name='page6_9_internal_ringer_file'></td>	<!-- 内置铃声文件 -->
+											<td>
+												<select id="">
 													<option class="i18n" name='page6_ring_type_1' value="1"></option>
 													<option class="i18n" name='page6_ring_type_2' value="2"></option>
 													<option class="i18n" name='page6_ring_type_3' value="3"></option>
@@ -3904,61 +5151,686 @@
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page6_upload_ringtone'></td>	<!-- 加载铃声 -->
-											<td style="text-align:left">
-												<input id="page6_filename_show" class="i18n-input" selectname="page6_select_file" readonly="readonly" style="background:#f2f2f2" type="text" onclick="page6_ring_select()">
-												<input class="i18n-input" selectname='page6_browse' type="button" onclick="page6_ring_select()">
-												<input id="page6_file_select" type="file" name="page6_file_select" onchange="page6_file_select_change(this)" style="opacity:0; position:absolute; width:0px; " accept=".wav,.mp3">
-											</td>
+											<td>2</td>
+											<td class="i18n" name='page6_9_internal_ringer_text'></td>
+											<td><input type="text"></td>
 										</tr>
 										<tr>
 											<td></td>
-											<td style="text-align:left">
-												<input id="page6_ring_upload" class="i18n-input" selectname='page6_file_upload' type="button">
-												<input id="page6_ring_cancel" class="i18n-input" selectname='page6_file_cancel' type="button">
-												<span></span>
-											</td>
-										</tr>
-										<tr>
-											<td class="i18n" name='page6_screensaver_wait_time'></td>	<!-- 屏保待机时间 -->
-											<td style="text-align:left">
-												<select id="page6_screensaver_wait_time">
-													<option class="i18n" name='page6_screensaver_wait_time_15s' value="0"></option>
-													<option class="i18n" name='page6_screensaver_wait_time_30s' value="1"></option>
-													<option class="i18n" name='page6_screensaver_wait_time_1min' value="2"></option>
-													<option class="i18n" name='page6_screensaver_wait_time_5min' value="3"></option>
-													<option class="i18n" name='page6_screensaver_wait_time_10min' value="4"></option>
+											<td class="i18n" name='page6_9_internal_ringer_file'></td>
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_ring_type_1' value="1"></option>
+													<option class="i18n" name='page6_ring_type_2' value="2"></option>
+													<option class="i18n" name='page6_ring_type_3' value="3"></option>
+													<option class="i18n" name='page6_ring_type_4' value="4"></option>
+													<option class="i18n" name='page6_ring_type_5' value="5"></option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<td class="i18n" name='page6_xml_browser_url'></td>	<!-- 	XML浏览器URL -->
-											<td style="text-align:left"><input id="page6_xml_browser_url" type="text"></td>
+											<td>3</td>
+											<td class="i18n" name='page6_9_internal_ringer_text'></td>
+											<td><input type="text"></td>
 										</tr>
 										<tr>
-											<td colspan="2">
-												<input id="page6_submit" class="i18n-input" selectname='page6_submit' type="submit"/>	<!-- 确认 -->
+											<td></td>
+											<td class="i18n" name='page6_9_internal_ringer_file'></td>
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_ring_type_1' value="1"></option>
+													<option class="i18n" name='page6_ring_type_2' value="2"></option>
+													<option class="i18n" name='page6_ring_type_3' value="3"></option>
+													<option class="i18n" name='page6_ring_type_4' value="4"></option>
+													<option class="i18n" name='page6_ring_type_5' value="5"></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>4</td>
+											<td class="i18n" name='page6_9_internal_ringer_text'></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="i18n" name='page6_9_internal_ringer_file'></td>
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_ring_type_1' value="1"></option>
+													<option class="i18n" name='page6_ring_type_2' value="2"></option>
+													<option class="i18n" name='page6_ring_type_3' value="3"></option>
+													<option class="i18n" name='page6_ring_type_4' value="4"></option>
+													<option class="i18n" name='page6_ring_type_5' value="5"></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>5</td>
+											<td class="i18n" name='page6_9_internal_ringer_text'></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="i18n" name='page6_9_internal_ringer_file'></td>
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_ring_type_1' value="1"></option>
+													<option class="i18n" name='page6_ring_type_2' value="2"></option>
+													<option class="i18n" name='page6_ring_type_3' value="3"></option>
+													<option class="i18n" name='page6_ring_type_4' value="4"></option>
+													<option class="i18n" name='page6_ring_type_5' value="5"></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>6</td>
+											<td class="i18n" name='page6_9_internal_ringer_text'></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="i18n" name='page6_9_internal_ringer_file'></td>
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_ring_type_1' value="1"></option>
+													<option class="i18n" name='page6_ring_type_2' value="2"></option>
+													<option class="i18n" name='page6_ring_type_3' value="3"></option>
+													<option class="i18n" name='page6_ring_type_4' value="4"></option>
+													<option class="i18n" name='page6_ring_type_5' value="5"></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>7</td>
+											<td class="i18n" name='page6_9_internal_ringer_text'></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="i18n" name='page6_9_internal_ringer_file'></td>
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_ring_type_1' value="1"></option>
+													<option class="i18n" name='page6_ring_type_2' value="2"></option>
+													<option class="i18n" name='page6_ring_type_3' value="3"></option>
+													<option class="i18n" name='page6_ring_type_4' value="4"></option>
+													<option class="i18n" name='page6_ring_type_5' value="5"></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>8</td>
+											<td class="i18n" name='page6_9_internal_ringer_text'></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="i18n" name='page6_9_internal_ringer_file'></td>
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_ring_type_1' value="1"></option>
+													<option class="i18n" name='page6_ring_type_2' value="2"></option>
+													<option class="i18n" name='page6_ring_type_3' value="3"></option>
+													<option class="i18n" name='page6_ring_type_4' value="4"></option>
+													<option class="i18n" name='page6_ring_type_5' value="5"></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>9</td>
+											<td class="i18n" name='page6_9_internal_ringer_text'></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="i18n" name='page6_9_internal_ringer_file'></td>
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_ring_type_1' value="1"></option>
+													<option class="i18n" name='page6_ring_type_2' value="2"></option>
+													<option class="i18n" name='page6_ring_type_3' value="3"></option>
+													<option class="i18n" name='page6_ring_type_4' value="4"></option>
+													<option class="i18n" name='page6_ring_type_5' value="5"></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td>10</td>
+											<td class="i18n" name='page6_9_internal_ringer_text'></td>
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td></td>
+											<td class="i18n" name='page6_9_internal_ringer_file'></td>
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_ring_type_1' value="1"></option>
+													<option class="i18n" name='page6_ring_type_2' value="2"></option>
+													<option class="i18n" name='page6_ring_type_3' value="3"></option>
+													<option class="i18n" name='page6_ring_type_4' value="4"></option>
+													<option class="i18n" name='page6_ring_type_5' value="5"></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="3">
+												<input id="page6_9_submit" class="i18n-input" selectname='page6_9_submit' type="submit"/>	<!-- 确认 -->
 												&emsp;
-												<input id="page6_cancel" class="i18n-input" selectname='page6_cancel' type="button"/>	<!-- 取消 -->
+												<input id="page6_9_cancel" class="i18n-input" selectname='page6_9_cancel' type="button"/>	<!-- 取消 -->
 											</td>
 										</tr>
 										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
-										<tr></tr>
+									</table>
+								</div>
+								<div id="page6_10">
+									<table class="content_six_10" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page6_10_select_country'></td>	<!-- 选择国家 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_10_select_country_custom'></option>
+													<option class="i18n" name='page6_10_select_country_australia'></option>
+													<option class="i18n" name='page6_10_select_country_austria'></option>
+													<option class="i18n" name='page6_10_select_country_brazil'></option>
+													<option class="i18n" name='page6_10_select_country_belgium'></option>
+													<option class="i18n" name='page6_10_select_country_chile'></option>
+													<option class="i18n" name='page6_10_select_country_china'></option>
+													<option class="i18n" name='page6_10_select_country_czech'></option>
+													<option class="i18n" name='page6_10_select_country_czech_etsi'></option>
+													<option class="i18n" name='page6_10_select_country_denmark'></option>
+													<option class="i18n" name='page6_10_select_country_finland'></option>
+													<option class="i18n" name='page6_10_select_country_france'></option>
+													<option class="i18n" name='page6_10_select_country_germany'></option>
+													<option class="i18n" name='page6_10_select_country_great_britain'></option>
+													<option class="i18n" name='page6_10_select_country_greece'></option>
+													<option class="i18n" name='page6_10_select_country_hungary'></option>
+													<option class="i18n" name='page6_10_select_country_lithuania'></option>
+													<option class="i18n" name='page6_10_select_country_india'></option>
+													<option class="i18n" name='page6_10_select_country_italy'></option>
+													<option class="i18n" name='page6_10_select_country_japan'></option>
+													<option class="i18n" name='page6_10_select_country_mexico'></option>
+													<option class="i18n" name='page6_10_select_country_new_zealand'></option>
+													<option class="i18n" name='page6_10_select_country_netherlands'></option>
+													<option class="i18n" name='page6_10_select_country_norway'></option>
+													<option class="i18n" name='page6_10_select_country_portugal'></option>
+													<option class="i18n" name='page6_10_select_country_spain'></option>
+													<option class="i18n" name='page6_10_select_country_switzerland'></option>
+													<option class="i18n" name='page6_10_select_country_sweden'></option>
+													<option class="i18n" name='page6_10_select_country_russia'></option>
+													<option class="i18n" name='page6_10_select_country_united_states'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_dial'></td>	<!-- 拨号 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_secondary_dial'></td>	<!-- 二次拨号 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_ring_back'></td>	<!-- 回铃音 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_busy'></td>	<!-- 忙音 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_congestion'></td>	<!-- 网络拥塞提示音 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_call_waiting'></td>	<!-- 呼叫等待 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_dial_recall'></td>	<!-- 回拨提示音 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_info'></td>	<!-- 特殊信息 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_stutter'></td>	<!-- 语音留言提示音 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_message'></td>	<!-- 信息提示音 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_auto_answer'></td>	<!-- 自动应答 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_10_stutter_dial'></td>	<!-- 语言留言回拨 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_10_submit" class="i18n-input" selectname='page6_10_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_10_cancel" class="i18n-input" selectname='page6_10_cancel' type="button"/>	<!-- 取消 -->
+											</td>
+										</tr>
 										<tr></tr>
 									</table>
-								</form>
+								</div>
+								<div id="page6_11">
+									<table class="content_six_11" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page6_11_custom_softKey'></td>	<!-- 自定义软键 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_11_custom_softKey_disable'></option>
+													<option class="i18n" name='page6_11_custom_softKey_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_11_unselected_states'></td>	<!-- 未选择地区 -->
+											<td class="i18n" name='page6_11_selected_states'></td>	<!-- 选择地区 -->
+										</tr>
+										<tr>
+											<td colspan="2">
+												<table width="600px" height="200px">
+													<tr>
+														<td width="60px"></td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&larr;">
+															<input type="button" value="&rarr;">
+														</td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&uarr;">
+															<input type="button" value="&darr;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_11_call_states'></td>	<!-- 呼叫状态 -->
+											<td>
+												<select name="" id="">
+													<option class="i18n" name='page6_11_call_states_callFail'></option>
+													<option class="i18n" name='page6_11_call_states_incomingCall'></option>
+													<option class="i18n" name='page6_11_call_states_connecting'></option>
+													<option class="i18n" name='page6_11_call_states_transferConnecting'></option>
+													<option class="i18n" name='page6_11_call_states_dialing'></option>
+													<option class="i18n" name='page6_11_call_states_dialingEmpty'></option>
+													<option class="i18n" name='page6_11_call_states_dialConference'></option>
+													<option class="i18n" name='page6_11_call_states_dialConferenceEmpty'></option>
+													<option class="i18n" name='page6_11_call_states_transferTo'></option>
+													<option class="i18n" name='page6_11_call_states_dialTransEmpty'></option>
+													<option class="i18n" name='page6_11_call_states_ringBack'></option>
+													<option class="i18n" name='page6_11_call_states_transferRingBack'></option>
+													<option class="i18n" name='page6_11_call_states_talking'></option>
+													<option class="i18n" name='page6_11_call_states_hold'></option>
+													<option class="i18n" name='page6_11_call_states_held'></option>
+													<option class="i18n" name='page6_11_call_states_conferenced'></option>
+													<option class="i18n" name='page6_11_call_states_conferencedHold'></option>
+													<option class="i18n" name='page6_11_call_states_newCallIn'></option>
+													<option class="i18n" name='page6_11_call_states_conferenced_newCallIn'></option>
+													<option class="i18n" name='page6_11_call_states_paging'></option>
+													<option class="i18n" name='page6_11_call_states_listeningPaging'></option>
+													<option class="i18n" name='page6_11_call_states_beTransferred'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_11_unselected_softkeys'></td>	<!-- 未选择软键 -->
+											<td class="i18n" name='page6_11_selected_softkeys'></td>	<!-- 已选择软键 按位置排序	 -->
+										</tr>
+										<tr>
+											<td colspan="2">
+												<table width="600px" height="200px">
+													<tr>
+														<td width="60px"></td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&larr;">
+															<input type="button" value="&rarr;">
+														</td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&uarr;">
+															<input type="button" value="&darr;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_11_submit" class="i18n-input" selectname='page6_11_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_11_cancel" class="i18n-input" selectname='page6_11_cancel' type="button"/>	<!-- 取消 -->
+												&emsp;
+												<input id="page6_11_reset" class="i18n-input" selectname='page6_11_reset' type="button"/>	<!-- 重置Softkey -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page6_12">
+									<table class="content_six_12" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_12_tr069'></span></td>	<!-- TR069 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_12_enable_tr069'></td>	<!-- 启用TR069 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_12_enable_tr069_disable'></option>
+													<option class="i18n" name='page6_12_enable_tr069_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_12_acs_username'></td>	<!-- ACS用户名 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_12_acs_password'></td>	<!-- ACS密码 -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_12_acs_url'></td>	<!-- ACS服务器地址 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_12_enable_periodic_inform'></td>	<!-- 启用周期性通知 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_12_enable_periodic_inform_disable'></option>
+													<option class="i18n" name='page6_12_enable_periodic_inform_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_12_periodic_inform_interval'></td>	<!-- 周期性通知间隔（秒） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_12_connection_request_ussername'></td>	<!-- 请求连接用户名 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_12_connection_request_password'></td>	<!-- 请求连接密码 -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_12_submit" class="i18n-input" selectname='page6_12_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_12_cancel" class="i18n-input" selectname='page6_12_cancel' type="button"/>	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page6_13">
+									<table class="content_six_13" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page6_13_VSR'></td>	<!-- VQ RTCP-XR会议报告 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_13_VSR_diaable'></option>
+													<option class="i18n" name='page6_13_VSR_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_13_VIR'></td>	<!-- VQ RTCP-XR报告周期 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_13_VIR_diaable'></option>
+													<option class="i18n" name='page6_13_VIR_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_13_period_for_interval_report'></td>	<!-- 通知时间周期 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_13_warning_threshold_for_moslq'></td>	<!-- 通话质量警戒值 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_13_critical_threshold_for_moslq'></td>	<!-- MOS-LQ临界阈值 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_13_warning_threshold_for_delay'></td>	<!-- 通话时延警戒值 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_13_critical_threshold_for_delay'></td>	<!-- 延迟临界阈值 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_13_display_report_options_on_web'></td>	<!-- 在网页显示报告选项 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_13_display_report_options_on_web_diaable'></option>
+													<option class="i18n" name='page6_13_display_report_options_on_web_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_13_display_report_options_on_phone'></td>	<!-- 在话机显示报告选项 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_13_display_report_options_on_phone_diaable'></option>
+													<option class="i18n" name='page6_13_display_report_options_on_phone_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_13_voice_rtcpXR_report'></td>	<!-- RTCP-XR語音報告	 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_13_voice_rtcpXR_report_diaable'></option>
+													<option class="i18n" name='page6_13_voice_rtcpXR_report_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_13_report_options_on_phone'></span></td>	<!-- 话机的报告选项 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_13_report_options_on_phone_disable'></td>	<!-- 禁用 -->
+											<td class="i18n" name='page6_13_report_options_on_phone_enable'></td>	<!-- 启用 -->
+										</tr>
+										<tr>
+											<td colspan="2">
+												<table width="600px" height="200px">
+													<tr>
+														<td width="60px"></td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&larr;">
+															<input type="button" value="&rarr;">
+														</td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&uarr;">
+															<input type="button" value="&darr;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_13_submit" class="i18n-input" selectname='page6_13_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_13_cancel" class="i18n-input" selectname='page6_13_cancel' type="button"/>	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page6_14">
+									<table class="content_six_14" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_14_sip_config'></span></td>	<!-- SIP 配置 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_14_sip_session_timer_t1'></td>	<!-- SIP会话定时器 T1（0.5~10秒)	 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_14_sip_session_timer_t2'></td>	<!-- SIP会话定时器 T2（2~40秒）	 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_14_sip_session_timer_t4'></td>	<!-- SIP会话定时器 T4（2.5~60秒） -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_14_local_sip_port'></td>	<!-- 本地SIP端口 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_14_tls_sip_port'></td>	<!-- TLS SIP 端口 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_14_submit" class="i18n-input" selectname='page6_14_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_14_cancel" class="i18n-input" selectname='page6_14_cancel' type="button"/>	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page6_15">
+									<table class="content_six_15" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page6_15_power_saving'></td>	<!-- 节电模式 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page6_15_power_saving_disable'></option>
+													<option class="i18n" name='page6_15_power_saving_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_15_office_hour'></span></td>	<!-- 工作时间 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_15_monday'></td>	<!-- 星期一 -->
+											<td>
+												<input type="text">
+												--
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_15_tuesday'></td>	<!-- 星期二 -->
+											<td>
+												<input type="text">
+												--
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_15_wednesday'></td>	<!-- 星期三 -->
+											<td>
+												<input type="text">
+												--
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_15_thursday'></td>	<!-- 星期四 -->
+											<td>
+												<input type="text">
+												--
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_15_friday'></td>	<!-- 星期五 -->
+											<td>
+												<input type="text">
+												--
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_15_saturday'></td>	<!-- 星期六 -->
+											<td>
+												<input type="text">
+												--
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_15_sunday'></td>	<!-- 星期日 -->
+											<td>
+												<input type="text">
+												--
+												<input type="text">
+											</td>
+										</tr>
+										<tr>
+											<td style="text-align:left"><span class="i18n" name='page6_15_idle_timeOut'></span></td>	<!-- 闲置逾时 (分钟) -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_15_office_hour_idle_timeOut'></td>	<!-- 工作时间空闲状态下超时 -->
+											<td><input type="text" name="" id=""></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_15_off_hour_idle_timeOut'></td>	<!-- 非工作时间空闲状态下超时 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page6_15_user_input_extension_idle_timeOut'></td>	<!-- 用户输入分机闲置超时 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page6_15_submit" class="i18n-input" selectname='page6_15_submit' type="submit"/>	<!-- 确认 -->
+												&emsp;
+												<input id="page6_15_cancel" class="i18n-input" selectname='page6_15_cancel' type="button"/>	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
 							</td>
 							<td width="200px" bgcolor="#c0c0c0">
 								<table class="explain_title" cellspacing="0">
@@ -4428,6 +6300,25 @@
 	<script type="text/javascript" src="js/page5_15.js"></script>
 	<script type="text/javascript" src="js/page5_16.js"></script>
 	<script type="text/javascript" src="js/page6.js"></script>
+	<script type="text/javascript" src="js/page6_1.js"></script>
+	<script type="text/javascript" src="js/page6_2.js"></script>
+	<script type="text/javascript" src="js/page6_3.js"></script>
+	<script type="text/javascript" src="js/page6_4.js"></script>
+	<script type="text/javascript" src="js/page6_5.js"></script>
+	<script type="text/javascript" src="js/page6_6.js"></script>
+	<script type="text/javascript" src="js/page6_7.js"></script>
+	<script type="text/javascript" src="js/page6_7_1.js"></script>
+	<script type="text/javascript" src="js/page6_7_2.js"></script>
+	<script type="text/javascript" src="js/page6_7_3.js"></script>
+	<script type="text/javascript" src="js/page6_7_4.js"></script>
+	<script type="text/javascript" src="js/page6_8.js"></script>
+	<script type="text/javascript" src="js/page6_9.js"></script>
+	<script type="text/javascript" src="js/page6_10.js"></script>
+	<script type="text/javascript" src="js/page6_11.js"></script>
+	<script type="text/javascript" src="js/page6_12.js"></script>
+	<script type="text/javascript" src="js/page6_13.js"></script>
+	<script type="text/javascript" src="js/page6_14.js"></script>
+	<script type="text/javascript" src="js/page6_15.js"></script>
 	<script type="text/javascript" src="js/page7.js"></script>
 	<script type="text/javascript" src="js/page8.js"></script>
 </body>
