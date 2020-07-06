@@ -5866,166 +5866,220 @@
 						<tr>
 							<td class="sidebar-seven" width="200px" bgcolor="#c0c0c0">
 								<div class="s7_1 i18n" name='page7_local_directory'></div>	<!-- 本地联系人 -->
-								<div class="i18n" name='page7_remote_phone_book'></div>		<!-- 远程地址簿 -->
-								<div class="i18n" name='page7_phone_call_info'></div>		<!-- 呼叫历史 -->
-								<div class="i18n" name='page7_ldap'></div>					<!-- LDAP -->
-								<div class="i18n" name='page7_multicast_ip'></div>			<!-- 组播地址 -->
-								<div class="i18n" name='page7_setting'></div>				<!-- 设置 -->
+								<div class="s7_2 i18n" name='page7_remote_phone_book'></div>		<!-- 远程地址簿 -->
+								<div class="s7_3 i18n" name='page7_phone_call_info'></div>		<!-- 呼叫历史 -->
+								<div class="s7_4 i18n" name='page7_ldap'></div>					<!-- LDAP -->
+								<div class="s7_5 i18n" name='page7_multicast_ip'></div>			<!-- 组播地址 -->
+								<div class="s7_6 i18n" name='page7_setting'></div>				<!-- 设置 -->
 							</td>
 							<td class="seven-1" width="600px" bgcolor="#fafafa">
-								<table class="content_seven" width="600px" height="850px" cellspacing="0">
-									<tr>
-										<td colspan="2" height="267px">
-											<table id="page7_contacts_show" class="page7_contacts_show" width="580px" height="267px" cellspacing="0">
-												<tr>
-													<td class="i18n" name='page7_index' width="50px"></td>			<!-- 索引 -->
-													<td class="i18n" name='page7_name'></td>			<!-- 姓名 -->
-													<td class="i18n" name='page7_office_numbe'></td>	<!-- 办公电话 -->
-													<td class="i18n" name='page7_mobile_number'></td>	<!-- 移动电话 -->
-													<td class="i18n" name='page7_other_numbe'></td>		<!-- 其他电话 -->
-													<td>
-														<select id="page7_group1" onchange="page7_group1_onchange(this.value)">
-															<option class="i18n" name='page7_all_contacts' value="1"></option>
-															<option class="i18n" name='page7_blacklist' value="0"></option>
-														</select>
-													</td>
-													<td width="30px"><input type="checkbox" /></td>
-												</tr>
-												<tr id="page7_contact_1">
-													<td id="data_1_1"></td>
-													<td id="data_1_2"></td>
-													<td id="data_1_3"></td>
-													<td id="data_1_4"></td>
-													<td id="data_1_5"></td>
-													<td id="data_1_6"></td>
-													<td ><input id="data_1_7" type="checkbox" /></td>
-												</tr>
-												<tr id="page7_contact_2">
-													<td id="data_2_1"></td>
-													<td id="data_2_2"></td>
-													<td id="data_2_3"></td>
-													<td id="data_2_4"></td>
-													<td id="data_2_5"></td>
-													<td id="data_2_6"></td>
-													<td ><input id="data_2_7" type="checkbox" /></td>
-												</tr>
-												<tr id="page7_contact_3">
-													<td id="data_3_1"></td>
-													<td id="data_3_2"></td>
-													<td id="data_3_3"></td>
-													<td id="data_3_4"></td>
-													<td id="data_3_5"></td>
-													<td id="data_3_6"></td>
-													<td ><input id="data_3_7" type="checkbox" /></td>
-												</tr>
-												<tr id="page7_contact_4">
-													<td id="data_4_1"></td>
-													<td id="data_4_2"></td>
-													<td id="data_4_3"></td>
-													<td id="data_4_4"></td>
-													<td id="data_4_5"></td>
-													<td id="data_4_6"></td>
-													<td ><input id="data_4_7" type="checkbox" /></td>
-												</tr>
-												<tr id="page7_contact_5">
-													<td id="data_5_1"></td>
-													<td id="data_5_2"></td>
-													<td id="data_5_3"></td>
-													<td id="data_5_4"></td>
-													<td id="data_5_5"></td>
-													<td id="data_5_6"></td>
-													<td ><input id="data_5_7" type="checkbox" /></td>
-												</tr>
-												<tr id="page7_contact_6">
-													<td id="data_6_1"></td>
-													<td id="data_6_2"></td>
-													<td id="data_6_3"></td>
-													<td id="data_6_4"></td>
-													<td id="data_6_5"></td>
-													<td id="data_6_6"></td>
-													<td ><input id="data_6_7" type="checkbox" /></td>
-												</tr>
-												<tr id="page7_contact_7">
-													<td id="data_7_1"></td>
-													<td id="data_7_2"></td>
-													<td id="data_7_3"></td>
-													<td id="data_7_4"></td>
-													<td id="data_7_5"></td>
-													<td id="data_7_6"></td>
-													<td ><input id="data_7_7" type="checkbox" /></td>
-												</tr>
-												<tr id="page7_contact_8">
-													<td id="data_8_1"></td>
-													<td id="data_8_2"></td>
-													<td id="data_8_3"></td>
-													<td id="data_8_4"></td>
-													<td id="data_8_5"></td>
-													<td id="data_8_6"></td>
-													<td ><input id="data_8_7" type="checkbox" /></td>
-												</tr>
-												<tr id="page7_contact_9">
-													<td id="data_9_1"></td>
-													<td id="data_9_2"></td>
-													<td id="data_9_3"></td>
-													<td id="data_9_4"></td>
-													<td id="data_9_5"></td>
-													<td id="data_9_6"></td>
-													<td ><input id="data_9_7" type="checkbox" /></td>
-												</tr>
-												<tr id="page7_contact_10">
-													<td id="data_10_1"></td>
-													<td id="data_10_2"></td>
-													<td id="data_10_3"></td>
-													<td id="data_10_4"></td>
-													<td id="data_10_5"></td>
-													<td id="data_10_6"></td>
-													<td><input id="data_10_7" type="checkbox" /></td>
-												</tr>
-												<tr>
-													<td colspan="7">
-														<span class="i18n" name='page7_page'></span>
-														<select id="page7_page">
-														</select>
-														<input id="page7_prev_page" class="i18n-input" selectname='page7_prev_page' type="button" />	<!-- 前页 -->
-														<input id="page7_next_page" class="i18n-input" selectname='page7_next_page' type="button" />	<!-- 后页 -->
-														<input class="i18n-input" selectname='page7_hang_up' type="button" />
-														<input id="page7_delete_all" class="i18n-input" selectname='page7_delete_all' type="button" />	<!-- 全部删除 -->
-														<input id="page7_delete" class="i18n-input" selectname='page7_delete' type="button" />	<!-- 删除 -->
-														<input id="page7_move_to" class="i18n-input" selectname='page7_move_to' type="button" />	<!-- 移动到 -->
-														<select id="page7_group2">
-															<option class="i18n" name='page7_all_contacts' value="1"></option>
-															<option class="i18n" name='page7_blacklist' value="0"></option>
-														</select>
-													</td>
-												</tr>
-											</table>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<form action="">
-												<table class="page7_contact_set" cellspacing="0">
-													<tr><td class="i18n" name='page7_contacts'></td></tr>	<!-- 联系人 -->
+								<div id="page7_1">
+									<table class="content_seven" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td colspan="2" height="267px">
+												<table id="page7_contacts_show" class="page7_contacts_show" width="580px" height="267px" cellspacing="0">
 													<tr>
-														<td class="i18n" name='page7_name'></td>	<!-- 姓名 -->
-														<td><input id="page7_name" type="text" /></td>
-													</tr>
-													<tr>
+														<td class="i18n" name='page7_index' width="50px"></td>			<!-- 索引 -->
+														<td class="i18n" name='page7_name'></td>			<!-- 姓名 -->
 														<td class="i18n" name='page7_office_numbe'></td>	<!-- 办公电话 -->
-														<td><input id="page7_office_numbe" type="text" /></td>
-													</tr>
-													<tr>
 														<td class="i18n" name='page7_mobile_number'></td>	<!-- 移动电话 -->
-														<td><input id="page7_mobile_number" type="text" /></td>
+														<td class="i18n" name='page7_other_numbe'></td>		<!-- 其他电话 -->
+														<td>
+															<select id="page7_group1" onchange="page7_group1_onchange(this.value)">
+																<option class="i18n" name='page7_all_contacts' value="1"></option>
+																<option class="i18n" name='page7_blacklist' value="0"></option>
+															</select>
+														</td>
+														<td width="30px"><input type="checkbox" /></td>
+													</tr>
+													<tr id="page7_contact_1">
+														<td id="data_1_1"></td>
+														<td id="data_1_2"></td>
+														<td id="data_1_3"></td>
+														<td id="data_1_4"></td>
+														<td id="data_1_5"></td>
+														<td id="data_1_6"></td>
+														<td ><input id="data_1_7" type="checkbox" /></td>
+													</tr>
+													<tr id="page7_contact_2">
+														<td id="data_2_1"></td>
+														<td id="data_2_2"></td>
+														<td id="data_2_3"></td>
+														<td id="data_2_4"></td>
+														<td id="data_2_5"></td>
+														<td id="data_2_6"></td>
+														<td ><input id="data_2_7" type="checkbox" /></td>
+													</tr>
+													<tr id="page7_contact_3">
+														<td id="data_3_1"></td>
+														<td id="data_3_2"></td>
+														<td id="data_3_3"></td>
+														<td id="data_3_4"></td>
+														<td id="data_3_5"></td>
+														<td id="data_3_6"></td>
+														<td ><input id="data_3_7" type="checkbox" /></td>
+													</tr>
+													<tr id="page7_contact_4">
+														<td id="data_4_1"></td>
+														<td id="data_4_2"></td>
+														<td id="data_4_3"></td>
+														<td id="data_4_4"></td>
+														<td id="data_4_5"></td>
+														<td id="data_4_6"></td>
+														<td ><input id="data_4_7" type="checkbox" /></td>
+													</tr>
+													<tr id="page7_contact_5">
+														<td id="data_5_1"></td>
+														<td id="data_5_2"></td>
+														<td id="data_5_3"></td>
+														<td id="data_5_4"></td>
+														<td id="data_5_5"></td>
+														<td id="data_5_6"></td>
+														<td ><input id="data_5_7" type="checkbox" /></td>
+													</tr>
+													<tr id="page7_contact_6">
+														<td id="data_6_1"></td>
+														<td id="data_6_2"></td>
+														<td id="data_6_3"></td>
+														<td id="data_6_4"></td>
+														<td id="data_6_5"></td>
+														<td id="data_6_6"></td>
+														<td ><input id="data_6_7" type="checkbox" /></td>
+													</tr>
+													<tr id="page7_contact_7">
+														<td id="data_7_1"></td>
+														<td id="data_7_2"></td>
+														<td id="data_7_3"></td>
+														<td id="data_7_4"></td>
+														<td id="data_7_5"></td>
+														<td id="data_7_6"></td>
+														<td ><input id="data_7_7" type="checkbox" /></td>
+													</tr>
+													<tr id="page7_contact_8">
+														<td id="data_8_1"></td>
+														<td id="data_8_2"></td>
+														<td id="data_8_3"></td>
+														<td id="data_8_4"></td>
+														<td id="data_8_5"></td>
+														<td id="data_8_6"></td>
+														<td ><input id="data_8_7" type="checkbox" /></td>
+													</tr>
+													<tr id="page7_contact_9">
+														<td id="data_9_1"></td>
+														<td id="data_9_2"></td>
+														<td id="data_9_3"></td>
+														<td id="data_9_4"></td>
+														<td id="data_9_5"></td>
+														<td id="data_9_6"></td>
+														<td ><input id="data_9_7" type="checkbox" /></td>
+													</tr>
+													<tr id="page7_contact_10">
+														<td id="data_10_1"></td>
+														<td id="data_10_2"></td>
+														<td id="data_10_3"></td>
+														<td id="data_10_4"></td>
+														<td id="data_10_5"></td>
+														<td id="data_10_6"></td>
+														<td><input id="data_10_7" type="checkbox" /></td>
 													</tr>
 													<tr>
-														<td class="i18n" name='page7_other_numbe'></td>	<!-- 其他电话 -->
-														<td><input id="page7_other_numbe" type="text" /></td>
+														<td colspan="7">
+															<span class="i18n" name='page7_page'></span>
+															<select id="page7_page">
+															</select>
+															<input id="page7_prev_page" class="i18n-input" selectname='page7_prev_page' type="button" />	<!-- 前页 -->
+															<input id="page7_next_page" class="i18n-input" selectname='page7_next_page' type="button" />	<!-- 后页 -->
+															<input class="i18n-input" selectname='page7_hang_up' type="button" />
+															<input id="page7_delete_all" class="i18n-input" selectname='page7_delete_all' type="button" />	<!-- 全部删除 -->
+															<input id="page7_delete" class="i18n-input" selectname='page7_delete' type="button" />	<!-- 删除 -->
+															<input id="page7_move_to" class="i18n-input" selectname='page7_move_to' type="button" />	<!-- 移动到 -->
+															<select id="page7_group2">
+																<option class="i18n" name='page7_all_contacts' value="1"></option>
+																<option class="i18n" name='page7_blacklist' value="0"></option>
+															</select>
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<form action="">
+													<table class="page7_contact_set" cellspacing="0">
+														<tr><td class="i18n" name='page7_contacts'></td></tr>	<!-- 联系人 -->
+														<tr>
+															<td class="i18n" name='page7_name'></td>	<!-- 姓名 -->
+															<td><input id="page7_name" type="text" /></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_office_numbe'></td>	<!-- 办公电话 -->
+															<td><input id="page7_office_numbe" type="text" /></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_mobile_number'></td>	<!-- 移动电话 -->
+															<td><input id="page7_mobile_number" type="text" /></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_other_numbe'></td>	<!-- 其他电话 -->
+															<td><input id="page7_other_numbe" type="text" /></td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_ring_tone'></td>	<!-- 响铃 -->
+															<td>
+																<select id="page7_ring_tone">
+																	<option class="i18n" name='page6_ring_type_1' value="1"></option>
+																	<option class="i18n" name='page6_ring_type_2' value="2"></option>
+																	<option class="i18n" name='page6_ring_type_3' value="3"></option>
+																	<option class="i18n" name='page6_ring_type_4' value="4"></option>
+																	<option class="i18n" name='page6_ring_type_5' value="5"></option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_group'></td>	<!-- 群组 -->
+															<td>
+																<select id="page7_add_group">
+																	<option class="i18n" name='page7_all_contacts' value="1"></option>	<!-- 本地联系人 -->
+																	<option class="i18n" name='page7_blacklist' value="0"></option>	<!-- 黑名单  -->
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page2_account'></td>	<!-- 账号 -->
+															<td>
+																<select id="page7_account">
+																	<option value="account_1" class="i18n" name='page2_account_1'></option>
+																	<option value="account_2" class="i18n" name='page2_account_2'></option>
+																	<option value="account_3" class="i18n" name='page2_account_3'></option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_auto_divert'></td>	<!-- 自动移除 -->
+															<td><input id="page7_auto_divert" type="text" /></td>
+														</tr>
+														<tr>
+															<td colspan="2">
+																<input id="page7_add" class="i18n-input" selectname='page7_add' type="submit" />	<!-- 添加 -->
+																&emsp;
+																<input id="page7_edit" class="i18n-input" selectname='page7_edit' type="button" />	<!-- 编辑 -->
+															</td>
+														</tr>
+														<tr></tr>
+													</table>
+												</form>
+											</td>
+											<td>
+												<table class="page7_contact_group" cellspacing="0">
+													<tr><th class="i18n" name='page7_group_setting'></th></tr>	<!-- 群组设置 -->
+													<tr>
+														<td class="i18n" name='page7_group'></td>	<!-- 群组 -->
+														<td><input id="page7_group" type="text" /></td>
 													</tr>
 													<tr>
 														<td class="i18n" name='page7_ring_tone'></td>	<!-- 响铃 -->
 														<td>
-															<select id="page7_ring_tone">
+															<select id="page7_group_ring_tone">
 																<option class="i18n" name='page6_ring_type_1' value="1"></option>
 																<option class="i18n" name='page6_ring_type_2' value="2"></option>
 																<option class="i18n" name='page6_ring_type_3' value="3"></option>
@@ -6035,101 +6089,3113 @@
 														</td>
 													</tr>
 													<tr>
-														<td class="i18n" name='page7_group'></td>	<!-- 群组 -->
-														<td>
-															<select id="page7_add_group">
-																<option class="i18n" name='page7_all_contacts' value="1"></option>	<!-- 本地联系人 -->
-																<option class="i18n" name='page7_blacklist' value="0"></option>	<!-- 黑名单  -->
-															</select>
+														<td colspan="2" style="text-align: center;">
+															<input id="page7_group_add" class="i18n-input" selectname='page7_group_add' type="button" />	<!-- 添加 -->
+															<input id="page7_group_edit" class="i18n-input" selectname='page7_group_edit' type="button" />	<!-- 编辑 -->
+															<input id="page7_group_delete" class="i18n-input" selectname='page7_group_delete' type="button" />	<!-- 删除 -->
+															<input id="page7_group_delete_all" class="i18n-input" selectname='page7_group_delete_all' type="button" />	<!-- 全部删除 -->
 														</td>
 													</tr>
+													<tr></tr>
 													<tr>
-														<td class="i18n" name='page2_account'></td>	<!-- 账号 -->
-														<td>
-															<select id="page7_account">
-																<option value="account_1" class="i18n" name='page2_account_1'></option>
-																<option value="account_2" class="i18n" name='page2_account_2'></option>
-																<option value="account_3" class="i18n" name='page2_account_3'></option>
-															</select>
-														</td>
-													</tr>
-													<tr>
-														<td class="i18n" name='page7_auto_divert'></td>	<!-- 自动移除 -->
-														<td><input id="page7_auto_divert" type="text" /></td>
+														<th class="i18n" name='page7_local_constact'></th>
 													</tr>
 													<tr>
 														<td colspan="2">
-															<input id="page7_add" class="i18n-input" selectname='page7_add' type="submit" />	<!-- 添加 -->
-															&emsp;
-															<input id="page7_edit" class="i18n-input" selectname='page7_edit' type="button" />	<!-- 编辑 -->
+															<input id="page7_xml_show" class="i18n-input" selectname="page6_select_file" readonly="readonly" style="background:#f2f2f2" type="text" onclick="page7_xml_select()">
+															<input class="i18n-input" selectname='page6_browse' type="button" onclick="page7_xml_select()">
+															<input id="page7_xml_select" type="file" name="page7_xml_select" onchange="page7_xml_select_change(this)" style="opacity:0; position:absolute; width:0px; " accept=".xml">
+														</td>
+													</tr>
+													<tr>
+														<td colspan="2">
+															<input id="page7_import_xml" class="i18n-input" selectname="page7_import_xml" type="button" />	<!-- xml导入 -->
+															<input id="page7_export_xml" class="i18n-input" selectname="page7_export_xml" type="button" />	<!-- xml导出 -->
+														</td>
+													</tr>
+													<tr>
+														<td colspan="2">
+															<input class="i18n-input" selectname="page6_select_file" readonly="readonly" style="background:#f2f2f2" type="text">
+															<input class="i18n-input" selectname='page6_browse' type="button">
+															<input type="file" style="opacity:0; position:absolute; width:0px; ">
+														</td>
+													</tr>
+													<tr>
+														<td colspan="2">
+															<input class="i18n-input" selectname="page7_import_csv" type="button" />	<!-- CSV导入 -->
+															<input class="i18n-input" selectname="page7_export_csv" type="button" />	<!-- CSV导出 -->
 														</td>
 													</tr>
 													<tr></tr>
 												</table>
-											</form>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<div id="page7_2">
+									<table class="content_seven_2" width="600px" height="850px" cellspacing="0">
+									<tr>
+										<td class="i18n" name='page7_2_index'></td>	<!-- 索引 -->
+										<td class="i18n" name='page7_2_remote_url' colspan="2"></td>
+										<td class="i18n" name='page7_2_display_name'></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td colspan="2"><input type="text" style="width:320px;"></td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td colspan="2"><input type="text" style="width:320px;"></td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td colspan="2"><input type="text" style="width:320px;"></td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td colspan="2"><input type="text" style="width:320px;"></td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td colspan="2"><input type="text" style="width:320px;"></td>
+										<td><input type="text"></td>
+									</tr>
+									<tr></tr>
+									<tr>
+										<td colspan="2">
+											<span class="i18n" name='page7_2_call_lookup'></span>
 										</td>
-										<td>
-											<table class="page7_contact_group" cellspacing="0">
-												<tr><th class="i18n" name='page7_group_setting'></th></tr>	<!-- 群组设置 -->
-												<tr>
-													<td class="i18n" name='page7_group'></td>	<!-- 群组 -->
-													<td><input id="page7_group" type="text" /></td>
-												</tr>
-												<tr>
-													<td class="i18n" name='page7_ring_tone'></td>	<!-- 响铃 -->
-													<td>
-														<select id="page7_group_ring_tone">
-															<option class="i18n" name='page6_ring_type_1' value="1"></option>
-															<option class="i18n" name='page6_ring_type_2' value="2"></option>
-															<option class="i18n" name='page6_ring_type_3' value="3"></option>
-															<option class="i18n" name='page6_ring_type_4' value="4"></option>
-															<option class="i18n" name='page6_ring_type_5' value="5"></option>
-														</select>
-													</td>
-												</tr>
-												<tr>
-													<td colspan="2" style="text-align: center;">
-														<input id="page7_group_add" class="i18n-input" selectname='page7_group_add' type="button" />	<!-- 添加 -->
-														<input id="page7_group_edit" class="i18n-input" selectname='page7_group_edit' type="button" />	<!-- 编辑 -->
-														<input id="page7_group_delete" class="i18n-input" selectname='page7_group_delete' type="button" />	<!-- 删除 -->
-														<input id="page7_group_delete_all" class="i18n-input" selectname='page7_group_delete_all' type="button" />	<!-- 全部删除 -->
-													</td>
-												</tr>
-												<tr></tr>
-												<tr>
-													<th class="i18n" name='page7_local_constact'></th>
-												</tr>
-												<tr>
-													<td colspan="2">
-														<input id="page7_xml_show" class="i18n-input" selectname="page6_select_file" readonly="readonly" style="background:#f2f2f2" type="text" onclick="page7_xml_select()">
-														<input class="i18n-input" selectname='page6_browse' type="button" onclick="page7_xml_select()">
-														<input id="page7_xml_select" type="file" name="page7_xml_select" onchange="page7_xml_select_change(this)" style="opacity:0; position:absolute; width:0px; " accept=".xml">
-													</td>
-												</tr>
-												<tr>
-													<td colspan="2">
-														<input id="page7_import_xml" class="i18n-input" selectname="page7_import_xml" type="button" />	<!-- xml导入 -->
-														<input id="page7_export_xml" class="i18n-input" selectname="page7_export_xml" type="button" />	<!-- xml导出 -->
-													</td>
-												</tr>
-												<tr>
-													<td colspan="2">
-														<input class="i18n-input" selectname="page6_select_file" readonly="readonly" style="background:#f2f2f2" type="text">
-														<input class="i18n-input" selectname='page6_browse' type="button">
-														<input type="file" style="opacity:0; position:absolute; width:0px; ">
-													</td>
-												</tr>
-												<tr>
-													<td colspan="2">
-														<input class="i18n-input" selectname="page7_import_csv" type="button" />	<!-- CSV导入 -->
-														<input class="i18n-input" selectname="page7_export_csv" type="button" />	<!-- CSV导出 -->
-													</td>
-												</tr>
-												<tr></tr>
-											</table>
+										<td colspan="2">
+											<select id="">
+												<option class="i18n" name='page7_2_call_lookup_disable'></option>
+												<option class="i18n" name='page7_2_call_lookup_enable'></option>
+											</select>
 										</td>
 									</tr>
-								</table>
+									<tr>
+										<td colspan="2">
+											<span class="i18n" name='page7_2_update_time_interval'></span>
+										</td>
+										<td colspan="2"><input type="text"></td>
+									</tr>
+									<tr>
+										<td colspan="4">
+											<input id="page7_2_sumbit" class="i18n-input" selectname='page7_2_sumbit' type="submit" />	<!-- 确定 -->
+											&emsp;
+											<input id="page7_2_cancel" class="i18n-input" selectname='page7_2_cancel' type="button" />	<!-- 取消 -->
+										</td>
+									</tr>
+									<tr></tr>
+									</table>
+								</div>
+								<div id="page7_3">
+									<table class="content_seven_3" width="600px" height="850px">
+										<tr>
+											<td class="content_seven_3_title i18n" name='page7_3_call_panel' colspan="2"></td>	<!-- 呼叫面板 -->
+										</tr>
+										<tr>
+											<td colspan="3" class="i18n" name='page7_3_dial_number'></td>	<!-- 呼叫号码 -->
+											<td colspan="3" style="text-align:left">
+												<input type="text">
+												<input class="i18n-input" selectname='page7_3_dial' type="button">
+												<input class="i18n-input" selectname='page7_3_handup' type="button">
+											</td>
+										</tr>
+										<tr>
+											<td colspan="3" class="i18n" name='page7_3_outgoing_identity'></td>	<!-- 呼出账号 -->
+											<td colspan="3" style="text-align:left">
+												<select id=""></select>
+											</td>
+										</tr>
+										<tr>
+											<td class="content_seven_3_title i18n" name='page7_3_call_list' colspan="2"></td>	<!-- 呼叫列表 -->
+										</tr>
+										<tr>
+											<td class="content_seven_3_title i18n" name='page7_3_dialed_list' colspan="2"></td>	<!-- 拨号列表 -->
+										</tr>
+										<tr class="content_seven_3_header">
+											<td class="i18n" name='page7_3_index' style="width:40px"></td>
+											<td class="i18n" name='page7_3_date' style="width:90px"></td>
+											<td class="i18n" name='page7_3_time' style="width:60px"></td>
+											<td class="i18n" name='page7_3_local_identity' style="width:110px"></td>
+											<td class="i18n" name='page7_3_name' style="width:110px"></td>
+											<td class="i18n" name='page7_3_number'></td>
+										</tr>
+										<tr>
+											<td colspan="6" style=" height: 100px">
+												<div style="width: 600px;height:100px;overflow-y:scroll;">
+													<table style="width: 100%;">
+														<colgroup>
+															<col style="width:38px">
+															<col style="width:90px">
+															<col style="width:60px">
+															<col style="width:110px">
+															<col style="width:110px">
+														</colgroup>
+														<tr>
+															<td >1</td>
+															<td ></td>	
+															<td ></td>
+															<td ></td>
+															<td ></td>
+															<td ></td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>3</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>4</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>5</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>6</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>7</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>8</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>9</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+														<tr>
+															<td>10</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</table>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="content_seven_3_title i18n" name='page7_3_missed_list' colspan="2"></td>	<!-- 未接来电记录 -->
+										</tr>
+										<tr class="content_seven_3_header">
+											<td class="i18n" name='page7_3_index'></td>
+											<td class="i18n" name='page7_3_date'></td>
+											<td class="i18n" name='page7_3_time'></td>
+											<td class="i18n" name='page7_3_local_identity'></td>
+											<td class="i18n" name='page7_3_name'></td>
+											<td class="i18n" name='page7_3_number'></td>
+										</tr>
+										<tr>
+											<td colspan="6" style=" height: 100px"></td>
+										</tr>
+										<tr>
+											<td class="content_seven_3_title i18n" name='page7_3_received_list' colspan="2"></td>	<!-- 已接来电记录 -->
+										</tr>
+										<tr class="content_seven_3_header">
+											<td class="i18n" name='page7_3_index'></td>
+											<td class="i18n" name='page7_3_date'></td>
+											<td class="i18n" name='page7_3_time'></td>
+											<td class="i18n" name='page7_3_local_identity'></td>
+											<td class="i18n" name='page7_3_name'></td>
+											<td class="i18n" name='page7_3_number'></td>
+										</tr>
+										<tr>
+											<td colspan="6" style=" height: 100px"></td>
+										</tr>
+										<tr>
+											<td class="content_seven_3_title i18n" name='page7_3_forwarded_list' colspan="2"></td>	<!-- 前转来电记录 -->
+										</tr>
+										<tr class="content_seven_3_header">
+											<td class="i18n" name='page7_3_index'></td>
+											<td class="i18n" name='page7_3_date'></td>
+											<td class="i18n" name='page7_3_time'></td>
+											<td class="i18n" name='page7_3_local_identity'></td>
+											<td class="i18n" name='page7_3_name'></td>
+											<td class="i18n" name='page7_3_number'></td>
+										</tr>
+										<tr>
+											<td colspan="6" style=" height: 100px"></td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page7_4">
+									<table class="content_seven_4" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="i18n" name='page7_4_enable_LDAP'></td>	<!-- 启用LDAP -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page7_4_enable_LDAP_disable'></option>
+													<option class="i18n" name='page7_4_enable_LDAP_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_LDAP_label'></td>	<!-- LDAP Label -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_LDAP_name_filter'></td>	<!-- LDAP名称过滤 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_LDAP_number_filter'></td>	<!-- LDAP号码过滤 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_LDAP_TLS_mode'></td>	<!-- LDAP加密传输模式 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page7_4_LDAP_TLS_mode_LDPA'></option>
+													<option class="i18n" name='page7_4_LDAP_TLS_mode_LDPA_LTS_Start'></option>
+													<option class="i18n" name='page7_4_LDAP_TLS_mode_LDPAS'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_server_address'></td>	<!-- 服务器地址 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_port'></td>	<!-- 端口 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_base'></td>	<!-- 基础 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_user_name'></td>	<!-- 用户名称 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_password'></td>	<!-- 密码 -->
+											<td><input type="password"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_max_hits'></td>	<!-- 最大点击数 (1~32000) -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_LDAP_name_attributes'></td>	<!-- LDAP名称属性 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_LDAP_number_attributes'></td>	<!-- LDAP号码属性 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_LDAP_display_name'></td>	<!-- LDAP显示名称 -->
+											<td><input type="text"></td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_protocol'></td>	<!-- 协议版本 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page7_4_protocol_version2'></option>
+													<option class="i18n" name='page7_4_protocol_version3'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_LDAP_lookup_for_incoming_call'></td>	<!-- LDAP匹配来电 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page7_4_LDAP_lookup_for_incoming_call_disable'></option>
+													<option class="i18n" name='page7_4_LDAP_lookup_for_incoming_call_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_LDAP_lookup_for_callout'></td>	<!-- LDAP呼出查询 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page7_4_LDAP_lookup_for_callout_disable'></option>
+													<option class="i18n" name='page7_4_LDAP_lookup_for_callout_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_4_LDAP_sorting_results'></td>	<!-- LDAP搜索排序 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page7_4_LDAP_sorting_results_disable'></option>
+													<option class="i18n" name='page7_4_LDAP_sorting_results_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page7_4_sumbit" class="i18n-input" selectname='page7_4_sumbit' type="submit" />	<!-- 确定 -->
+												&emsp;
+												<input id="page7_4_cancel" class="i18n-input" selectname='page7_4_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page7_5">
+									<table class="content_seven_5" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="content_seven_5_title i18n" name='page7_5_multicast_listening'></td>	<!-- 组播监听 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_5_paging_barge'></td>	<!-- 寻呼介入 -->
+											<td colspan="4">
+												<select id="">
+													<option value="0" class="i18n" name='page7_5_paging_barge_disable'></option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+													<option value="15">15</option>
+													<option value="16">16</option>
+													<option value="17">17</option>
+													<option value="18">18</option>
+													<option value="19">19</option>
+													<option value="20">20</option>
+													<option value="21">21</option>
+													<option value="22">22</option>
+													<option value="23">23</option>
+													<option value="24">24</option>
+													<option value="25">25</option>
+													<option value="26">26</option>
+													<option value="27">27</option>
+													<option value="28">28</option>
+													<option value="29">29</option>
+													<option value="30">30</option>
+													<option value="31">31</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_5_ignore_dnd'></td>	<!-- 穿透DND -->
+											<td colspan="4">
+												<select id="">
+													<option class="i18n" name='page7_5_ignore_dnd_disable'></option>
+													<option class="i18n" name='page7_5_ignore_dnd_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_5_paging_priority_active'></td>	<!-- 寻呼优先级 -->
+											<td colspan="4">
+												<select id="">
+													<option class="i18n" name='page7_5_paging_priority_active_disable'></option>
+													<option class="i18n" name='page7_5_paging_priority_active_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr class="content_seven_5_header">
+											<td class="i18n" name='page7_5_ip_address' style="width:140px"></td>	<!-- IP地址 -->
+											<td class="i18n" name='page7_5_listening_address' style="width:160px"></td>	<!-- 监听地址 -->
+											<td class="i18n" name='page7_5_label' style="width:160px"></td>	<!-- 标签 -->
+											<td class="i18n" name='page7_5_channel' style="width:70px"></td>	<!-- 信道 -->
+											<td class="i18n" name='page7_5_priority'></td>	<!-- 优先级 -->
+										</tr>
+										<tr style="height:300px">
+											<td colspan="5" style=" height: 300px">
+												<div style="width: 600px;height:300px;overflow-y:scroll;">
+													<table style="width: 100%;" cellspacing="0">
+														<colgroup>
+															<col style="width:140px">
+															<col style="width:160px">
+															<col style="width:160px">
+															<col style="width:70px">
+														</colgroup>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_1'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td >
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td >1</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_2'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>2</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_3'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>3</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_4'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>4</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_5'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>5</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_6'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>6</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_7'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>7</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_8'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>8</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_9'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>9</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_10'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>10</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_11'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>11</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_11'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>11</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_12'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>12</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_13'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>13</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_14'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>14</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_15'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>15</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_16'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>16</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_17'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>17</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_18'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>18</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_19'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>19</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_20'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>20</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_21'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>21</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_22'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>23</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_24'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>24</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_25'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>25</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_26'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>26</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_27'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>27</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_28'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>28</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_29'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>29</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_30'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>30</td>
+														</tr>
+														<tr>
+															<td class="i18n" name='page7_5_ip_address_31'></td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+															<td>31</td>
+														</tr>
+													</table>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td class="content_seven_5_title i18n" name='page7_5_paging_list'></td>	<!-- 组播列表 -->
+										</tr>
+										<tr class="content_seven_5_header">
+											<td class="i18n" name='page7_5_index'></td>	<!-- 索引 -->
+											<td class="i18n" name='page7_5_paging_address'></td>	<!-- 组播地址 -->
+											<td class="i18n" name='page7_5_label'></td>	<!-- 标签 -->
+											<td class="i18n" name='page7_5_channel' colspan="2"></td>	<!-- 信道 -->
+											<td ></td>
+										</tr>
+										<tr style="height:300px">
+											<td colspan="5" style=" height: 300px">
+												<div style="width: 600px;height:300px;overflow-y:scroll;">
+													<table style="width: 100%;" cellspacing="0">
+														<colgroup>
+															<col style="width:140px">
+															<col style="width:160px">
+															<col style="width:160px">
+														</colgroup>
+														<tr>
+															<td>1</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td >
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>2</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>3</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>4</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>5</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>6</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>7</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>8</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>9</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>10</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>11</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>12</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>13</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>14</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>15</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>16</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>17</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>18</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>19</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>20</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>21</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>22</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>23</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>24</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>25</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>26</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>27</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>28</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>29</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>30</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td>31</td>
+															<td ><input type="text"></td>	
+															<td ><input type="text"></td>
+															<td>
+																<select name="" id="">
+																	<option value="">0</option>
+																	<option value="">1</option>
+																	<option value="">2</option>
+																	<option value="">3</option>
+																	<option value="">4</option>
+																	<option value="">5</option>
+																	<option value="">6</option>
+																	<option value="">7</option>
+																	<option value="">8</option>
+																	<option value="">9</option>
+																	<option value="">10</option>
+																	<option value="">11</option>
+																	<option value="">12</option>
+																	<option value="">13</option>
+																	<option value="">14</option>
+																	<option value="">15</option>
+																	<option value="">16</option>
+																	<option value="">17</option>
+																	<option value="">18</option>
+																	<option value="">19</option>
+																	<option value="">20</option>
+																	<option value="">21</option>
+																	<option value="">22</option>
+																	<option value="">23</option>
+																	<option value="">24</option>
+																	<option value="">25</option>
+																	<option value="">26</option>
+																	<option value="">27</option>
+																	<option value="">28</option>
+																	<option value="">29</option>
+																	<option value="">30</option>
+																</select>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="5">
+												<input id="page7_5_sumbit" class="i18n-input" selectname='page7_5_sumbit' type="submit" />	<!-- 确定 -->
+												&emsp;
+												<input id="page7_5_cancel" class="i18n-input" selectname='page7_5_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
+								<div id="page7_6">
+									<table class="content_seven_6" width="600px" height="850px" cellspacing="0">
+										<tr>
+											<td class="content_seven_6_title i18n" name='page7_6_directory'></td>	<!-- 联系人 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_6_directory_disable'></td>	<!-- 禁用 -->
+											<td class="i18n" name='page7_6_directory_enable'></td>	<!-- 启用 -->
+										</tr>
+										<tr>
+											<td colspan="2">
+												<table width="600px" height="175px">
+													<tr>
+														<td width="60px"></td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&larr;">
+															<input type="button" value="&rarr;">
+														</td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&uarr;">
+															<input type="button" value="&darr;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td class="content_seven_6_title i18n" name='page7_6_search_ource_list_in_dialing'></td>	<!-- 去电联系人匹配列表 -->
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_6_search_ource_list_in_dialing_disable'></td>	<!-- 禁用 -->
+											<td class="i18n" name='page7_6_search_ource_list_in_dialing_enable'></td>	<!-- 启用 -->
+										</tr>
+										<tr>
+											<td colspan="2">
+												<table width="600px" height="175px">
+													<tr>
+														<td width="60px"></td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&larr;">
+															<input type="button" value="&rarr;">
+														</td>
+														<td width="150px">
+															<select id="" size="10">
+
+															</select>
+														</td>
+														<td width="90px">
+															<input type="button" value="&uarr;">
+															<input type="button" value="&darr;">
+														</td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<tr>
+											<td class="i18n" name='page7_6_recent_call_in_dialing'></td>	<!-- 去电匹配近期呼叫 -->
+											<td>
+												<select id="">
+													<option class="i18n" name='page7_6_recent_call_in_dialing_diasble'></option>
+													<option class="i18n" name='page7_6_recent_call_in_dialing_enable'></option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<input id="page7_6_sumbit" class="i18n-input" selectname='page7_6_sumbit' type="submit" />	<!-- 确定 -->
+												&emsp;
+												<input id="page7_6_cancel" class="i18n-input" selectname='page7_6_cancel' type="button" />	<!-- 取消 -->
+											</td>
+										</tr>
+										<tr></tr>
+									</table>
+								</div>
 							</td>
 							<td width="200px" bgcolor="#c0c0c0">
 								<table class="explain_title" cellspacing="0">
@@ -6320,6 +9386,12 @@
 	<script type="text/javascript" src="js/page6_14.js"></script>
 	<script type="text/javascript" src="js/page6_15.js"></script>
 	<script type="text/javascript" src="js/page7.js"></script>
+	<script type="text/javascript" src="js/page7_1.js"></script>
+	<script type="text/javascript" src="js/page7_2.js"></script>
+	<script type="text/javascript" src="js/page7_3.js"></script>
+	<script type="text/javascript" src="js/page7_4.js"></script>
+	<script type="text/javascript" src="js/page7_5.js"></script>
+	<script type="text/javascript" src="js/page7_6.js"></script>
 	<script type="text/javascript" src="js/page8.js"></script>
 </body>
 </html>

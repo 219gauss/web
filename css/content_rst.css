@@ -586,7 +586,34 @@ border: 10px solid #ffffff;
 .page7_contact_group{width: 300px; height: 583px; text-align: left; font-size: 14px;}
 .page7_contact_group select{width: 173px;}
 .page7_contact_group tr:NOT(:LAST-CHILD){ height: 30px;}
-
+/* ----------page 7-2-------------- */
+.content_seven_2 select{ width: 173px; }
+.content_seven_2 tr:NOT(:LAST-CHILD){height: 30px; font-size: 14px; text-align: center;}
+.content_seven_2 tr:FIRST-CHILD{ background: #999999;}
+/* ----------page 7-3-------------- */
+.content_seven_3 select{ width: 173px; }
+.content_seven_3 tr:NOT(:LAST-CHILD){height: 30px; font-size: 14px; text-align: center;}
+.content_seven_3 .content_seven_3_title{ font-weight: bold; text-align: left; padding-left: 14px;}
+.content_seven_3 .content_seven_3_header{ background: #999999;}
+.content_seven_3 table tr{background-color:#cccccc;}
+/* ----------page 7-4-------------- */
+.content_seven_4 select{ width: 173px; }
+.content_seven_4 tr:NOT(:LAST-CHILD){height: 30px; font-size: 14px; text-align: center;}
+/* ----------page 7-5-------------- */
+.content_seven_5 select{ width: 173px; }
+.content_seven_5 tr:NOT(:LAST-CHILD){height: 30px; font-size: 14px; text-align: center;}
+.content_seven_5 .content_seven_5_title{ font-weight: bold; text-align: left; padding-left: 14px;}
+.content_seven_5 .content_seven_5_header{ background: #999999;}
+.content_seven_5 table [type="text"]{width: 147px;}
+.content_seven_5  table select{ width: 40px; }
+.content_seven_5 table tr:NTH-CHILD(odd){ background: #e2e2e2;}
+.content_seven_5 table tr:NTH-CHILD(even){ background: #f2f2f2;}
+/* ----------page 7-6-------------- */
+.content_seven_6 select{ width: 173px; }
+.content_seven_6 tr:NOT(:LAST-CHILD){height: 30px; font-size: 14px; text-align: center;}
+.content_seven_6 .content_seven_6_title{ font-weight: bold; text-align: left; padding-left: 14px;}
+.content_seven_6 tr:nth-child(3) [type="button"],
+.content_seven_6 tr:nth-child(6) [type="button"]{ width: 20px;height: 20px; }
 /* -------page 8--------- */
 .sidebar-eight div{
 	position: relative;

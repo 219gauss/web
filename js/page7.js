@@ -57,6 +57,21 @@ function tabseven() {
 		tab_8.style.background = "";
 		tab_8.style.color = "";
 	}
+
+	$(".s7_1")[0].style.background = "#fafafa";
+	$(".s7_2")[0].style.background = "#c0c0c0";
+	$(".s7_3")[0].style.background = "#c0c0c0";
+	$(".s7_4")[0].style.background = "#c0c0c0";
+	$(".s7_5")[0].style.background = "#c0c0c0";
+	$(".s7_6")[0].style.background = "#c0c0c0";
+
+	$("#page7_1")[0].style.display = "block";
+	$("#page7_2")[0].style.display = "none";
+	$("#page7_3")[0].style.display = "none";
+	$("#page7_4")[0].style.display = "none";
+	$("#page7_5")[0].style.display = "none";
+	$("#page7_6")[0].style.display = "none";
+		
 	//最右端多选框默认不可选中
 	for (var i = 1; i <= 10; i++) {
 		$("#data_"+i+"_7")[0].disabled  = true;
